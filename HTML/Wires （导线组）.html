@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>导线组 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn;  line-height: 0.9; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-05">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">导线组<br>Wires</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Wires.svg" />
+						<h2>关于<span class="force-zh">“</span>导线组<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">导线是电器的血液！等等，不对，电力才是血液。导线更像动脉。静脉？那不重要<span class="force-zh">……</span></p>
+						<ul>
+							<li><span class="force-zh">“</span>导线组<span class="force-zh">”</span>模块上会有 3～6 根导线。</li>
+							<li>要解除该模块，只有<em>一</em>根正确的导线需要被剪断。</li>
+							<li>导线的次序从顶部第一根开始。</li>
+						</ul>
+						<div style="clear: both"></div>
+						<table>
+							<tr>
+								<td><strong><em>3 根导线：</em></strong>
+								<br>如果没有红色导线，剪断第二根导线。
+								<br>否则，如果最后一根导线为白色，剪断最后一根导线。
+								<br>否则，如果蓝色导线多于一根，剪断最后一根蓝色导线。
+								<br>否则，剪断最后一根导线。</td>
+							</tr>
+							<tr>
+								<td><strong><em>4 根导线：</em></strong>
+								<br>如果红色导线多于一根，并且序列号最后一位数字为奇数，剪断最后一根红色导线。
+								<br>否则，如果最后一根导线为黄色，并且没有红色导线，剪断第一根导线。
+								<br>否则，如果蓝色导线仅有一根，剪断第一根导线。
+								<br>否则，如果黄色导线多于一根，剪断最后一根导线。
+								<br>否则，剪断第二根导线。</td>
+							</tr>
+							<tr>
+								<td><strong><em>5 根导线：</em></strong>
+								<br>如果最后一根导线为黑色，并且序列号最后一位数字为奇数，剪断第四根导线。
+								<br>否则，如果红色导线仅有一根，并且黄色导线多于一根，剪断第一根导线。
+								<br>否则，如果没有黑色导线，剪断第二根导线。
+								<br>否则，剪断第一根导线。</td>
+							</tr>
+							<tr>
+								<td><strong><em>6 根导线：</em></strong>
+								<br>如果没有黄色导线，并且序列号最后一位数字为奇数，剪断第三根导线。
+								<br>否则，如果黄色导线仅有一根，并且白色导线多于一根，剪断第四根导线。
+								<br>否则，如果没有红色导线，剪断最后一根导线。
+								<br>否则，剪断第四根导线。</td>
+							</tr>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 1 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

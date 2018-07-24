@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>圆形键盘 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; }
+			@media screen and (max-width: 900px) {
+				table.keypad-table td { padding: 0; line-height: 1.2; }
+				img.keypad-symbol-image { width: 10mm; height: 10mm; }
+				table.keypad-table td.keypad-table-spacer { padding: 0 1mm; }
+			}
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-01">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">圆形键盘<br>Round Keypad</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Round Keypad.svg">
+						<h2>关于<span class="force-zh">“</span>圆形键盘<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">我想某人曾尝试让这个模块看起来很酷，但失败了。</p>
+						<ul>
+							<li>这个圆形的键盘包含 8 个来自下方各列的图案。</li>
+							<li>找到下方含有最多的键盘上符号的那一列。</li>
+							<li>如果有两列或更多列含有最多符号，使用其中最右侧一列。</li>
+							<li>按下所有在正确的那一列上未出现的图案。</li>
+						</ul>
+						<div style="clear: both"><br></div>
+						<table class="keypad-table">
+							<tbody>
+								<tr>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/28-balloon.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/16-euro.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/1-copyright.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/11-six.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/24-pitchfork.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/11-six.png"></td>
+								</tr><tr>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/13-at.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/28-balloon.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/8-pumpkin.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/21-paragraph.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/4-smileyface.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/16-euro.png"></td>
+								</tr><tr>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/30-upsidedowny.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/23-leftc.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/26-cursive.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/31-bt.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/31-bt.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/27-tracks.png"></td>
+								</tr><tr>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/12-squigglyn.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/26-cursive.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/5-doublek.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/7-squidknife.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/22-rightc.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/14-ae.png"></td>
+								</tr><tr>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/7-squidknife.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/3-hollowstar.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/15-meltedthree.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/5-doublek.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/21-paragraph.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/24-pitchfork.png"></td>
+								</tr><tr>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/9-hookn.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/9-hookn.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/30-upsidedowny.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/20-questionmark.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/19-dragon.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/18-nwithhat.png"></td>
+								</tr><tr>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/23-leftc.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/20-questionmark.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/3-hollowstar.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/4-smileyface.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/2-filledstar.png"></td>
+									<td class="keypad-table-spacer"></td>
+									<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Round Keypad/6-omega.png"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 1 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

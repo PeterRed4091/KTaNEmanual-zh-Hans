@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>洗衣间——“保持通话，不会爆炸”一般模块</title>
+	<meta name="viewport" content="initial-scale=1">
+	<link rel='stylesheet' type='text/css' href='css/font.css'>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src='js/highlighter.js'></script>
+    <style>
+        p.strong {
+            font-weight: bold;
+        }
+
+        table.laundry {
+            width: 100%;
+        }
+
+        table.laundry td {
+            white-space: nowrap;
+        }
+
+        table.reference {
+            table-layout: fixed;
+            width: 100%;
+            border: none;
+        }
+        table.reference col {
+            width: 12.5%;
+        }
+        table.reference td {
+            text-align: center;
+            vertical-align: top;
+            padding: 0;
+            border: none;
+        }
+        table.reference td div.label {
+            font-size: 8pt;
+        }
+
+        h4 {
+            margin: 1.5em 0 .5em;
+            text-align: center;
+        }
+        h4.reference {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="section">
+    <div class="page page-bg-02">
+        <div class="page-header">
+			<span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+			<span class="page-header-section-title">洗衣间</span>
+		</div>
+		<div class="page-content">
+			<img src="img/Component/Laundry.svg" class="diagram">
+			<h2>关于洗衣间(Laundry)</h2>
+			<p class="flavour-text">分类和折叠在你要担心的事情中是最简单的。
+
+            <p class='strong'>
+                之前的爆炸所遗留的一切脏乱物品必须被清理干净。使用L4UHDR9号洗涤标志参考文件和下列规则，决定机器面板上正确的设置。	一旦条件满足，投入一枚硬币。出错时，你将失去一只袜子，并将获得一次失误(Strike)。
+
+            <p>
+                用下表决定须要清洗的那件服装。对于所有大于5的值，从总数减去6直至新数字小于6。对于所有负值，加上6直至你拥有一个0-5之间的值。
+
+            <ul>
+                <li><strong>服装物品</strong>（表L41）由未解除的模块数量（反复(Needy)模块除外） + 指示器总数所决定。
+                <li><strong>物品材料</strong>（表L42）由接口总数 + 解除模块数量 - 电池盒数量所决定。
+                <li><strong>物品色彩</strong>（表L43）由序列号末位数字 + 电池数量所决定。
+            </ul>
+
+            <p>
+                <strong>使用有关材料的洗涤说明，使用有关色彩的干燥说明，并使用有关物品的熨烫和特殊说明。</strong>但是，由上而下优先处理下列规则：
+
+            <ul>
+                <li>如果色彩为朦胧珍珠，始终使用非氯漂白。
+                <li>如果物品由皮革制成，或以翡翠果实为色彩，它不可超过120°F。为了安全起见始终在80°F洗涤。
+                <li>如果物品为紧身胸衣或材料为灯芯绒，那么使用有关材料的特殊说明。
+                <li>如果材料为羊毛或色彩为星光柠檬石英，始终用高温干燥。
+                <li>如果服装材料的某个字母与你的序列号中的某个字母相符，那么色彩将接管特殊说明。
+                <li>但是如果有正好4节电池在2个电池盒里且有亮灯BOB指示器，无视所有其他规则。鲍勃替你完成了工作。只需投入硬币就行了。谢谢鲍勃。
+            </ul>
+
+            <p class='strong'>
+                在左上角设置洗涤标志，右上角设置干燥标志，顶部显示屏设置熨烫要求，底部显示屏设置特殊要求，以此输入解答。
+		</div>
+        <div class="page-footer relative-footer">第 1 页 / 共 3 页</div>
+	</div>
+    <div class="page page-bg-03">
+        <div class="page-header">
+			<span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+			<span class="page-header-section-title">洗衣间</span>
+		</div>
+		<div class="page-content">
+
+            <h4>表L41：服装物品参考资料</h4>
+
+            <table class='laundry'>
+                <tr>
+                    <td>
+                    <th>服装物品
+                    <th>洗涤
+                    <th>干燥
+                    <th>熨烫
+                    <th>特殊
+                </tr>
+                <tr>
+                    <td>0
+                    <td>紧身胸衣
+                    <td>140°F
+                    <td>平干
+                    <td>2圆点
+                    <td><img src='img/Laundry/bleach.png' width='40'>
+                </tr>
+                <tr>
+                    <td>1
+                    <td>衬衫
+                    <td>105°F
+                    <td><img src='img/Laundry/high heat.png' width='40'>
+                    <td>无蒸汽
+                    <td>无四氯乙烯
+                </tr>
+                <tr>
+                    <td>2
+                    <td>裙子
+                    <td>30°C
+                    <td>挂干
+                    <td><img src='img/Laundry/iron.png' width='40'>
+                    <td>降低水分
+                </tr>
+                <tr>
+                    <td>3
+                    <td>短裤裙
+                    <td><img src='img/Laundry/machine wash gentle or delicate.png' width='40'>
+                    <td>翻转烘干
+                    <td>3圆点
+                    <td>圆圈左上
+                </tr>
+                <tr>
+                    <td>4
+                    <td>短裤
+                    <td>不可拧干
+                    <td>阴凉
+                    <td>150°C
+                    <td><img src='img/Laundry/do not bleach.png' width='40'>
+                </tr>
+                <tr>
+                    <td>5
+                    <td>围巾
+                    <td>95°C
+                    <td>干燥
+                    <td><img src='img/Laundry/iron at 110°C 230°F.png' width='40'>
+                    <td>不可干洗
+                </tr>
+            </table>
+
+            <h4>表L42：服装材料参考资料</h4>
+
+            <table class='laundry'>
+                <tr>
+                    <td>
+                    <th>服装材料
+                    <th>洗涤
+                    <th>干燥
+                    <th>熨烫
+                    <th>特殊
+                </tr>
+                <tr>
+                    <td>0
+                    <td>涤纶 (Polyester)
+                    <td>50°C
+                    <td>无热
+                    <td>2圆点
+                    <td><img src='img/Laundry/petroleum solvent only.png' width='40'>
+                </tr>
+                <tr>
+                    <td>1
+                    <td>棉 (Cotton)
+                    <td><img src='img/Laundry/95°C or 200°F dots.png' width='40'>
+                    <td>中温
+                    <td>熨烫
+                    <td>不可干洗
+                </tr>
+                <tr>
+                    <td>2
+                    <td>羊毛 (Wool)
+                    <td>手洗
+                    <td><img src='img/Laundry/dry in the shade.png' width='40'>
+                    <td>390°F
+                    <td>降低水分
+                </tr>
+                <tr>
+                    <td>3
+                    <td>尼龙 (Nylon)
+                    <td>30°C
+                    <td>滴干
+                    <td><img src='img/Laundry/no steam.png' width='40'>
+                    <td>低热
+                </tr>
+                <tr>
+                    <td>4
+                    <td>灯芯绒 (Corduroy)
+                    <td>105°F
+                    <td><img src='img/Laundry/drip dry.png' width='40'>
+                    <td>110°C
+                    <td>W
+                </tr>
+                <tr>
+                    <td>5
+                    <td>皮革 (Leather)
+                    <td>不可水洗
+                    <td>不可干燥
+                    <td>不可熨烫
+                    <td><img src='img/Laundry/any solvent except tetrachlorethylene.png' width='40'>
+                </tr>
+            </table>
+		</div>
+        <div class="page-footer relative-footer">第 2 页 / 共 3 页</div>
+	</div>
+    <div class="page page-bg-04">
+        <div class="page-header">
+			<span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+			<span class="page-header-section-title">洗衣间</span>
+		</div>
+		<div class="page-content">
+
+            <h4>表L43：服装色彩参考资料</h4>
+
+            <table class='laundry'>
+                <tr>
+                    <td>
+                    <th>服装色彩
+                    <th>洗涤
+                    <th>干燥
+                    <th>熨烫
+                    <th>特殊
+                </tr>
+                <tr>
+                    <td>0
+                    <td>红宝石喷泉
+                    <td>140°F
+                    <td><img src='img/Laundry/high heat.png' width='40'>
+                    <td>不可熨烫
+                    <td><img src='img/Laundry/any solvent.png' width='40'>
+                </tr>
+                <tr>
+                    <td>1
+                    <td>星光柠檬石英
+                    <td><img src='img/Laundry/95°C or 200°F.png' width='40'>
+                    <td>平干
+                    <td>熨烫
+                    <td><img src='img/Laundry/low heat.png' width='40'>
+                </tr>
+                <tr>
+                    <td>2
+                    <td>蓝宝石泉水
+                    <td>80°F
+                    <td>翻转烘干
+                    <td><img src='img/Laundry/iron at 200°C 390°F.png' width='40'>
+                    <td><img src='img/Laundry/short cycle.png' width='40'>
+                </tr>
+                <tr>
+                    <td>3
+                    <td>翡翠果实
+                    <td>30°C
+                    <td><img src='img/Laundry/do not tumble dry.png' width='40'>
+                    <td>300°F
+                    <td><img src='img/Laundry/no steam finishing.png' width='40'>
+                </tr>
+                <tr>
+                    <td>4
+                    <td>朦胧珍珠
+                    <td><img src='img/Laundry/machine wash permanent press.png' width='40'>
+                    <td>低温
+                    <td>无蒸汽
+                    <td><img src='img/Laundry/low heat.png' width='40'>
+                </tr>
+                <tr>
+                    <td>5
+                    <td>黑榴石
+                    <td>60°C
+                    <td>中温
+                    <td><img src='img/Laundry/iron at 200°C 390°F.png' width='40'>
+                    <td><img src='img/Laundry/non-chlorine bleach.png' width='40'>
+                </tr>
+            </table>
+
+            <h4 class='reference'>洗涤标志参考资料</h4>
+
+            <table class='reference'>
+                <col><col><col><col><col><col><col><col>
+                <tr>
+                    <td><img src='img/Laundry/machine%20wash%20permanent%20press.png' width='55'><div class='label'>永久定型机洗<br>machine wash<br>permanent<br>press</div>
+                    <td><img src='img/Laundry/machine%20wash%20gentle%20or%20delicate.png' width='55'><div class='label'>轻柔机洗<br>machine wash<br>gentle or<br>delicate</div>
+                    <td><img src='img/Laundry/hand%20wash.png' width='55'><div class='label'>手洗<br>hand<br>wash</div>
+                    <td><img src='img/Laundry/do%20not%20wash.png' width='55'><div class='label'>不可水洗<br>do not<br>wash</div>
+                    <td><img src='img/Laundry/30°C%20or%2080°F.png' width='55'><div class='label'>30°C<br>或 80°F</div>
+                    <td><img src='img/Laundry/40°C%20or%20105°F.png' width='55'><div class='label'>40°C<br>或 105°F</div>
+                    <td><img src='img/Laundry/50°C%20or%20120°F.png' width='55'><div class='label'>50°C<br>或 120°F</div>
+                    <td><img src='img/Laundry/60°C%20or%20140°F.png' width='55'><div class='label'>60°C<br>或 140°F</div>
+                </tr>
+                <tr>
+                    <td><img src='img/Laundry/70°C%20or%20160°F.png' width='55'><div class='label'>70°C<br>或 160°F</div>
+                    <td><img src='img/Laundry/95°C%20or%20200°F.png' width='55'><div class='label'>95°C<br>或 200°F</div>
+                    <td><img src='img/Laundry/30°C%20or%2080°F%20dots.png' width='55'><div class='label'>30°C<br>或 80°F</div>
+                    <td><img src='img/Laundry/40°C%20or%20105°F%20dots.png' width='55'><div class='label'>40°C<br>或 105°F</div>
+                    <td><img src='img/Laundry/50°C%20or%20120°F%20dots.png' width='55'><div class='label'>50°C<br>或 120°F</div>
+                    <td><img src='img/Laundry/60°C%20or%20140°F%20dots.png' width='55'><div class='label'>60°C<br>或 140°F</div>
+                    <td><img src='img/Laundry/70°C%20or%20160°F%20dots.png' width='55'><div class='label'>70°C<br>或 160°F</div>
+                    <td><img src='img/Laundry/95°C%20or%20200°F%20dots.png' width='55'><div class='label'>95°C<br>或 200°F</div>
+                </tr>
+                <tr>
+                    <td><img src='img/Laundry/do%20not%20wring.png' width='55'><div class='label'>不可拧干<br>do not wring</div>
+                    <td><img src='img/Laundry/tumble%20dry.png' width='55'><div class='label'>翻转烘干<br>tumble dry</div>
+                    <td><img src='img/Laundry/low%20heat%20dry.png' width='55'><div class='label'>低温<br>low heat</div>
+                    <td><img src='img/Laundry/medium%20heat.png' width='55'><div class='label'>中温<br>medium heat</div>
+                    <td><img src='img/Laundry/high%20heat.png' width='55'><div class='label'>高温<br>high heat</div>
+                    <td><img src='img/Laundry/no%20heat.png' width='55'><div class='label'>无热<br>no heat</div>
+                    <td><img src='img/Laundry/hang%20to%20dry.png' width='55'><div class='label'>挂干<br>hang to dry</div>
+                    <td><img src='img/Laundry/drip%20dry.png' width='55'><div class='label'>滴干<br>drip dry</div>
+                </tr>
+                <tr>
+                    <td><img src='img/Laundry/dry%20flat.png' width='55'><div class='label'>平干<br>dry flat</div>
+                    <td><img src='img/Laundry/dry%20in%20the%20shade.png' width='55'><div class='label'>阴干<br>dry<br>in the shade</div>
+                    <td><img src='img/Laundry/do%20not%20dry.png' width='55'><div class='label'>不可干燥<br>do not dry</div>
+                    <td><img src='img/Laundry/do%20not%20tumble%20dry.png' width='55'><div class='label'>不可翻转烘干<br>do not<br>tumble dry</div>
+                    <td><img src='img/Laundry/dry.png' width='55'><div class='label'>干燥<br>dry</div>
+                    <td><img src='img/Laundry/iron.png' width='55'><div class='label'>熨烫<br>iron</div>
+                    <td><img src='img/Laundry/do%20not%20iron.png' width='55'><div class='label'>不可熨烫<br>do not iron</div>
+                    <td><img src='img/Laundry/iron%20at%20110°C%20230°F.png' width='55'><div class='label'>110°C<br>230°F</div>
+                </tr>
+                <tr>
+                    <td><img src='img/Laundry/iron%20at%20150°C%20300°F.png' width='55'><div class='label'>150°C<br>300°F</div>
+                    <td><img src='img/Laundry/iron%20at%20200°C%20390°F.png' width='55'><div class='label'>200°C<br>390°F</div>
+                    <td><img src='img/Laundry/no%20steam.png' width='55'><div class='label'>无蒸汽<br>no steam</div>
+                    <td><img src='img/Laundry/bleach.png' width='55'><div class='label'>漂白<br>bleach</div>
+                    <td><img src='img/Laundry/do%20not%20bleach.png' width='55'><div class='label'>不可漂白<br>do not<br>bleach</div>
+                    <td><img src='img/Laundry/non-chlorine%20bleach.png' width='55'><div class='label'>非氯漂白<br>non-chlorine<br>bleach</div>
+                    <td><img src='img/Laundry/dryclean.png' width='55'><div class='label'>干洗<br>dryclean</div>
+                    <td><img src='img/Laundry/any%20solvent.png' width='55'><div class='label'>任意溶剂<br>any solvent</div>
+                </tr>
+                <tr>
+                    <td><img src='img/Laundry/any%20solvent%20except%20tetrachlorethylene.png' width='55'><div class='label'>四氯乙烯以外<br>任意溶剂<br>any solvent<br>except<br>tetrachloro&shy;ethylene</div>
+                    <td><img src='img/Laundry/petroleum%20solvent%20only.png' width='55'><div class='label'>只用石油溶剂<br>petroleum<br>solvent<br>only</div>
+                    <td><img src='img/Laundry/wet%20cleaning.png' width='55'><div class='label'>专业湿洗<br>wet cleaning</div>
+                    <td><img src='img/Laundry/do%20not%20dryclean.png' width='55'><div class='label'>不可干洗<br>do not<br>dryclean</div>
+                    <td><img src='img/Laundry/short%20cycle.png' width='55'><div class='label'>短程序<br>short cycle</div>
+                    <td><img src='img/Laundry/reduced%20moisture.png' width='55'><div class='label'>降低水分<br>reduced<br>moisture</div>
+                    <td><img src='img/Laundry/low%20heat.png' width='55'><div class='label'>低热<br>low heat</div>
+                    <td><img src='img/Laundry/no%20steam%20finishing.png' width='55'><div class='label'>无蒸汽处理<br>no steam<br>finishing</div>
+                </tr>
+            </table>
+
+        </div>
+        <div class="page-footer relative-footer">第 3 页 / 共 3 页</div>
+    </div>
+</div>
+</body></html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>跟随领头羊——“保持通话，不会爆炸”一般模块</title>
+    <meta content="initial-scale=1" name="viewport">
+    <link rel='stylesheet' type='text/css' href='css/font.css'>
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src='js/highlighter.js'></script>
+    <style>
+        table.repeaters-table th { white-space: nowrap; }
+    </style>
+</head>
+<body>
+    <div id="ManualContent">
+        <div class="section">
+            <div class="page">
+                <div class="page-header">
+                    <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                    <span class="page-header-section-title">跟随领头羊</span>
+                </div>
+                <div class="page-content">
+                    <img class="diagram" src="img/Component/Follow the Leader.svg">
+                    <h2>关于跟随领头羊(Follow the Leader)</h2>
+
+                    <p class="flavour-text">不过儿戏而已。跟着领头就行。只是如果你没能跟上，这惩罚稍微更具爆炸性。
+
+                    <p>该模块包含8-12根导线，它们以循环序列连接着标有数字的插口。每根导线以数字升序从一个插口引向下一个含有导线的插口。从插口1引出的导线被认作“导线1”。
+
+                    <p>通过首先确定起始导线，然后检查是否切断序列中的每根导线，以此推进模块。基于序列中之前的导线的状态，每根导线将需要被切断或保留不切断。
+
+                    <h3>确定起始位置</h3>
+
+                    <p>遵循第一条适用的规则：
+
+                    <ol>
+                        <li>如果有RJ-45接口且有一条导线从插口4<u>直接</u>引向插口5，从那条导线开始。
+                        <li>否则，如果有一条导线始于同炸弹上电池数量相符的插口，从那条导线开始。
+                        <li>否则，如果有一条导线始于同序列号的第一个数字相符的插口，从那条导线开始。
+                        <li>否则，如果有带CLR标签的亮灯指示器，无视所有进一步的指示并以数字降序切断该模块上所有存在的导线。
+                        <li>如果上述没有一项适用，起始位置为数序排列中最早的含有导线的插口。
+                    </ol>
+                </div>
+                <div class="page-footer relative-footer">第 1 页 / 共 2 页</div>
+            </div>
+            <div class="page">
+                <div class="page-header">
+                    <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                    <span class="page-header-section-title">跟随领头羊</span>
+                </div>
+                <div class="page-content">
+                    <h3>切断导线</h3>
+                    <ul>
+                        <li><u>总是</u>切断起始插口处的导线。然后前往下一条导线。
+                        <li>从这个位置起，按照下列表格中步骤的指示切断导线。起始步骤对应序列号中第一个字母。如果序列号不包含字母，开始于步骤A。
+                        <li>当你前往下一根导线时，同样按字母表顺序前往表格中下一个步骤来确定是否切断导线。
+                        <li>“之前的导线”可能指序列中超出起始位置的导线。
+                        <li>如果起始插口的导线为红色、绿色或白色，改为按反向字母表顺序推进步骤。
+                    </ul>
+                    <table class="repeaters-table">
+                        <tr>
+                            <th>步骤
+                            <th>导线切除条件：
+                        </tr>
+                        <tr>
+                            <th>A 或 N
+                            <td>之前的导线不是黄色或蓝色或绿色。
+                        </tr>
+                        <tr>
+                            <th>B 或 O
+                            <td>之前的导线引向标有偶数的插口。
+                        </tr>
+                        <tr>
+                            <th>C 或 P
+                            <td>之前的导线应被切断。
+                        </tr>
+                        <tr>
+                            <th>D 或 Q
+                            <td>之前的导线是红色或蓝色或黑色。
+                        </tr>
+                        <tr>
+                            <th>E 或 R
+                            <td>之前的三根导线中的两根共用一种色彩。
+                        </tr>
+                        <tr>
+                            <th>F 或 S
+                            <td>之前的两根导线中正好一根与这根导线是相同的色彩。
+                        </tr>
+                        <tr>
+                            <th>G 或 T
+                            <td>之前的导线是黄色或白色或绿色。
+                        </tr>
+                        <tr>
+                            <th>H 或 U
+                            <td>之前的导线不应被切断。
+                        </tr>
+                        <tr>
+                            <th>I 或 V
+                            <td>之前的导线跳过了一个插口。
+                        </tr>
+                        <tr>
+                            <th>J 或 W
+                            <td>之前的导线不是白色或黑色或红色。
+                        </tr>
+                        <tr>
+                            <th>K 或 X
+                            <td>之前的两根导线是不同的色彩。
+                        </tr>
+                        <tr>
+                            <th>L 或 Y
+                            <td>之前的导线不引向标有6或更小数字的位置。
+                        </tr>
+                        <tr>
+                            <th>M 或 Z
+                            <td>之前的两根导线中正好一根是或都不是白色或黑色。
+                        </tr>
+                    </table>
+                </div>
+                <div class="page-footer relative-footer">第 2 页 / 共 2 页</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

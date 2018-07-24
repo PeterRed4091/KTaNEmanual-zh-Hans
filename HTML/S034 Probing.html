@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>探测——“保持通话，不会爆炸”一般模块</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script src='js/highlighter.js'></script>
+		<link rel='stylesheet' type='text/css' href='css/font.css'>
+        <style>
+            .note {
+                font-size: 70%;
+                font-style: italic;
+            }
+        </style>
+	</head>
+	<body>
+		<div class="section">
+			<div class="page page-bg-02">
+				<div class="page-header">
+					<span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+					<span class="page-header-section-title">探测</span>
+				</div>
+				<div class="page-content">
+					<img src="img/Component/Probing.svg" class="diagram">
+					<h2>关于探测(Probing)</h2>
+					<p class="flavour-text">不是那种探测……
+
+                    <p>该模块有六根导线和两个鳄鱼夹。每根导线带有三种交流电（又称3相电），每相的频率不同。可能的频率为10Hz、22Hz、50Hz和60Hz。
+
+                    <p>为了探测电路，你需要将红色夹连接至一条线，并将蓝色夹连接至另一条线。两条线中共有的频率会抵消，而屏幕会从低到高显示剩余的频率。
+
+                    <p>如果红白双色线含有50Hz电流，将红色夹连接至含有10Hz、22Hz和60Hz频率的导线；否则如果红黄双色线不含有10Hz电流，将红色夹连接至含有22Hz、55Hz和60Hz频率的导线；否则将红色夹连接至含有10Hz、22Hz和50Hz频率的导线。
+
+                    <p>如果黄红双色线含有10Hz电流，将蓝色夹连接至含有10Hz、50Hz和60Hz频率的导线；否则将蓝色夹连接至含有10Hz、22Hz和50Hz频率的导线。
+
+                    <p>保持两夹子连通至少六秒以解除模块。保持不正确的两导线连通超过六秒会导致失误。
+
+                    <p class='note'>注：注意每次发生失误后，每根导线中的频率可能改变。
+
+				</div>
+				<div class="page-footer relative-footer">第 1 页 / 共 1 页</div>
+			</div>
+		</div>
+	</body>
+</html>

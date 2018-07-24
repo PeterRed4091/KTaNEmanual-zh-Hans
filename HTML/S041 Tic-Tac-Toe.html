@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>井字棋——“保持通话，不会爆炸”一般模块</title>
+    <meta name="viewport" content="initial-scale=1">
+    <link rel='stylesheet' type='text/css' href='css/font.css'>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src='js/highlighter.js'></script>
+    <style>
+        .ttt-table { width: 100%; }
+        .ttt-table td { text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                <span class="page-header-section-title">井字棋</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Tic-Tac-Toe.svg" class="diagram">
+                <h2>关于井字棋(Tic-Tac-Toe)</h2>
+                <p class="flavour-text">
+                    这么多年在井字棋中获得平局的努力可能终于有所回报了。
+
+                <p>为解除该模块，所有九个按钮必须被“X”与“O”填充。
+
+                <p>标有“下一个：(Up Next:)”的显示屏会显示“X”或“O”。键盘会显示一些1和9之间的数字，以及一些已经放置好的“X”与“O”。在放置一个棋子后，显示屏会变为空白。
+
+                <p>下一页的表格中的数字表示键盘上每个棋子应该被放置的位置。
+
+                <p>使用下方的规则来确定起始行：
+                <ol>
+                    <li>如果序列号的末位数字是偶数，起始行是5、6、7、8或9。否则，起始行是1、2、3或4。</li>
+                    <li>如果有至少一个并行接口，使用偶数数值。否则，使用奇数数值。</li>
+                    <li>如果灭灯指示器多于亮灯指示器，初始行是规则2中剩余数值的最低值。</li>
+                    <li>如果亮灯指示器多于灭灯指示器，初始行是规则2中剩余数值的最高值。</li>
+                    <li>如果有同等数量的亮灯与灭灯指示器，初始行是规则2中剩余数值的平均值。</li>
+                </ol>
+
+                <p>在表格中，基于棋盘上已有的“X”与“O”相对的数量确定合适的放置列。从起始行开始沿所选列向下移动，直至抵达某个与键盘上未填充点对应的数字。如果你略过了第9行，在第1行处继续。
+
+                <p>如果在此地放置该棋子会导致同子三连，你必须按下“略过(PASS)”并在<u>同</u>一行继续；否则，通过按下键盘上的该位置来放置棋子并前往表格内<u>下</u>一行。
+
+                <p>连续两次略过会导致棋子被放置（并显示）于可用空格之一中。这可能会导致同子三连但不会引起失误。在这种情况下，前往表格内<u>下</u>一行。
+
+                <p>在失误时，当前行会重置为最初的起始行，同时键盘会显示已放置的棋子和剩余的数字。之前所有棋子的放置状态会保留，直至模块被解除。
+            </div>
+            <div class="page-footer relative-footer">第 1 页 / 共 2 页</div>
+        </div>
+
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                <span class="page-header-section-title">井字棋</span>
+            </div>
+            <div class="page-content">
+                <p><strong>表1：</strong>井字棋棋子放置位置表
+                <table class='ttt-table'>
+                    <tr><td>
+                        <td colspan=2>更多“X”
+                        <td colspan=2>“X” = “O”
+                        <td colspan=2>更多“O”</tr>
+                    <tr><td>
+                        <td colspan=2>正在放置：
+                        <td colspan=2>正在放置：
+                        <td colspan=2>正在放置：</tr>
+                    <tr><th>行
+                        <th>“X”
+                        <th>“O”
+                        <th>“X”
+                        <th>“O”
+                        <th>“X”
+                        <th>“O”</tr>
+
+                    <tr><th>1<td>9<td>3<td>3<td>9<td>8<td>1</tr>
+                    <tr><th>2<td>5<td>6<td>6<td>7<td>1<td>2</tr>
+                    <tr><th>3<td>7<td>8<td>2<td>1<td>5<td>8</tr>
+                    <tr><th>4<td>4<td>5<td>7<td>8<td>9<td>6</tr>
+                    <tr><th>5<td>1<td>4<td>1<td>6<td>7<td>3</tr>
+                    <tr><th>6<td>8<td>7<td>5<td>2<td>4<td>4</tr>
+                    <tr><th>7<td>6<td>1<td>8<td>4<td>3<td>9</tr>
+                    <tr><th>8<td>2<td>2<td>9<td>5<td>2<td>5</tr>
+                    <tr><th>9<td>3<td>9<td>4<td>3<td>6<td>7</tr>
+                </table>
+
+            </div>
+            <div class="page-footer relative-footer">第 2 页 / 共 2 页</div>
+        </div>
+    </div>
+</body>
+</html>

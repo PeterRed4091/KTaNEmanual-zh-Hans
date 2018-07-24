@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>神秘方阵——“保持通话，不会爆炸”一般模块</title>
+    <meta content="initial-scale=1" name="viewport">
+    <link rel='stylesheet' type='text/css' href='css/font.css'>
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src='js/highlighter.js'></script>
+    <style>
+        .skull-diagram {
+            float: right;
+        }
+
+        .full-solution {
+            margin: 0 auto 1em;
+        }
+
+        .partial-solutions {
+            width: 100%;
+        }
+        .partial-solutions table {
+            width: 100%;
+        }
+        .partial-solutions td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page">
+            <div class="page-header">
+                <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                <span class="page-header-section-title">神秘方阵</span>
+            </div>
+            <div class="page-content">
+                <img src='img/Component/Mystic Square.svg' class='diagram'>
+                <h2>关于神秘方阵(Mystic Square)</h2>
+                <p class='flavour-text'>身穿闪亮铠甲的骑士啊，请把我们从骷髅的灾厄中解救！
+                <ol>
+                    <li><strong>本页上的“行”/“列”均指向下方的表格。</strong></li>
+                    <li>在揭露骑士之前不要揭露骷髅。</li>
+                    <li>
+                        如何找到骷髅：
+                        <ol>
+                            <li>如果中央位置为空白，骷髅在7下方。前往步骤4并继续。</li>
+                            <li>
+                                <table class="skull-diagram">
+                                    <tr><td>X</td><td></td><td>X</td></tr>
+                                    <tr><td></td><td>X</td><td></td></tr>
+                                    <tr><td>X</td><td></td><td>X</td></tr>
+                                </table>
+                                中央的数字决定了应使用哪一行/列。如果序列号中的末位数字处于右图所示的五个打叉位置之一当中，使用行。否则，使用列。</li>
+                            <li>从模块上的空白位置开始。使用下表，考虑行/列中的每个数字，检查其是否与当前位置直接相邻。如果是，从那个位置继续。最后的位置就是骷髅所在。</li>
+                            <li>为解除该模块，将滑块移动成下一页所示的目标星座。</li>
+                        </ol>
+                    </li>
+                </ol>
+                <table>
+                    <tr><td></td><td></td><td colspan=9>序列号末尾数字不在模块打叉部分上</td></tr>
+                    <tr><td></td><td>模块中央数字</td><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr>
+                    <tr><td rowspan=8>在打叉部分上</td>
+                    <th>1</th><td>1</td><td>3</td><td>5</td><td>4</td><td>6</td><td>7</td><td>2</td><td>8</tr>
+                    <tr><th>2</th><td>2</td><td>5</td><td>7</td><td>3</td><td>8</td><td>1</td><td>4</td><td>6</tr>
+                    <tr><th>3</th><td>6</td><td>4</td><td>8</td><td>1</td><td>7</td><td>3</td><td>5</td><td>2</tr>
+                    <tr><th>4</th><td>8</td><td>1</td><td>2</td><td>5</td><td>3</td><td>4</td><td>6</td><td>7</tr>
+                    <tr><th>5</th><td>3</td><td>2</td><td>6</td><td>8</td><td>4</td><td>5</td><td>7</td><td>1</tr>
+                    <tr><th>6</th><td>7</td><td>6</td><td>1</td><td>2</td><td>5</td><td>8</td><td>3</td><td>4</tr>
+                    <tr><th>7</th><td>4</td><td>7</td><td>3</td><td>6</td><td>1</td><td>2</td><td>8</td><td>5</tr>
+                    <tr><th>8</th><td>5</td><td>8</td><td>4</td><td>7</td><td>2</td><td>6</td><td>1</td><td>3</tr>
+                </table>
+
+            </div>
+            <div class="page-footer relative-footer">第 1 页 / 共 2 页</div>
+        </div>
+        <div class="page">
+            <div class="page-header">
+                <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                <span class="page-header-section-title">神秘方阵</span>
+            </div>
+            <div class="page-content">
+                <p><strong>本页上的“行”/“列”均指向模块。</strong></p>
+                <img src="img/Mystic Square/Knight.png" class="diagram">
+                <p>确定期望星座：</p>
+                <p>在移动任意滑块之前，使用各行之和R1、R2与R3以及各列之和C1、C2与C3，在下表中查找目标星座。同时下方的星座一直可以被接受。</p>
+
+                <table class='full-solution'>
+                    <tr><td>1<td>2<td>3</tr>
+                    <tr><td>4<td>5<td>6</tr>
+                    <tr><td>7<td>8<td> </tr>
+                </table>
+
+                <table class='partial-solutions'>
+                    <tr>
+                        <td>
+                        <th>C1 &gt; C2,C3
+                        <th>C2 &gt; C1,C3
+                        <th>C3 &gt; C1,C2
+                        <th>其他
+                    </tr>
+                    <tr>
+                        <th>R1 &gt; R2,R3
+                        <td>
+                            <table>
+                                <tr><td>1<td>?<td>2</tr>
+                                <tr><td>?<td>?<td>?</tr>
+                                <tr><td>4<td>?<td>3</tr>
+                            </table>
+                        <td>
+                            <table>
+                                <tr><td>1<td>?<td>2</tr>
+                                <tr><td>?<td>?<td>?</tr>
+                                <tr><td>3<td>?<td>4</tr>
+                            </table>
+                        <td>
+                            <table>
+                                <tr><td>1<td>?<td>3</tr>
+                                <tr><td>?<td>?<td>?</tr>
+                                <tr><td>7<td>?<td>5</tr>
+                            </table>
+                        <td>
+                            <table>
+                                <tr><td>1<td>?<td>3</tr>
+                                <tr><td>?<td>?<td>?</tr>
+                                <tr><td>5<td>?<td>7</tr>
+                            </table>
+                    </tr>
+                    <tr>
+                        <th>R2 &gt; R1,R3
+                        <td>
+                            <table>
+                                <tr><td>?<td>1<td>?</tr>
+                                <tr><td>4<td>?<td>2</tr>
+                                <tr><td>?<td>3<td>?</tr>
+                            </table>
+                        <td>
+                            <table>
+                                <tr><td>?<td>1<td>?</tr>
+                                <tr><td>3<td>?<td>2</tr>
+                                <tr><td>?<td>4<td>?</tr>
+                            </table>
+                        <td>
+                            <table>
+                                <tr><td>?<td>2<td>?</tr>
+                                <tr><td>8<td>?<td>4</tr>
+                                <tr><td>?<td>6<td>?</tr>
+                            </table>
+                        <td>
+                            <table>
+                                <tr><td>?<td>2<td>?</tr>
+                                <tr><td>6<td>?<td>4</tr>
+                                <tr><td>?<td>8<td>?</tr>
+                            </table>
+                    </tr>
+                    <tr>
+                        <th>R3 &gt; R1,R2
+                        <td>
+                            <table>
+                                <tr><td>1<td>?<td>?</tr>
+                                <tr><td>?<td>2<td>?</tr>
+                                <tr><td>?<td>?<td>3</tr>
+                            </table>
+                        <td>
+                            <table>
+                                <tr><td>?<td>?<td>3</tr>
+                                <tr><td>?<td>2<td>?</tr>
+                                <tr><td>1<td>?<td>?</tr>
+                            </table>
+                        <td>
+                            <table>
+                                <tr><td>3<td>?<td>?</tr>
+                                <tr><td>?<td>2<td>?</tr>
+                                <tr><td>?<td>?<td>1</tr>
+                            </table>
+                        <td>
+                            <table>
+                                <tr><td>?<td>?<td>1</tr>
+                                <tr><td>?<td>2<td>?</tr>
+                                <tr><td>3<td>?<td>?</tr>
+                            </table>
+                    </tr>
+                    <tr>
+                        <th>其他
+                        <td>
+                            <table>
+                                <tr><td>1<td>2<td>3</tr>
+                                <tr><td>?<td>4<td>?</tr>
+                                <tr><td>?<td>?<td>?</tr>
+                            </table>
+                        <td>
+                            <table>
+                                <tr><td>1<td>?<td>?</tr>
+                                <tr><td>2<td>4<td>?</tr>
+                                <tr><td>3<td>?<td>?</tr>
+                            </table>
+                        <td>
+                            <table>
+                                <tr><td>?<td>?<td>?</tr>
+                                <tr><td>?<td>4<td>?</tr>
+                                <tr><td>1<td>2<td>3</tr>
+                            </table>
+                        <td>
+                            <table>
+                                <tr><td>?<td>?<td>1</tr>
+                                <tr><td>?<td>4<td>2</tr>
+                                <tr><td>?<td>?<td>3</tr>
+                            </table>
+                    </tr>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">第 2 页 / 共 2 页</div>
+        </div>
+    </div>
+</body>
+</html>

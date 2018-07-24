@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>逻辑 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; } .crush { margin-right: -.5em; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-01">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">逻辑<br>Logic</span>
+					</div>
+					<div class="page-content">
+						<img src="img/Component/Logic.svg" class="diagram">
+						<h2>关于<span class="force-zh">“</span>逻辑<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">
+							逻辑很简单，但逻辑与拆弹或许不是这样。
+						<ul>
+							<li>每一行会显示 3 个字母。每个字母代表一句陈述，在表 1 中能找到这些陈述。</li>
+							<li>在每一行内，应当认为绿色的命题仿佛被括号包围一样。这些必须在其他命题前解出。</li>
+							<li>陈述被逻辑运算符所连接。在表 2 中能找到各运算符的运作方式。</li>
+							<li>如果有陈述上方的红色 LED 常亮，首先对那些陈述套用逻辑否定（非门：假变为真，真变为假<span class="crush">）</span>。</li>
+							<li>求出每一行的最终结果，然后使用右侧的 T/F 按钮来选择真（True）／假（False<span class="crush">）</span>。完成后按下<span class="force-zh">“</span>Submit（提交<span class="crush">）</span><span class="crush force-zh">”</span>。</li>
+						</ul>
+						<p class="appendix-reference">查看附录 A 以获得指示灯识别参考。
+						<br>查看附录 B 以获得电池识别参考。
+						<br>查看附录 C 以获得接口识别参考。</p>
+						<h3>表 1：陈述列表</h3>
+						<table>
+							<tr>
+								<th>字母</th>
+								<th>陈述</th>
+								<th>字母</th>
+								<th>陈述</th>
+							</tr>
+							<tr>
+								<td>A</td>
+								<td>电池数量 = 指示灯数量</td>
+								<td>N</td>
+								<td>多于 2 个电池盒</td>
+							</tr>
+							<tr>
+								<td>B</td>
+								<td>序列号拥有的字母多于数字</td>
+								<td>O</td>
+								<td>同时有常亮与常灭指示灯</td>
+							</tr>
+							<tr>
+								<td>C</td>
+								<td>有 IND 指示灯</td>
+								<td>P</td>
+								<td>有并行接口</td>
+							</tr>
+							<tr>
+								<td>D</td>
+								<td>有 FRK 指示灯</td>
+								<td>Q</td>
+								<td>仅有 2 个接口</td>
+							</tr>
+							<tr>
+								<td>E</td>
+								<td>仅有 1 个常灭指示灯</td>
+								<td>R</td>
+								<td>有 PS/2 接口</td>
+							</tr>
+							<tr>
+								<td>F</td>
+								<td>多于 1 种接口种类</td>
+								<td>S</td>
+								<td>序列号的数字之和 &gt; 10</td>
+							</tr>
+							<tr>
+								<td>G</td>
+								<td>2 节或更多电池</td>
+								<td>T</td>
+								<td>有 MSA 指示灯</td>
+							</tr>
+							<tr>
+								<td>H</td>
+								<td>少于 2 节电池</td>
+								<td>U</td>
+								<td>仅有 1 个电池盒</td>
+							</tr>
+							<tr>
+								<td>I</td>
+								<td>序列号最后一位数字是奇数</td>
+								<td>V</td>
+								<td>序列号含有元音字母</td>
+							</tr>
+							<tr>
+								<td>J</td>
+								<td>多于 4 节电池</td>
+								<td>W</td>
+								<td>没有指示灯</td>
+							</tr>
+							<tr>
+								<td>K</td>
+								<td>仅有 1 个常亮指示灯</td>
+								<td>X</td>
+								<td>仅有 1 个指示灯</td>
+							</tr>
+							<tr>
+								<td>L</td>
+								<td>多于 2 个指示器</td>
+								<td>Y</td>
+								<td>多于 5 个接口</td>
+							</tr>
+							<tr>
+								<td>M</td>
+								<td>所有接口都互不相同</td>
+								<td>Z</td>
+								<td>少于 2 个接口</td>
+							</tr>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 2 页</div>
+				</div>
+				
+				<div class="page page-bg-04">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">逻辑<br>Logic</span>
+					</div>
+					<div class="page-content">
+					<h3>表2：逻辑运算符列表</h3>
+					<table>
+					  <tr>
+						<th>逻辑<br>运算</th>
+						<th>符号</th>
+						<th>等价<br>逻辑门</th>
+						<th>意义</th>
+					  </tr>
+					  <tr>
+						<td>合取</td>
+						<td>∧</td>
+						<td>AND<br>与门</td>
+						<td>如果所有输入为真，返回真。<br>否则返回假。</td>
+					  </tr>
+					  <tr>
+						<td>析取</td>
+						<td>∨</td>
+						<td>OR<br>或门</td>
+						<td>如果任意输入为真，返回真。<br>否则返回假。</td>
+					  </tr>
+					  <tr>
+						<td>异或</td>
+						<td>⊻</td>
+						<td>XOR<br>异或门</td>
+						<td>如果仅有一个输入为真，返回真。<br>否则返回假。</td>
+					  </tr>
+					  <tr>
+						<td>与非</td>
+						<td>|</td>
+						<td>NAND<br>与非门</td>
+						<td>如果所有输入为真，返回假。<br>否则返回真。</td>
+					  </tr>
+					  <tr>
+						<td>或非</td>
+						<td>↓</td>
+						<td>NOR<br>或非门</td>
+						<td>如果任意输入为真，返回假。<br>否则返回真。</td>
+					  </tr>
+					  <tr>
+						<td>双条件</td>
+						<td>↔</td>
+						<td>XNOR<br>异或非门</td>
+						<td>如果仅有一个输入为真，返回假。<br>否则返回真。</td>
+					  </tr>
+					  <tr>
+						<td>蕴含</td>
+						<td>→</td>
+						<td>（无）</td>
+						<td>当左侧输入为真，右侧输入为假时，返回假。<br>否则返回真。</td>
+					  </tr>
+					  <tr>
+						<td>反蕴含</td>
+						<td>←</td>
+						<td>（无）</td>
+						<td>当左侧输入为假，右侧输入为真时，返回假。<br>否则返回真。</td>
+					  </tr>
+					</table>
+					</div>
+					<div class="page-footer relative-footer">第 2 页　共 2 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

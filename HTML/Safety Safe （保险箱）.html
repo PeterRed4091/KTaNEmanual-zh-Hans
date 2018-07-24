@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>保险箱 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; }
+			.densetable  td { text-align: center; padding: .0em .3em .0em; }
+			.no-border { border: none; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-07">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">保险箱<br>Safety Safe</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Safety Safe.svg">
+						<h2>关于<span class="force-zh">“</span>保险箱<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">保险箱要么存着大量的财产，要么空无一物。</p>
+						<ul>
+							<li>所有 6 个刻度盘的朝向必须正确，才能解除模块。</li>
+							<li>每个刻度盘都有这么一处标记，那里的咔哒声更响。这就是每个刻度盘的初始位置。</li>
+							<li>从初始位置开始，遵循下方的规则来确定你需要旋转各个刻度盘多少格。</li>
+							<li>转动拉杆来检查解答。正确的刻度盘都会用绿灯表示，而不正确的刻度盘会用红灯表示。</li>
+						</ul>
+						<ul>
+							<li>从 0 开始，加上炸弹上接口种类数量与 7 的乘积。</li>
+							<li>加上与序列号有相匹配字母的常亮指示灯数量与 5 的乘积。</li>
+							<li>加上与序列号有相匹配字母的常灭指示灯数量。</li>
+							<li>对于前五个刻度盘，利用刻度盘位置和序列号作为索引，加上从下一页表格得到的数字。</li>
+							<li>对于最后一个刻度盘，利用序列号的所有字符作为索引，加上最后一列中所得数字的和。</li>
+							<li>注：转满一整圈需要 12 格。</li>
+						</ul>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 2 页</div>
+				</div>
+				<div class="page page-bg-01">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">保险箱<br>Safety Safe</span>
+					</div>
+					<div class="page-content" style="padding-top: 3.25em">
+						<table class="densetable" style="border: none">
+							<tbody>
+                                <tr>
+									<td rowspan="7" class="no-border"></td>
+									<td colspan="6">刻度盘</td>
+                                </tr>
+								<tr>
+									<td colspan="3">上方</td>
+									<td colspan="3">下方</td>
+								</tr>
+								<tr>
+									<td>左侧</td>
+									<td>中间</td>
+									<td>右侧</td>
+									<td>左侧</td>
+									<td>中间</td>
+									<td>右侧</td>
+								</tr>
+                                <tr><td colspan="6"></td></tr>
+                                <tr>
+                                    <td colspan="6">序列号</td>
+                                </tr>
+								<tr>
+									<td>第一</td>
+									<td>第二</td>
+									<td>第三</td>
+									<td>第四</td>
+									<td>第五</td>
+									<td>全部</td>
+								</tr>
+                                <tr><td colspan="6"></td></tr>
+								<tr>
+									<td>A</td>
+									<td>8</td>
+									<td>3</td>
+									<td>4</td>
+									<td>8</td>
+									<td>9</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>B</td>
+									<td>10</td>
+									<td>1</td>
+									<td>3</td>
+									<td>7</td>
+									<td>3</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<td>C</td>
+									<td>2</td>
+									<td>1</td>
+									<td>1</td>
+									<td>5</td>
+									<td>3</td>
+									<td>6</td>
+								</tr>
+								<tr>
+									<td>D</td>
+									<td>11</td>
+									<td>6</td>
+									<td>11</td>
+									<td>11</td>
+									<td>7</td>
+									<td>7</td>
+								</tr>
+								<tr>
+									<td>E</td>
+									<td>0</td>
+									<td>5</td>
+									<td>5</td>
+									<td>8</td>
+									<td>2</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>F</td>
+									<td>4</td>
+									<td>2</td>
+									<td>7</td>
+									<td>7</td>
+									<td>1</td>
+									<td>5</td>
+								</tr>
+                                <tr><td colspan="7"></td></tr>
+								<tr>
+									<td>G</td>
+									<td>7</td>
+									<td>4</td>
+									<td>4</td>
+									<td>2</td>
+									<td>10</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>H</td>
+									<td>8</td>
+									<td>3</td>
+									<td>6</td>
+									<td>6</td>
+									<td>6</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>I</td>
+									<td>0</td>
+									<td>11</td>
+									<td>0</td>
+									<td>0</td>
+									<td>9</td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>J</td>
+									<td>2</td>
+									<td>11</td>
+									<td>8</td>
+									<td>0</td>
+									<td>5</td>
+									<td>6</td>
+								</tr>
+								<tr>
+									<td>K</td>
+									<td>5</td>
+									<td>2</td>
+									<td>5</td>
+									<td>1</td>
+									<td>0</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td>L</td>
+									<td>1</td>
+									<td>9</td>
+									<td>8</td>
+									<td>11</td>
+									<td>11</td>
+									<td>11</td>
+								</tr>
+                                <tr><td colspan="7"></td></tr>
+								<tr>
+									<td>M</td>
+									<td>1</td>
+									<td>7</td>
+									<td>9</td>
+									<td>5</td>
+									<td>6</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td>N</td>
+									<td>9</td>
+									<td>5</td>
+									<td>1</td>
+									<td>4</td>
+									<td>4</td>
+									<td>9</td>
+								</tr>
+								<tr>
+									<td>O</td>
+									<td>5</td>
+									<td>9</td>
+									<td>8</td>
+									<td>10</td>
+									<td>2</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<td>P</td>
+									<td>3</td>
+									<td>10</td>
+									<td>9</td>
+									<td>1</td>
+									<td>9</td>
+									<td>7</td>
+								</tr>
+								<tr>
+									<td>Q</td>
+									<td>4</td>
+									<td>10</td>
+									<td>6</td>
+									<td>1</td>
+									<td>4</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<td>R</td>
+									<td>8</td>
+									<td>0</td>
+									<td>4</td>
+									<td>0</td>
+									<td>6</td>
+									<td>11</td>
+								</tr>
+                                <tr><td colspan="7"></td></tr>
+								<tr>
+									<td>S</td>
+									<td>9</td>
+									<td>4</td>
+									<td>0</td>
+									<td>6</td>
+									<td>3</td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>T</td>
+									<td>7</td>
+									<td>6</td>
+									<td>7</td>
+									<td>11</td>
+									<td>5</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>U</td>
+									<td>11</td>
+									<td>9</td>
+									<td>6</td>
+									<td>3</td>
+									<td>11</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>V</td>
+									<td>11</td>
+									<td>11</td>
+									<td>2</td>
+									<td>8</td>
+									<td>1</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>W</td>
+									<td>6</td>
+									<td>0</td>
+									<td>11</td>
+									<td>6</td>
+									<td>11</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td>X</td>
+									<td>4</td>
+									<td>2</td>
+									<td>7</td>
+									<td>2</td>
+									<td>8</td>
+									<td>10</td>
+								</tr>
+                                <tr><td colspan="7"></td></tr>
+								<tr>
+									<td>Y</td>
+									<td>10</td>
+									<td>7</td>
+									<td>10</td>
+									<td>10</td>
+									<td>8</td>
+									<td>9</td>
+								</tr>
+								<tr>
+									<td>Z</td>
+									<td>3</td>
+									<td>7</td>
+									<td>1</td>
+									<td>10</td>
+									<td>0</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td>0</td>
+									<td>7</td>
+									<td>0</td>
+									<td>3</td>
+									<td>5</td>
+									<td>8</td>
+									<td>6</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>9</td>
+									<td>10</td>
+									<td>10</td>
+									<td>9</td>
+									<td>1</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>2</td>
+									<td>5</td>
+									<td>11</td>
+									<td>7</td>
+									<td>7</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>10</td>
+									<td>8</td>
+									<td>10</td>
+									<td>4</td>
+									<td>10</td>
+									<td>4</td>
+								</tr>
+                                <tr><td colspan="7"></td></tr>
+								<tr>
+									<td>4</td>
+									<td>6</td>
+									<td>8</td>
+									<td>0</td>
+									<td>3</td>
+									<td>5</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>6</td>
+									<td>3</td>
+									<td>3</td>
+									<td>3</td>
+									<td>0</td>
+									<td>11</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>1</td>
+									<td>1</td>
+									<td>5</td>
+									<td>2</td>
+									<td>7</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td>0</td>
+									<td>6</td>
+									<td>2</td>
+									<td>4</td>
+									<td>2</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td>5</td>
+									<td>4</td>
+									<td>9</td>
+									<td>9</td>
+									<td>10</td>
+									<td>7</td>
+								</tr>
+								<tr>
+									<td>9</td>
+									<td>3</td>
+									<td>8</td>
+									<td>2</td>
+									<td>9</td>
+									<td>4</td>
+									<td>9</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="page-footer relative-footer" style="margin-top: .05in">第 2 页　共 2 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

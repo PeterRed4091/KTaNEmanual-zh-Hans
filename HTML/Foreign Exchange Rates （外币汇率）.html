@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>外币汇率 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; } .crush { margin-right: -.5em; }
+			.footnote { vertical-align: super; font-size: .83em; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">外币汇率<br>Foreign Exchange Rates</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Foreign Exchange Rates.svg">
+						<h2>关于<span class="force-zh">“</span>外币汇率<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">假如炸弹成为了证券经纪人<span class="force-zh">……</span>
+						<p><u>为解除该模块，拆弹专家需要拥有一台能够连接至万维网的设备。</u></p>
+						<p>该模块有能力连接至网络并查询外币汇率的状态。模块上会有网格状排列的 3 行 3 列的按键，每一个都带有发光二极管。<em>当发光二极管正按顺序闪烁时，不要按下该模块的任意按钮。</em></p>
+						<p>按键依照所在行被分组为：</p>
+						<table>
+							<tr><td>顶部一行：基准货币的 ISO 4217 字母代码。<span class="footnote">[1][2]</span></td></tr>
+							<tr><td>中间一行：目标货币的 ISO 4217 字母代码。<span class="footnote">[1][2]</span></td></tr>
+							<tr><td>底部一行：需要转换的货币金额。</td></tr>
+						</table>
+						<h3>所有发光二极管变为绿色：</h3>
+						<p>将下列统一资源定位符输入你的可连网设备：
+						<br><u>http://api.fixer.io/latest?base=XXX&symbols=YYY</u>
+						<br>把 <u>XXX</u> 替换为基准货币的 ISO 4217 字母代码。
+						<br>把 <u>YYY</u> 替换为目标货币的 ISO 4217 字母代码。
+						<br>你将收到以 JavaScript 对象表示法为格式的数据；寻找 <u>{"YYY": 数字}</u>，其中<span class="force-zh">“</span><u>数字</u><span class="force-zh">”</span>即是汇率。利用该汇率，将底部一行的数字转换至目标货币并向下取整，记下从左数第 2 个数字<span class="footnote">[4]</span>。按下第 N 个按键，其中 N 即是记下的数字<span class="footnote">[5]</span>（数按键时从上到下、从左到右<span class="crush">）</span>。</p>
+						<h3>所有发光二极管变为红色：</h3>
+						<p>在这种情况下，该模块未能查询到今日货币汇率。取得目标货币的 ISO 4217 数字代码，并记下从右数第 2 个数字。按下第 N 个按键，其中 N 即是记下的数字<span class="footnote">[5]</span>（数按键时从上到下、从左到右<span class="crush">）</span>。</p>
+						<p><u>[1]：如果炸弹上有多于一节电池，基准货币代码与目标货币代码将互相替换。
+						<br>[2]：这有可能改为 ISO 4217 数字代码。
+						<br>[3]：注意货币汇率在欧洲中部时间下午 4 点左右会更新。
+						<br>[4]：在转换后货币少于 10 的情况下，应记下的数字为 0。
+						<br>[5]：在记下的数字为 0 的情况下，按下左上角的按键。</u></p>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 1 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

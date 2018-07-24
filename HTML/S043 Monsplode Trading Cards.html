@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>小精灵换卡——“保持通话，不会爆炸”一般模块</title>
+    <meta name="viewport" content="initial-scale=1">
+    <link rel='stylesheet' type='text/css' href='css/font.css'>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <style>
+        .indented {
+            padding-left: 20pt;
+        }
+
+        .box {
+            border: 1px solid black;
+            padding: .2em .7em;
+            margin-bottom: 1em;
+        }
+        .explanation {
+            margin: 2em 0;
+        }
+            .explanation p {
+                margin: .5em 0;
+            }
+
+        .initial-value {
+            width: 100%;
+        }
+            .initial-value th {
+                text-align: left;
+            }
+    </style>
+    <script src='js/highlighter.js'></script>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                <span class="page-header-section-title">小精灵换卡</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Monsplode Trading Cards.svg" class="diagram">
+                <h2>关于小精灵换卡(Monsplode Trading Cards)</h2>
+                <p class="flavour-text">一Bob在手胜过二Bob在……Buhar？</p>
+                <ul>
+                    <li>基于你手中的3张Monsplode&trade;集换式卡牌，使用卡牌上方的“保留(Keep)”和“交易(Trade)”按钮，正确地接受或拒绝3次交易报价。
+                    <li>每张卡牌会显示一只Monsplode、一个珍贵度符号和一个印刷版本。
+                    <li>你的手牌在左侧显示。使用左右按钮在卡牌间浏览，从而选择你想交易的那一张。报价在右侧显示。
+                    <li>不正确的行动将导致一次失误(Strike)，但如果你尝试交易，你仍能保留从中收到的卡牌。
+                </ul>
+                <h3>计算卡牌的珍贵度价值</h3>
+                <div class='box'>
+                    <p>
+                        <b>1.</b> <em>识别卡牌的初始价值：</em>使用“初始价值参考表”，找到包含你的Monsplode&trade;名字的那一行。确定炸弹的序列号的前两个字符属于下列哪种格式：<br>
+                        <b>XX</b>（如KT、NE），&nbsp;&nbsp;&nbsp;&nbsp;
+                        <b>X#</b>（如C4、H8），&nbsp;&nbsp;&nbsp;&nbsp;
+                        <b>#X</b>（如2A、5D），&nbsp;&nbsp;&nbsp;&nbsp;
+                        <b>##</b>（如20、17）<br>这将给你卡牌的初始价值。
+                    </p>
+                    <p>
+                        <b>2.</b> <em>调整卡牌的价值：</em>查看卡牌左侧的“印刷版本”。炸弹上每有一个包含印刷版本的字母的指示器，如果是亮灯则把卡牌价值<b>加上1</b>，如果是灭灯则<b>减去1</b>。使用下方的规则继续调整卡牌的价值：
+                    </p>
+                    <p>
+                        如果炸弹<b>没有电池</b>，<b>保留卡牌的当前价值不变</b>。<br>
+                        否则，如果印刷版本的数字<b>大于</b>炸弹上的电池数量，把卡牌的当前价值<b>加上1</b>。<br>
+                        否则，如果印刷版本的数字<b>小于</b>炸弹上的电池数量，把卡牌的当前价值<b>减去1</b>。<br>
+                        否则，把卡牌的当前价值<b>加上2</b>。<br>
+                    </p>
+                    <p>
+                        如果印刷版本的数字等于其字母的字母表序数值，该卡牌是赝品且拥有0价值。本条优先于<b>一切</b>。<br>
+                    </p>
+                </div>
+            </div>
+            <div class="page-footer relative-footer">第 1 页 / 共 3 页</div>
+        </div>
+    </div>
+    <div class="page page-bg-03">
+        <div class="page-header">
+            <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+            <span class="page-header-section-title">小精灵换卡</span>
+        </div>
+        <div class="page-content">
+            <br>
+            <div class='box'>
+                <p>
+                    <b>3.</b> <em>计算倍乘数：</em>基于卡牌左下角的符号和“珍贵度符号参考表”，使用下方的规则：
+                </p>
+                <p>
+                    如果卡牌为<b>常见</b>，倍乘数为<b>1</b>。<br>
+                    否则，如卡牌为<b>不常见</b>，倍乘数为<b>1.25</b>。<br>
+                    否则，如卡牌为<b>稀有</b>，倍乘数为<b>1.5</b>。<br>
+                    否则，如卡牌为<b>极其稀有</b>，倍乘数为<b>1.75</b>。<br>
+                    如果卡牌为一张<b>闪卡</b>（上面有闪亮斑点），把倍乘数<b>加上0.5</b>。<br>
+                    每有一个卡牌的<b>折角</b>，把倍乘数<b>减去0.25</b>。
+                </p>
+            </div>
+            <div class='explanation'>
+                <p>把卡牌的调整后价值乘以计算得到的倍乘数。
+                <p>如果卡牌的价值为负数，它拥有<b>0价值</b>。
+                <p>如果你的所有卡牌比报价提供的卡牌拥有更高的价值，按下<b>“保留”</b>。
+                <p>否则，通过按下<b>“交易”</b>来交易你的<em><b>价值最低的卡牌</b></em>。
+                <p>如果有多张卡牌拥有最低价值，你可以交易<b>其中任意一张</b>。
+            </div>
+            <h3>珍贵度符号参考表</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <b>常见</b>
+                        </td>
+                        <td>
+                            <b>不常见</b>
+                        </td>
+                        <td>
+                            <b>稀有</b>
+                        </td>
+                        <td>
+                            <b>极其稀有</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="middle">
+                            ●
+                        </td>
+                        <td align="middle">
+                            ♦
+                        </td>
+                        <td align="middle">
+                            ★
+                        </td>
+                        <td align="middle">
+                            ☆
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="page-footer relative-footer">第 2 页 / 共 3 页</div>
+    </div>
+    </div>
+    <div class="page page-bg-03">
+        <div class="page-header">
+            <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+            <span class="page-header-section-title">小精灵换卡</span>
+        </div>
+        <div class="page-content">
+            <h3>初始价值参考表</h3>
+            <h4>基础套卡</h4>
+            <table class='initial-value'>
+                <tbody>
+                    <tr>
+                        <th>Monsplode&trade;</td>
+                        <th>XX</td>
+                        <th>X#</td>
+                        <th>#X</td>
+                        <th>##</td>
+                        <td>&nbsp;</td>
+                        <th>Monsplode&trade;</td>
+                        <th>XX</td>
+                        <th>X#</td>
+                        <th>#X</td>
+                        <th>##</td>
+                    </tr>
+                    <tr><td>Aluga    <td>2<td>3<td>4<td>2<td>&nbsp;<td>Magmy    <td>4<td>3<td>2<td>3
+                    <tr><td>Asteran  <td>2<td>5<td>2<td>2<td>&nbsp;<td>Melbor   <td>2<td>4<td>4<td>3
+                    <tr><td>Bob      <td>2<td>4<td>2<td>5<td>&nbsp;<td>Mountoise<td>2<td>4<td>3<td>3
+                    <tr><td>Buhar    <td>5<td>2<td>2<td>3<td>&nbsp;<td>Myrchat  <td>2<td>2<td>4<td>3
+                    <tr><td>Caadarim <td>2<td>4<td>3<td>2<td>&nbsp;<td>Nibs     <td>3<td>3<td>2<td>4
+                    <tr><td>Clondar  <td>3<td>2<td>4<td>5<td>&nbsp;<td>Percy    <td>3<td>3<td>2<td>4
+                    <tr><td>Cutie Pie<td>2<td>4<td>2<td>4<td>&nbsp;<td>Pouse    <td>2<td>3<td>3<td>3
+                    <tr><td>Docsplode<td>2<td>4<td>2<td>5<td>&nbsp;<td>Ukkens   <td>4<td>2<td>3<td>3
+                    <tr><td>Flaurim  <td>2<td>3<td>4<td>2<td>&nbsp;<td>Vellarim <td>4<td>2<td>3<td>2
+                    <tr><td>Gloorim  <td>5<td>2<td>2<td>2<td>&nbsp;<td>Violan   <td>3<td>4<td>2<td>2
+                    <tr><td>Lanaluff <td>2<td>3<td>4<td>3<td>&nbsp;<td>Zapra    <td>3<td>4<td>2<td>3
+                    <tr><td>Lugirit  <td>3<td>3<td>3<td>2<td>&nbsp;<td>Zenlad   <td>4<td>2<td>2<td>4
+                </tbody>
+            </table>
+            <h4>英雄扩展</h4>
+            <table class='initial-value'>
+                <tbody>
+                    <tr>
+                        <th>Monsplode&trade;</td>
+                        <th>XX</td>
+                        <th>X#</td>
+                        <th>#X</td>
+                        <th>##</td>
+                        <td>&nbsp;</td>
+                        <th>Monsplode&trade;</td>
+                        <th>XX</td>
+                        <th>X#</td>
+                        <th>#X</td>
+                        <th>##</td>
+                    </tr>
+                    <tr><td>Aluga,<br>The Fighter   <td>6<td>5<td>4<td>3<td>&nbsp;<td>Buhar,<br>The Protector<td>6<td>3<td>5<td>4
+                    <tr><td>Bob,<br>The Ancestor    <td>5<td>4<td>6<td>4<td>&nbsp;<td>Melbor,<br>The Web Bug <td>4<td>4<td>4<td>6
+                </tbody>
+            </table>
+        </div>
+        <div class="page-footer relative-footer">第 3 页 / 共 3 页</div>
+    </div>
+</body>
+</html>

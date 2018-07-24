@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>点阵图——“保持通话，不会爆炸”一般模块</title>
+	<meta name="viewport" content="initial-scale=1">
+	<link rel='stylesheet' type='text/css' href='css/font.css'>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src='js/highlighter.js'></script>
+</head>
+<body>
+<div class="section">
+    <div class="page page-bg-04">
+        <div class="page-header">
+			<span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+			<span class="page-header-section-title">点阵图</span>
+		</div>
+		<div class="page-content">
+            <img src="img/Component/Bitmaps.svg" class="diagram">
+            <h2>关于点阵图(Bitmaps)</h2>
+            <p class="flavour-text">1千8百多亿亿种组合，只有其中一部分真正重要。
+
+            <ul>
+                <li>该模块会显示一个被分为四个“象限”的64像素点阵图。每个像素或亮（称作“白色”，尽管可能有色）或暗（“黑色”）。
+                <li>底下有4个按钮，标有1、2、3和4。
+                <li>在下表中，从标号等于序列号末位数字的规则开始。
+                <li>保持查阅规则（必要时首尾相接）直到你遇到一个适用的条件。
+                <li>为该适用规则计算答案。反复加上或减去4直到答案为1到4之间，然后按下相应的按钮以解除模块。
+            </ul>
+
+            <table>
+                <tr><th>#<th class='rule'>规则</tr>
+                <tr><th>0<td class='rule'>如果正好一个象限有5个或更少的白色像素，答案为其他3个象限中白色像素的数量。</tr>
+                <tr><th>1<td class='rule'>如果多半白色的象限正好和亮灯指示器一样多，答案为电池数量。</tr>
+                <tr><th>2<td class='rule'>如果正好一行或正好一列是完全白色或完全黑色，答案为其x/y坐标值（从顶部/左侧为1开始）。</tr>
+                <tr><th>3<td class='rule'>如果多半白色的象限比多半黑色的象限少，答案为多半黑色的象限的数量。</tr>
+                <tr><th>4<td class='rule'>如果整个点阵图有36个或更多的白色像素，答案为白色像素的总数。</tr>
+                <tr><th>5<td class='rule'>如果多半白色的象限比多半黑色的象限多，答案为任意一个象限中黑色像素的最小数量。</tr>
+                <tr><th>6<td class='rule'>如果正好一个象限有5个或更少的黑色像素，答案为其他3个象限中黑色像素的数量。</tr>
+                <tr><th>7<td class='rule'>如果多半黑色的象限正好和灭灯指示器一样多，答案为接口数量。</tr>
+                <tr><th>8<td class='rule'>如果有3x3方阵是完全白色或完全黑色，答案为按阅读顺序的第一个这种方阵的中央x坐标值（从1开始）。</tr>
+                <tr><th>9<td class='rule'>如果多半白色的象限正好和多半黑色的象限一样多，答案为序列号第一个数字。</tr>
+            </table>
+
+		</div>
+        <div class="page-footer relative-footer">第 1 页 / 共 1 页</div>
+	</div>
+</div>
+</body></html>

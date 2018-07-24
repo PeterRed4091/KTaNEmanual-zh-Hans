@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>国际象棋 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; } .crush { margin-right: -.5em; }
+            table.chess h4 { margin: 0; }
+            table.chess p { margin: 0; }
+        </style>
+	</head>
+	<body>
+		<div class="section">
+			<div class="page page-bg-01">
+				<div class="page-header">
+					<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+					<span class="page-header-section-title">国际象棋<br>Chess</span>
+				</div>
+				<div class="page-content">
+					<img class="diagram" src="img/Component/Chess.svg">
+					<h2>关于<span class="force-zh">“</span>国际象棋<span class="force-zh">”</span>模块</h2>
+					<p class="flavour-text">在压力下，国际象棋可能感觉更像一局海战游戏。</p>
+					<p>该模块基于一张 <b>6x6 国际象棋棋盘</b><i>（可在下一页参考<span class="crush">）</span></i>，所有棋子遵循标准 FIDE（世界国际象棋联合会）移动规则。</p>
+					<p>象棋模块包含一个显示屏和两行各6个按钮。</p>
+					<ul>
+						<li>有六个不同的坐标，代表六个国际象棋棋盘上的位置。</li>
+						<li>使用底部一行的数字按键来浏览不同的坐标。按钮下方的绿色 LED 会指示当前选择坐标的位置。</li>
+						<li>使用下方的参考表，每一个位置都能指派一个确定的国际象棋棋子。</li>
+						<li>国际象棋棋子和它们的走法组合将覆盖 36 个可能区域中的 35 个。</li>
+						<li>所有的国际象棋棋子无色，但能互相阻挡行动。</li>
+						<li>找到唯一未被任意国际象棋棋子覆盖的区域并输入其坐标，从而解除该模块。</li>
+						<li>要输入坐标，先按下字母，然后按下数字。LED 会变红以确认正在输入解答。</li>
+					</ul>
+					<p>可参考该表格来确定每个位置的正确棋子。</p>
+					<table class="chess">
+						<tr>
+							<td>
+								<h4>位置 #1：君主国对抗神权国</h4>
+								<p>如果 #5 由皇后占据，该区域由国王占据。</p>
+								<p>否则，该区域由主教占据。</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h4>位置 #2：军队的指挥官</h4>
+								<p>如果序列号末位数字是奇数，该区域由城堡占据。</p>
+								<p>否则，该区域由骑士占据。</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h4>位置 #3：摄政者的问题</h4>
+								<p>如果棋盘上有少于两个城堡，该区域由皇后占据。</p>
+								<p>否则，该区域由国王占据。</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h4>位置 #4：铁塔</h4>
+								<p>该区域总是由城堡占据。</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h4>位置 #5：善恶间的冲突</h4>
+								<p>如果该区域是白色，该区域由皇后占据。</p>
+								<p>否则，该区域由城堡占据。</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h4>位置 #6：权杖、刀剑以及牧杖</h4>
+								<p>如果棋盘上没有其他皇后，该区域由皇后占据。</p>
+								<p>否则，如果棋盘上没有其他骑士，该区域由骑士占据。</p>
+								<p>否则，该区域由主教占据。</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="page-footer relative-footer">第 1 页　共 2 页</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="page page-bg-02">
+				<div class="page-header">
+					<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+					<span class="page-header-section-title">国际象棋<br>Chess</span>
+				</div>
+				<div class="page-content">
+					<h3>国际象棋棋盘参考</h3>
+					<p>可参考下图，了解国际象棋棋盘布局。</p>
+					<img src="img/Chess/ChessBoard.png">
+				</div>
+				<div class="page-footer relative-footer">第 2 页　共 2 页</div>
+			</div>
+		</div>
+	</body>
+</html>

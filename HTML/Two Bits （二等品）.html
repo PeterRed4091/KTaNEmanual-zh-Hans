@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>二等品 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; } .crush { margin-right: -.5em; }
+			p { margin: .4em 0; }
+			.note { font-size: smaller; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-01">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">二等品<br>Two Bits</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Two Bits.svg">
+						<h2>关于<span class="force-zh">“</span>二等品<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">这个查询设备编写得相当糟糕。一方面它反应缓慢得令人恼怒，另一方面它对不合时宜的输入毫不留情。耐心是必须的。</p>
+						<p>在提交正确答案前，查询一系列的两字母代码来追查该答案。这个简陋的查询机器无法容忍不完整的和过多的输入，同时也不在繁忙运作时接受任何输入。</p>
+						<h3>第 1 步：确定初始代码</h3>
+						<p>如果序列号包含字母，把最左侧字母在字母表中的序数位置用作你的基础数值（如 A=1，B=2<span class="crush">）</span>。对没有字母的情况，使用 0。</p>
+						<p>加上序列号最后一位数字与出现电池数量的乘积。</p>
+						<p>如果有出现双声道 RCA 接口，将目前数值翻倍。*</p>
+						<p>这个数值即是当前代码<span class="crush">。</span>［数值有效数位多于两位的，取最后两位<span class="crush">。</span>］</p>
+						<p class="note">* 注：如果同时有出现 RJ-45 接口，跳过此步。</p>
+						<h3>第 2 步：确定字符对，执行查询</h3>
+						<p>利用当前代码，查找字符对。将那对字符输入设备，然后按下<span class="force-zh">“</span>Query（查询<span class="crush">）</span><span class="force-zh crush">”</span>。</p>
+						<table>
+							<tr><th>  </th><th>-0</th><th>-1</th><th>-2</th><th>-3</th><th>-4</th><th>-5</th><th>-6</th><th>-7</th><th>-8</th><th>-9</th></tr>
+							<tr><th>0-</th><td>kb</td><td>dk</td><td>gv</td><td>tk</td><td>pv</td><td>kp</td><td>bv</td><td>vt</td><td>pz</td><td>dt</td></tr>
+							<tr><th>1-</th><td>ee</td><td>zk</td><td>ke</td><td>ck</td><td>zp</td><td>pp</td><td>tp</td><td>tg</td><td>pd</td><td>pt</td></tr>
+							<tr><th>2-</th><td>tz</td><td>eb</td><td>ec</td><td>cc</td><td>cz</td><td>zv</td><td>cv</td><td>gc</td><td>bt</td><td>gt</td></tr>
+							<tr><th>3-</th><td>bz</td><td>pk</td><td>kz</td><td>kg</td><td>vd</td><td>ce</td><td>vb</td><td>kd</td><td>gg</td><td>dg</td></tr>
+							<tr><th>4-</th><td>pb</td><td>vv</td><td>ge</td><td>kv</td><td>dz</td><td>pe</td><td>db</td><td>cd</td><td>td</td><td>cb</td></tr>
+							<tr><th>5-</th><td>gb</td><td>tv</td><td>kk</td><td>bg</td><td>bp</td><td>vp</td><td>ep</td><td>tt</td><td>ed</td><td>zg</td></tr>
+							<tr><th>6-</th><td>de</td><td>dd</td><td>ev</td><td>te</td><td>zd</td><td>bb</td><td>pc</td><td>bd</td><td>kc</td><td>zb</td></tr>
+							<tr><th>7-</th><td>eg</td><td>bc</td><td>tc</td><td>ze</td><td>zc</td><td>gp</td><td>et</td><td>vc</td><td>tb</td><td>vz</td></tr>
+							<tr><th>8-</th><td>ez</td><td>ek</td><td>dv</td><td>cg</td><td>ve</td><td>dp</td><td>bk</td><td>pg</td><td>gk</td><td>gz</td></tr>
+							<tr><th>9-</th><td>kt</td><td>ct</td><td>zz</td><td>vg</td><td>gd</td><td>cp</td><td>be</td><td>zt</td><td>vk</td><td>dc</td></tr>
+						</table>
+						<h3>第 3 步：重复后提交</h3>
+						<p>从第 2 步中查询得到的设备回复代码即是新的当前代码。追加执行第 2 步 2 次，每次都利用新的代码。</p>
+						<p>从最后一次查询得到回复代码后，查找相应的字符对，将其输入设备，然后按下<span class="force-zh">“</span>Submit（提交<span class="crush">）</span><span class="force-zh crush">”</span>。</p>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 1 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

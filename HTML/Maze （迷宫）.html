@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>迷宫 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; }
+			.maze { display: inline-block; width: 12em; height: 12em; position: relative; }
+			.maze.maze-0 { background-image: url(img/Mazes/maze0.svg); }
+			.maze.maze-1 { background-image: url(img/Mazes/maze1.svg); }
+			.maze.maze-2 { background-image: url(img/Mazes/maze2.svg); }
+			.maze.maze-3 { background-image: url(img/Mazes/maze3.svg); }
+			.maze.maze-4 { background-image: url(img/Mazes/maze4.svg); }
+			.maze.maze-5 { background-image: url(img/Mazes/maze5.svg); }
+			.maze.maze-6 { background-image: url(img/Mazes/maze6.svg); }
+			.maze.maze-7 { background-image: url(img/Mazes/maze7.svg); }
+			.maze.maze-8 { background-image: url(img/Mazes/maze8.svg); }
+			.square { width: 2em; height: 2em; position: absolute; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-01">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">迷宫<br>Maze</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Mazes.svg">
+						<h2>关于<span class="force-zh">“</span>迷宫<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">这看似是某种迷宫，图案大概是从餐厅的餐具垫上偷来的。</p>
+						<ul>
+							<li>找到带有相匹配的圆形标记的迷宫。</li>
+							<li>拆弹人员必须利用方向按键，将白色亮光导航至红色三角形处。</li>
+							<li><strong>警告</strong>：不要穿越迷宫中显示的线条。这些线条在炸弹上是隐形的。</li>
+						</ul>
+						<div style="clear: both"></div>
+						<div class="maze maze-0">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+						<div class="maze maze-1">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+						<div class="maze maze-2">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+						<div class="maze maze-3">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+						<div class="maze maze-4">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+						<div class="maze maze-5">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+						<div class="maze maze-6">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+						<div class="maze maze-7">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+                        <div class="maze maze-8">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 1 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

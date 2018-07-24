@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <title>偏心老虎机——“保持通话，不会爆炸”一般模块</title>
+        <meta content="initial-scale=1" name="viewport">
+        <link rel='stylesheet' type='text/css' href='css/font.css'>
+        <link href="css/normalize.css" rel="stylesheet" type="text/css">
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <script src='js/highlighter.js'></script>
+        <style>
+            .prime {
+                background: khaki;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="ManualContent">
+            <div class="section">
+                <div class="page page-bg-01">
+                    <div class="page-header">
+                        <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                        <span class="page-header-section-title">偏心老虎机</span>
+                    </div>
+                    <div class="page-content">
+                        <img src="img/Component/Skewed Slots.svg" class="diagram">
+                        <h2>关于偏心老虎机(Skewed Slots)</h2>
+                        <p class="flavour-text">这一定以某种方式违法了……</p>
+                        <i>关于识别指示器的参考资料，参见附录 A。</i>
+                        <br>
+                        <i>关于识别电池的参考资料，参见附录 B。</i>
+                        <br>
+                        <i>关于识别接口的参考资料，参见附录 C。</i>
+                        <br>
+                        <i>关于数学术语的参考资料，参见附录 数学。</i>
+                        <ul>
+                            <li>偏心老虎机模块上包含3个数字显示屏和一个提交(Submit)按钮.</li>
+                            <li>基于老虎机上当前的显示，按照下列各部分规则提交正确的数字。每部分规则都标注了它适用于哪一栏。</li>
+                            <li>当应用完所有规则后，如果数字小于0，加上10。否则如果数字大于9，减去10。重复这一动作，直至数字处于0-9之间。</li>
+                            <li>如果你提交了不正确的数字，老虎机将会自动重转，并分配一次失误(Strike)。</li>
+                        </ul>
+                        <strong><em>注：</em></strong>原始数字即是进行任何更改前的数字。
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <strong><em>所有栏</em></strong>
+                                        <br>
+                                        把任意2替换为5，并把任意7替换为0。
+                                        <br>
+                                        每有一个亮灯指示器，在该数字上加1；每有一个灭灯指示器，减去1。
+                                        <br>
+                                        如果该数字是3的倍数，把它加上4。
+                                        <br>
+                                        否则，如果该数字大于7，把它乘以2。
+                                        <br>
+                                        否则，如果该数字小于3且是偶数，把它除以2。
+                                        <br>
+                                        否则，如果炸弹上有RCA或PS/2接口，跳过本部分的其余规则。
+                                        <br>
+                                        否则，取原始数字并加上炸弹上的电池数量。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong><em>第1栏</em></strong>
+                                        <br>
+                                        如果该数字是偶数且大于5，把它除以二。
+                                        <br>
+                                        否则，如果该数字为质数，加上序列号中最右侧的数字。
+                                        <br>
+                                        否则，如果炸弹上有并行接口，把它乘以-1。
+                                        <br>
+                                        否则，如果右侧的原始数字是奇数，保留这个数字不做改动。
+                                        <br>
+                                        否则，把它减去2。
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="page-footer relative-footer">第 1 页 / 共 3 页</div>
+                </div>
+                <div class="page page-bg-02">
+                    <div class="page-header">
+                        <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                        <span class="page-header-section-title">偏心老虎机</span>
+                    </div>
+                    <div class="page-content">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <strong><em>第2栏</em></strong>
+                                        <br>
+                                        如果有灭灯BOB指示器，保留这个数字不做改动。
+                                        <br>
+                                        否则，如果该数字为0，加上第1个显示屏的原始数字。
+                                        <br>
+                                        否则，如果该数字在斐波那契数列中，基于该数字第一次出现的位置，加上斐波那契数列中的下一个数字。
+                                        <br>
+                                        否则，如果该数字大于或等于7，加上4。
+                                        <br>
+                                        否则，把它乘以3。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong><em>第3栏</em></strong>
+                                        <br>
+                                        如果炸弹上有串行接口，加上序列号中的最大数字。
+                                        <br>
+                                        否则，如果原始数字和任意其他的原始数字相同，保留该数字不做改动。
+                                        <br>
+                                        否则，如果该数字大于或等于5，把原始数字的二进制形式的所有数位相加，作为新的数字。
+                                        <br>
+                                        否则，把该数字加上1。
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="page-footer relative-footer">第 2 页 / 共 3 页</div>
+                </div>
+                <div class="section">
+                    <div class="page appendix-indicators page-bg-03">
+                        <div class="page-header">
+                            <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                            <span class="page-header-section-title">附录 数学</span>
+                        </div>
+                        <div class="page-content">
+                            <h2>附录 数学：数学术语的参考资料</h2>
+                            <h3>斐波那契数列</h3>
+                            1、1、2、3、5、8、13、21、34、55、89、144、……
+                            <h3>质数</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td class="prime">2</td>
+                                        <td class="prime">3</td>
+                                        <td>4</td>
+                                        <td class="prime">5</td>
+                                        <td>6</td>
+                                        <td class="prime">7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="prime">11</td>
+                                        <td>12</td>
+                                        <td class="prime">13</td>
+                                        <td>14</td>
+                                        <td>15</td>
+                                        <td>16</td>
+                                        <td class="prime">17</td>
+                                        <td>18</td>
+                                        <td class="prime">19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td>21</td>
+                                        <td>22</td>
+                                        <td class="prime">23</td>
+                                        <td>24</td>
+                                        <td>25</td>
+                                        <td>26</td>
+                                        <td>27</td>
+                                        <td>28</td>
+                                        <td class="prime">29</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h3>二进制转换</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>十进制</td>
+                                        <td>二进制形式</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0001</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>0010</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>0011</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>0100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>0101</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>0110</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>0111</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>1000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>1001</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>1010</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="page-footer relative-footer">第 3 页 / 共 3 页</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

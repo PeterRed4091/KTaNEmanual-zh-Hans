@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>立柱与视角——“保持通话，不会爆炸”一般模块</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script src='js/highlighter.js'></script>
+		<link rel='stylesheet' type='text/css' href='css/font.css'>
+        <style>
+            em { font-style: normal; font-weight: bold; text-decoration: none; }
+            td.sep { padding: 0 1mm; }
+            col.number { width: 15mm; }
+            col.color, col.sequence { width: 30mm; }
+            td.number, td.subhead, td.sequence { text-align: center; }
+            h3 { font-weight: normal; font-size: 1.25em; }
+            h4 { text-decoration: none; margin-top: 3em; }
+            p { margin: .1em 0; }
+            table { border: none; margin-top: .2em; }
+        </style>
+	</head>
+	<body>
+		<div class="section">
+			<div class="page page-bg-01">
+				<div class="page-header">
+					<span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+					<span class="page-header-section-title">立柱与视角</span>
+				</div>
+				<div class="page-content">
+					<img src="img/Component/Perspective Pegs.svg" class="diagram">
+					<h2>关于立柱与视角(Perspective Pegs)</h2>
+					<p class="flavour-text">换一个视角，一切都会显得不同。
+
+                    <h3>第1步：线索色彩</h3>
+
+                    <ul>
+                        <li>计算序列号中前两个字母的字母表序位之差。（A=1，B=2，等等。）
+                        <li>把字母表序位之差视为正值。
+                        <li>如果序列号中有四个或更多的字母，加上第三个与第四个字母的字母表序位之差。
+                        <li>在<em>线索色彩</em>表格中查找这个数字，获得一种色彩。
+                    </ul>
+
+                    <h3>第2步：序列变换</h3>
+
+                    <ul>
+                        <li>从带有三个或更多面该色彩的立柱开始顺时针行进，读出每个立柱最外侧面的色彩，组成长度为五的色彩序列。这即是当前序列。
+                        <li>决定应使用<em>序列变换</em>表格的哪一列。
+                        <li>对于相应列中的每一项：
+                            <ul>
+                                <li>如果原型序列出现在当前序列中，将第一次出现的该序列更换为替代序列，组成新的当前序列。
+                                <li>否则，如果逆向的原型序列出现在当前序列中，将最后一次出现的该序列更换为逆向的替代序列。
+                            </ul>
+                        <li>最后，取当前序列的前三种色彩，获得线索序列。
+                    </ul>
+
+                    <h3>第3步：线索序列</h3>
+
+                    <ul>
+                        <li>调整炸弹的角度，使一个立柱接近你并处于你视角的中心，然后观察排成一条线面向你的五种色彩。这即是该视角的候选序列。
+                        <li>在五个候选序列之一中，线索序列正好出现一次，可能正向或逆向。
+                        <li>确定包含线索序列的候选序列，然后依次按下代表线索序列的三个立柱。
+                        <li>如果线索序列的逆向与其正向相同，你可任意按照正向或逆向顺序按下这三个立柱。
+                    </ul>
+				</div>
+				<div class="page-footer relative-footer">第 1 页 / 共 2 页</div>
+			</div>
+
+			<div class="page page-bg-05">
+				<div class="page-header">
+					<span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+					<span class="page-header-section-title">立柱与视角</span>
+				</div>
+				<div class="page-content">
+
+                    <h4>表1.1 线索色彩</h4>
+
+                    <p>把字母表序位之差视为正值。
+                    <p>取该数的最低有效数位，并在表中查找：
+
+                    <table>
+                        <col class='number'><col class='number'><col class='color'><col class='sep'><col class='number'><col class='number'><col class='color'>
+                        <tr><td class='number'>0<td class='number'>3<td>红<td class='sep'>    <td class='number'>5<td class='number'>8<td>蓝</tr>
+                        <tr><td class='number'>4<td class='number'>9<td>黄<td class='sep'>    <td class='number'>2<td class='number'>6<td>紫</tr>
+                        <tr><td class='number'>1<td class='number'>7<td>绿<td class='sep'>    </tr>
+                    </table>
+
+                    <h4>表1.2 序列变换</h4>
+
+                    <p>R——红，Y——黄，G——绿，B——蓝，P——紫</p>
+                    <p>基于电池数量决定应使用哪一列。
+                    <p>从上到下执行变换：
+
+                    <table>
+                        <col class='sequence'><col class='sequence'><col class='sep'>
+                        <col class='sequence'><col class='sequence'><col class='sep'>
+                        <col class='sequence'><col class='sequence'>
+                        <tr>
+                            <th colspan=2>1–2节电池
+                            <td class='sep'>
+                            <th colspan=2>3–4节电池
+                            <td class='sep'>
+                            <th colspan=2>0节、5+节电池
+                        </tr>
+                        <tr>
+                            <td class='subhead'>原型
+                            <td class='subhead'>替代
+                            <td class='sep'>
+                            <td class='subhead'>原型
+                            <td class='subhead'>替代
+                            <td class='sep'>
+                            <td class='subhead'>原型
+                            <td class='subhead'>替代
+                        </tr>
+                        <tr>
+                            <td class='sequence'>R&nbsp;Y&nbsp;Y
+                            <td class='sequence'>B&nbsp;P&nbsp;Y
+                            <td class='sep'>
+                            <td class='sequence'>B&nbsp;P&nbsp;B
+                            <td class='sequence'>Y&nbsp;B&nbsp;G
+                            <td class='sep'>
+                            <td class='sequence'>P&nbsp;Y&nbsp;B
+                            <td class='sequence'>R&nbsp;G&nbsp;B
+                        </tr>
+                        <tr>
+                            <td class='sequence'>Y&nbsp;P&nbsp;G
+                            <td class='sequence'>P&nbsp;B&nbsp;R
+                            <td class='sep'>
+                            <td class='sequence'>Y&nbsp;Y&nbsp;P
+                            <td class='sequence'>B&nbsp;R&nbsp;P
+                            <td class='sep'>
+                            <td class='sequence'>Y&nbsp;R&nbsp;P
+                            <td class='sequence'>R&nbsp;Y&nbsp;R
+                        </tr>
+                        <tr>
+                            <td class='sequence'>R&nbsp;G&nbsp;P
+                            <td class='sequence'>B&nbsp;G&nbsp;R
+                            <td class='sep'>
+                            <td class='sequence'>G&nbsp;R&nbsp;B
+                            <td class='sequence'>Y&nbsp;P&nbsp;B
+                            <td class='sep'>
+                            <td class='sequence'>G&nbsp;Y&nbsp;R
+                            <td class='sequence'>G&nbsp;B&nbsp;P
+                        </tr>
+                        <tr>
+                            <td class='sequence'>Y&nbsp;B&nbsp;G
+                            <td class='sequence'>B&nbsp;Y&nbsp;Y
+                            <td class='sep'>
+                            <td class='sequence'>R&nbsp;P&nbsp;Y
+                            <td class='sequence'>G&nbsp;B&nbsp;G
+                            <td class='sep'>
+                            <td class='sequence'>B&nbsp;Y&nbsp;G
+                            <td class='sequence'>P&nbsp;G&nbsp;R
+                        </tr>
+                        <tr>
+                            <td class='sequence'>P&nbsp;P&nbsp;R
+                            <td class='sequence'>R&nbsp;Y&nbsp;P
+                            <td class='sep'>
+                            <td class='sequence'>Y&nbsp;G&nbsp;G
+                            <td class='sequence'>P&nbsp;B&nbsp;R
+                            <td class='sep'>
+                            <td class='sequence'>R&nbsp;P&nbsp;Y
+                            <td class='sequence'>G&nbsp;Y&nbsp;B
+                        </tr>
+                        <tr>
+                            <td class='sequence'>B&nbsp;G&nbsp;B
+                            <td class='sequence'>P&nbsp;Y&nbsp;G
+                            <td class='sep'>
+                            <td class='sequence'>G&nbsp;P&nbsp;B
+                            <td class='sequence'>Y&nbsp;G&nbsp;Y
+                            <td class='sep'>
+                            <td class='sequence'>P&nbsp;P&nbsp;G
+                            <td class='sequence'>P&nbsp;B&nbsp;R
+                        </tr>
+                        <tr>
+                            <td class='sequence'>Y&nbsp;G&nbsp;B
+                            <td class='sequence'>G&nbsp;P&nbsp;Y
+                            <td class='sep'>
+                            <td class='sequence'>P&nbsp;R&nbsp;P
+                            <td class='sequence'>B&nbsp;B&nbsp;G
+                            <td class='sep'>
+                            <td class='sequence'>R&nbsp;Y&nbsp;Y
+                            <td class='sequence'>B&nbsp;B&nbsp;R
+                        </tr>
+                        <tr>
+                            <td class='sequence'>P&nbsp;G&nbsp;G
+                            <td class='sequence'>G&nbsp;Y&nbsp;R
+                            <td class='sep'>
+                            <td class='sequence'>R&nbsp;Y&nbsp;R
+                            <td class='sequence'>R&nbsp;P&nbsp;B
+                            <td class='sep'>
+                            <td class='sequence'>Y&nbsp;G&nbsp;P
+                            <td class='sequence'>P&nbsp;Y&nbsp;Y
+                        </tr>
+                    </table>
+
+				</div>
+				<div class="page-footer relative-footer">第 2 页 / 共 2 页</div>
+			</div>
+		</div>
+	</body>
+</html>

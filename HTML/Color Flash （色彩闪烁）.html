@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>色彩闪烁 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; } .crush { margin-right: -.5em; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-01">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">色彩闪烁<br />Color Flash</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Color Flash zh-Hans substitute PeterRed4091.svg">
+						<h2>关于<span class="force-zh">“</span>色彩闪烁<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">识别色彩很容易：红色、蓝色、绿色，等等。不过把一个关于色彩的单词用另一种色彩来显示，识别起来就有些难了<span class="force-zh">……</span></p>
+						<ul>
+							<li>色彩闪烁模块会重复闪烁一组序列。序列由 8 个代表不同色彩的单词组成，而单词以不同的色彩显示。</li>
+							<li>可能出现的色彩包括红色（Red<span class="crush">）</span>、黄色（Yellow<span class="crush">）</span>、绿色（Green<span class="crush">）</span>、蓝色（Blue<span class="crush">）</span>、洋红（Magenta）和白色（White<span class="crush">）</span>。</li>
+							<li>模块上还有分别写着 Yes（是）与 No（否）的按钮。</li>
+							<li>为了解除该模块，你只需要按下 Yes 与 No 按钮中的<em>一个</em>，但你必须依据下列规则在正确的时间按下按钮。</li>
+							<li>序列中最后一个单词的色彩决定了你应遵循下列的哪一套规则。</li>
+							<li>对于该模块所适用的那一块规则，由最上方到最下方依次遵循。</li>
+						</ul>
+						<table>
+							<tr>
+								<td><strong><em>序列中最后一个单词的色彩为红色：</em></strong>
+								<br>如果序列中绿色被用作单词至少三次，当序列中绿色第三次被用作单词或单词的色彩时按下 Yes。
+								<br>否则，如果蓝色只被用作单词的色彩一次，当单词洋红显示时按下 No。
+								<br>否则，当序列中白色最后一次被用作单词或单词的色彩时按下 Yes。</td>
+							</tr>
+							<tr>
+								<td><strong><em>序列中最后一个单词的色彩为黄色：</em></strong>
+								<br>如果单词蓝色以绿色色彩显示，当绿色第一次被用作单词的色彩时按下 Yes。
+								<br>否则，如果单词白色以白色或红色色彩显示，当序列中单词的色彩与单词本身第二次不符时按下 Yes。
+								<br>否则，数出序列中洋红被用作单词或单词的色彩的次数（单词洋红以洋红色彩显示只计一次<span class="crush">）</span>，然后当合计次数所指的那一项出现时按下 No（例如合计次数为 4 意味着序列中第四项<span class="crush">）</span>。</td>
+							</tr>
+							<tr>
+								<td><strong><em>序列中最后一个单词的色彩为绿色：</em></strong>
+								<br>如果一个单词连续以不同色彩显示，当序列中第五项出现时按下 No。
+								<br>否则，如果序列中洋红被用作单词至少三次，当序列中黄色第一次被用作单词或单词的色彩时按下 No。
+								<br>否则，当单词的色彩与单词本身相符的任意一项出现时按下 Yes。</td>
+							</tr>
+							<tr>
+								<td><strong><em>序列中最后一个单词的色彩为蓝色：</em></strong>
+								<br>如果序列中单词的色彩与单词本身不符共三次或更多，当序列中单词的色彩与单词本身第一次不符时按下 Yes。
+								<br>否则，如果单词红色以黄色色彩显示，或单词黄色以白色色彩显示，当单词白色以红色色彩显示时按下 No。
+								<br>否则，当序列中绿色最后一次被用作单词或单词的色彩时按下 Yes。</td>
+							</tr>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 2 页</div>
+				</div>
+				<div class="page page-bg-02">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">色彩闪烁<br />Color Flash</span>
+					</div>
+					<div class="page-content">
+						<p>续上表<span class="force-zh">……</span></p>
+						<table>
+							<tr>
+								<td><strong><em>序列中最后一个单词的色彩为洋红：</em></strong>
+								<br>如果一种色彩连续以不同单词显示，当序列中出现第三项时按下 Yes。
+								<br>否则，如果单词黄色显示的次数大于单词的色彩为蓝色的次数，当序列中单词黄色最后一次显示时按下 No。
+								<br>否则，当序列中单词的色彩与第七项的单词第一次相符时按下 No。</td>
+							</tr>
+							<tr>
+								<td><strong><em>序列中最后一个单词的色彩为白色：</em></strong>
+								<br>如果第三项单词的色彩与第四或第五项的单词相符，当序列中蓝色第一次被用作单词或单词的色彩时按下 No。
+								<br>否则，如果单词黄色以红色色彩显示，当蓝色最后一次被用作单词的色彩时按下 Yes。
+								<br>否则，按下 No。</td>
+							</tr>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 2 页　共 2 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

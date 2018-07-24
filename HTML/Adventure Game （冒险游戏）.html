@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>冒险游戏 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			li { margin-bottom: .5em; }
+			ul { margin-bottom: 3em; }
+			table { margin-bottom: 1em; }
+			table.enemies { float: left; width: 47%; margin-right: 2em; }
+			table.weapons { float: left; width: 45%; }
+			td, th { padding: .18em .6em 0; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-03">
+					<div class="page-footer absolute-footer">第 2 页　共 2 页</div>
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">冒险游戏<br>Adventure Game</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Adventure Game.svg">
+						<h2>关于<span class="force-zh">“</span>冒险游戏<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">这看上去像是某个古老的文字冒险游戏的奇怪界面。这里满是你已有所了解并喜爱的库存管理谜题，但毫无剧情可寻。</p>
+						<ul>
+							<li>模块的三个屏幕分别显示你所面对的敌人，关于你的角色与世界的一系列数据，以及你的库存拥有的一系列物品。</li>
+							<li>你的库存含有三种武器，以及其他五种道具。</li>
+							<li>你必须决定使用哪些道具以准备战斗，然后使用哪种武器。</li>
+							<li>使用左右箭头来翻阅数据与库存。</li>
+							<li>要使用某道具或武器，请在它于库存中显示时按下<span class="force-zh">“</span>USE（使用<span class="crush">）</span><span class="crush force-zh">”</span>。</li>
+							<li>使用下方的道具表来决定是否使用各项道具。</li>
+							<li>道具能按任意顺序使用，但在使用武器与敌人战斗前必须用完所有适用的道具。</li>
+							<li>使用武器表和敌人数据表来决定使用哪种武器与敌人战斗。</li>
+							<li>对于每种武器，将玩家的相关数据（力量、敏捷或智力<span class="crush">）</span>，加上可能的加成，与敌人的同一数据相比较。</li>
+							<li>为了最有效地击败敌人，请使用具有最大数据优势（或最小劣势）的武器。</li>
+							<li>如果有两种武器拥有相同的数据优势，可以使用其中任意一种。</li>
+						</ul>
+						<table>
+							<tr>
+								<th>数据</th>
+								<th>描述</th>
+							</tr>
+							<tr>
+								<td>5 STR</td>
+								<td>玩家的力量（strength<span class="crush">）</span>，在战斗中使用</td>
+							</tr>
+							<tr>
+								<td>5 DEX</td>
+								<td>玩家的敏捷（dexterity<span class="crush">）</span>，在战斗中使用</td>
+							</tr>
+							<tr>
+								<td>5 INT</td>
+								<td>玩家的智力（intelligence<span class="crush">）</span>，在战斗中使用</td>
+							</tr>
+							<tr>
+								<td>5’5”</td>
+								<td>玩家身高，单位为英尺和英寸</td>
+							</tr>
+							<tr>
+								<td>15°C</td>
+								<td>温度，单位为摄氏度</td>
+							</tr>
+							<tr>
+								<td>9.8m/s²</td>
+								<td>重力，单位为米每平方秒</td>
+							</tr>
+							<tr>
+								<td>101kPa</td>
+								<td>大气压强，单位为千帕斯卡</td>
+							</tr>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 2 页</div>
+					
+				</div>
+				<div class="page page-bg-01">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">冒险游戏<br>Adventure Game</span>
+					</div>
+					<div class="page-content">
+						<table>
+							<tr>
+								<th width="27%">道具</th>
+								<th>使用条件</th>
+							</tr>
+							<tr>
+								<td>气球 Balloon</td>
+								<td>重力小于 9.3m/s² 或压强大于 110kPa，且不与雄鹰战斗。</td>
+							</tr>
+							<tr>
+								<td>电池 Battery</td>
+								<td>炸弹上有至多 1 节电池，且与魔像或巫师以外的敌人战斗。</td>
+							</tr>
+							<tr>
+								<td>风箱 Bellows</td>
+								<td>如果与飞龙或雄鹰战斗，当压强大于 105kPa 时使用。如果与其它敌人战斗，当压强小于 95kPa 时使用。</td>
+							</tr>
+							<tr>
+								<td>作弊码 Cheat&nbsp;code</td>
+								<td>作弊者永远不能成功！不要使用它们。</td>
+							</tr>
+							<tr>
+								<td>水晶球 Crystal&nbsp;ball</td>
+								<td>智力比序列号最后一位数字大，且不与巫师战斗。</td>
+							</tr>
+							<tr>
+								<td>羽毛 Feather</td>
+								<td>敏捷大于力量或智力。</td>
+							</tr>
+							<tr>
+								<td>硬驱 Hard&nbsp;drive</td>
+								<td>炸弹上有两个或更多个同种接口。</td>
+							</tr>
+							<tr>
+								<td>台灯 Lamp</td>
+								<td>温度小于 12°C，且不与蜥蜴战斗。</td>
+							</tr>
+							<tr>
+								<td>月光石 Moonstone</td>
+								<td>炸弹上有至少两个常灭指示灯。</td>
+							</tr>
+							<tr>
+								<td>药剂 Potion</td>
+								<td>总是使用它，但注意力量、敏捷和智力可能会改变。</td>
+							</tr>
+							<tr>
+								<td>小狗 Small&nbsp;dog</td>
+								<td>与恶魔、飞龙或巨怪之外的敌人战斗。</td>
+							</tr>
+							<tr>
+								<td>折梯 Stepladder</td>
+								<td>玩家低于 4’，且与地精或蜥蜴之外的敌人战斗。</td>
+							</tr>
+							<tr>
+								<td>日光石 Sunstone</td>
+								<td>炸弹上有至少两个常亮指示灯。</td>
+							</tr>
+							<tr>
+								<td>符号 Symbol</td>
+								<td>与恶魔或魔像战斗，或者气温大于 31°C。</td>
+							</tr>
+							<tr>
+								<td>门票 Ticket</td>
+								<td>玩家有 4’6” 或更高，且重力至少为 9.2m/s²，至多为 10.4m/s²。</td>
+							</tr>
+							<tr>
+								<td>奖杯 Trophy</td>
+								<td>力量大于序列号第一位数字，或者与巨怪战斗。</td>
+							</tr>
+						</table>
+						<table class="enemies">
+							<tr><th>敌人       <th>力量<th>敏捷<th>智力</tr>
+							<tr><td>恶魔 Demon <td>50  <td>50  <td>50  </tr>
+							<tr><td>飞龙 Dragon<td>10  <td>11  <td>13  </tr>
+							<tr><td>雄鹰 Eagle <td>4   <td>7   <td>3   </tr>
+							<tr><td>地精 Goblin<td>3   <td>6   <td>5   </tr>
+							<tr><td>魔像 Golem <td>9   <td>4   <td>7   </tr>
+							<tr><td>巨怪 Troll <td>8   <td>5   <td>4   </tr>
+							<tr><td>蜥蜴 Lizard<td>4   <td>6   <td>3   </tr>
+							<tr><td>巫师 Wizard<td>4   <td>3   <td>8   </tr>
+						</table>
+						<table class="weapons">
+							<tr><th>武器                   <th>利用<th>加成</tr>
+							<tr><td>阔剑 Broadsword        <td>力量<td>+0  </tr>
+							<tr><td>木棒 Caber             <td>力量<td>+2  </tr>
+							<tr><td>脏小刀 Nasty&nbsp;knife<td>敏捷<td>+0  </tr>
+							<tr><td>长弓 Longbow           <td>敏捷<td>+2  </tr>
+							<tr><td>魔法珠 Magic&nbsp;orb  <td>智力<td>+0  </tr>
+							<tr><td>魔导书 Grimoire        <td>智力<td>+2  </tr>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 2 页　共 2 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

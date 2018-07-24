@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Special Elite'), local('SpecialElite-Regular'), url(../font/SpecialElite.ttf);
+}
+@font-face {
+  font-family: source-han-serif-cn;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../font/SourceHanSerifCN-Medium.ttf);
+}
+@font-face {
+  font-family: source-han-serif-cn;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/SourceHanSerifCN-Bold.ttf);
+}

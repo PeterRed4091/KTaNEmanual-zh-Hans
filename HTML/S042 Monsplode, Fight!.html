@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>小精灵战斗——“保持通话，不会爆炸”一般模块</title>
+    <meta name="viewport" content="initial-scale=1">
+    <link rel='stylesheet' type='text/css' href='css/font.css'>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src='js/highlighter.js'></script>
+    <style>
+        table.moves {
+            width: 100%;
+            margin: 3em auto;
+			line-height: 110%;
+        }
+		table.moves td{
+			padding: 0.5em;
+		}
+
+        table.moves td.move-name {
+            white-space: nowrap;
+        }
+
+        table.multipliers {
+            margin: 3em auto;
+        }
+
+        table.multipliers td.special {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                <span class="page-header-section-title">小精灵战斗</span>
+            </div>
+
+            <div class="page-content">
+                <img src="img/Component/Monsplode, Fight!.svg" class="diagram">
+                <h2>关于小精灵战斗(Monsplode, Fight!)</h2>
+
+                <p class="flavour-text">
+					你还是某些童年时期动画系列的爱好者吗？看来你碰上了另一位爱好者。
+
+                <ul>
+					<li>你遭遇了一只野生的Monsplode&trade;。
+                    <li>你可以使用4种不同的招式来对抗它。
+                    <li>选择一种招式以对相对抗的Monsplode&trade;造成可能的最大净伤害。
+                    <li>错误的招式会引起失误(Strike)，并且模块会重置。
+					<li>每种招式有其属性和伤害，有时还有特殊规则。 <em>（特别规则可以覆盖较早的信息。）</em>
+					<li>每只Monsplode&trade;同样有其属性、伤害以及特殊规则。
+					<li>招式的净伤害是指其基础伤害乘以属性优势/劣势倍乘数的乘积。
+				</ul>
+
+                <table style="width:100%;">
+                    <tr>
+                        <th>Monsplode&trade;
+                        <th>名称
+                        <th>属性
+                        <th>特殊规则
+                    </tr>
+
+                    <tr>
+                        <td><img src="img/Monsplode/buhar.png" alt="Buhar" height=80px>
+                        <td>Buhar
+                        <td>水
+                        <td>不会受到来自岩石属性招式的伤害。
+					</tr>
+
+					<tr>
+                        <td><img src="img/Monsplode/lanaluff.png" alt="Lanaluff" height=80px>
+                        <td>Lanaluff
+                        <td>一般
+						<td>如果它的名字与序列号有相同字母，会受到来自毒属性招式的+3净伤害。
+                    </tr>
+
+                    <tr>
+                        <td><img src="img/Monsplode/bob.png" alt="Bob" height=80px>
+                        <td>Bob
+                        <td>一般
+                        <td>如果有亮灯BOB指示器，只会受到来自一般属性招式的伤害。
+					</tr>
+
+                    <tr>
+                        <td><img src="img/Monsplode/mountoise.png" alt="Mountoise" height=80px>
+                        <td>Mountoise
+                        <td>岩石
+                        <td>如果炸弹有失误，其属性为一般。
+                    </tr>
+
+                    <tr>
+                        <td><img src="img/Monsplode/nibs.png" alt="Nibs" height=80px>
+                        <td>Nibs
+                        <td>一般
+						<td>不会受到来自草属性招式的伤害。
+                    </tr>
+
+                </table>
+
+            </div>
+            <div class="page-footer relative-footer">第 1 页 / 共 5 页</div>
+        </div>
+
+		<div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                <span class="page-header-section-title">小精灵战斗</span>
+            </div>
+
+            <div class="page-content">
+                <table style="width:100%;">
+                    <tr>
+                        <th>Monsplode&trade;
+                        <th>名称
+                        <th>属性
+                        <th>特殊规则
+                    </tr>
+
+                    <tr>
+                        <td><img src="img/Monsplode/aluga.png" alt="Aluga" height=80px>
+                        <td>Aluga
+                        <td>一般
+						<td>会受到来自火属性招式的+2净伤害。会受到来自水属性招式的-1净伤害。
+                    </tr>
+
+                    <tr>
+                        <td><img src="img/Monsplode/lugirit.png" alt="Lugirit" height=80px>
+                        <td>Lugirit
+                        <td>幽灵
+						<td>会受到来自水属性招式的+2净伤害。会受到来自火属性招式的-1净伤害。
+                    </tr>
+
+                    <tr>
+                        <td><img src="img/Monsplode/caadarim.png" alt="Caadarim" height=80px>
+                        <td>Caadarim
+                        <td>一般
+                        <td>如果有至少一个接口，不会受到来自一般属性招式的伤害。
+                    </tr>
+
+                    <tr>
+                        <td><img src="img/Monsplode/vellarim.png" alt="Vellarim" height=80px>
+                        <td>Vellarim
+                        <td>水
+						<td>如果有并行接口，不会受到来自一般属性招式的伤害。
+                    </tr>
+
+                    <tr>
+                        <td><img src="img/Monsplode/flaurim.png" alt="Flaurim" height=80px>
+                        <td>Flaurim
+                        <td>火
+						<td>如果有串行接口，不会受到来自一般属性招式的伤害。
+                    </tr>
+
+					<tr>
+                        <td><img src="img/Monsplode/gloorim.png" alt="Gloorim" height=80px>
+                        <td>Gloorim
+                        <td>恶
+						<td>如果有DVI-D接口，不会受到来自一般属性招式的伤害。
+                    </tr>
+
+					<tr>
+                        <td><img src="img/Monsplode/melbor.png" alt="Melbor" height=80px>
+                        <td>Melbor
+                        <td>恶
+						<td>如果某招式的净伤害正好为6或8，它改为受到0伤害。
+                    </tr>
+
+                    <tr>
+                        <td><img src="img/Monsplode/clondar.png" alt="Clondar" height=80px>
+                        <td>Clondar
+                        <td>电
+                        <td>会受到来自水属性招式的+3净伤害。
+					</tr>
+
+					<tr>
+                        <td><img src="img/Monsplode/docsplode.png" alt="Docsplode" height=80px>
+                        <td>Docsplode
+                        <td>一般
+						<td>“Boom”将改为引爆Docsplode而非炸弹。如果该招式出现，它必须被使用。
+                    </tr>
+
+                </table>
+
+            </div>
+            <div class="page-footer relative-footer">第 2 页 / 共 5 页</div>
+        </div>
+
+
+		<div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                <span class="page-header-section-title">小精灵战斗</span>
+            </div>
+
+            <div class="page-content">
+                <table style="width:100%;">
+                    <tr>
+                        <th>Monsplode&trade;
+                        <th>名称
+                        <th>属性
+                        <th>特殊规则
+                    </tr>
+
+                    <tr>
+                        <td><img src="img/Monsplode/magmy.png" alt="Magmy" height=80px>
+                        <td>Magmy
+                        <td>火
+                        <td>如果炸弹上有少于3节电池，其属性为岩石。
+					</tr>
+
+
+                    <tr>
+                        <td><img src="img/Monsplode/pouse.png" alt="Pouse" height=80px>
+                        <td>Pouse
+                        <td>电
+						<td>如果某招式的净伤害为6或更多，它改为受到0伤害。
+                    </tr>
+
+                    <tr>
+                        <td><img src="img/Monsplode/ukkens.png" alt="Ukkens" height=80px>
+                        <td>Ukkens
+                        <td>毒
+						<td>不会受到来自水属性招式的伤害。
+                    </tr>
+
+					<tr>
+                        <td><img src="img/Monsplode/asteran.png" alt="Zenlad" height=80px>
+                        <td>Asteran
+                        <td>草
+						<td>如果出现CAR指示器，其属性为水。
+                    </tr>
+
+					<tr>
+                        <td><img src="img/Monsplode/violan.png" alt="Zenlad" height=80px>
+                        <td>Violan
+                        <td>草
+						<td>如果出现CLR指示器，其属性为水。
+                    </tr>
+
+
+                    <tr>
+                        <td><img src="img/Monsplode/zenlad.png" alt="Zenlad" height=80px>
+                        <td>Zenlad
+                        <td>草
+						<td>会受到来自电属性招式的+3净伤害。
+                    </tr>
+
+                    <tr>
+                        <td><img src="img/Monsplode/zapra.png" alt="Zapra" height=80px>
+                        <td>Zapra
+                        <td>电
+						<td>如果炸弹上有少于3节电池，其属性为一般。
+                    </tr>
+
+					<tr>
+                        <td><img src="img/Monsplode/myrchat.png" alt="Myrchat" height=80px>
+                        <td>Myrchat
+                        <td>毒
+						<td>如果炸弹上没有灭灯指示器，其属性为恶。
+                    </tr>
+					
+					<tr>
+                        <td><img src="img/Monsplode/percy.png" alt="Percy" height=80px>
+                        <td>Percy
+                        <td>水
+						<td>Percy无法忍受愚蠢。如果“Splash”出现，你必须使用它。
+                    </tr>
+					
+					<tr>
+                        <td><img src="img/Monsplode/cutiepie.png" alt="Cutie Pie" height=80px>
+                        <td>Cutie Pie
+                        <td>一般
+						<td>Cutie Pie是伙伴！改为造成可能的最低伤害。
+                    </tr>
+                </table>
+
+            </div>
+            <div class="page-footer relative-footer">第 3 页 / 共 5 页</div>
+        </div>
+
+		<div class="page page-bg-05">
+            <div class="page-header">
+                <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                <span class="page-header-section-title">小精灵战斗</span>
+            </div>
+            <div class="page-content">
+
+				<table class='moves'>
+					<tr>
+                        <th>招式名称
+                        <th>招式属性
+                        <th>基础伤害
+                        <th>特殊规则
+                    </tr>
+
+<tr><td class='move-name'>Appearify<td>一般<td>4<td>如果对手为恶属性，伤害为10。</tr>
+<tr><td class='move-name'>Battery Power<td>电<td>0<td>炸弹上每有一节电池，加上2伤害。</tr>
+<tr><td class='move-name'>Bedrock<td>岩石<td>0<td>伤害为炸弹上模块数量。</tr>
+<tr><td class='move-name'>Boo<td>幽灵<td>0<td>在序列号中每有一个“0”或“O”，加上3伤害。</tr>
+<tr><td class='move-name'>Boom<td>火<td>0<td>按下这个会引爆炸弹。</tr>
+<tr><td class='move-name'>Bug Spray<td>毒<td>2<td>对抗Melbor和Zenlad的伤害为10。</tr>
+<tr><td class='move-name'>Countdown<td>毒<td>0<td>伤害为炸弹以分钟为单位的剩余时间，向下取整。</tr>
+<tr><td class='move-name'>Dark Portal<td>恶<td>0<td>伤害为出现的接口数量。</tr>
+<tr><td class='move-name'>Fiery Soul<td>火<td>0<td>伤害为电池数量与电池盒数量相乘的乘积。</tr>
+<tr><td class='move-name'>Finale<td>草<td>2<td>如果其他所有模块在本模块之前已被解除，伤害为10。</tr>
+<tr><td class='move-name'>Freak Out<td>幽灵<td>1<td>如果有“FRK”或“FRQ”指示器，伤害为5。如果其中任意指示器为亮灯，伤害为10。</tr>
+<tr><td class='move-name'>Glyph<td>一般<td>0<td>伤害为对手名称的字母数。</tr>
+<tr><td class='move-name'>Last Word<td>幽灵<td>0<td>伤害为序列号的末位数字。</tr>
+<tr><td class='move-name'>Sendify<td>一般<td>2<td>如果对手为岩石或草属性，伤害为10。</tr>
+<tr><td class='move-name'>Shock<td>电<td>3<td>如果炸弹上有RJ-45接口，伤害为8。</tr>
+<tr><td class='move-name'>Shrink<td>一般<td>0<td>伤害为序列号的最小数字。</tr>
+<tr><td class='move-name'>Sidestep<td>一般<td>0<td>伤害为模块上本招式左侧或右侧显示的招式的字母数。</tr>
+<tr><td class='move-name'>Stretch<td>一般<td>0<td>伤害为序列号的最大数字。</tr>
+<tr><td class='move-name'>Void<td>恶<td>2<td>如果没有其他模块在本模块之前被解除，伤害为10。</tr>
+                </table>
+
+			</div>
+            <div class="page-footer relative-footer">第 4 页 / 共 5 页</div>
+		</div>
+
+		<div class="page page-bg-04">
+            <div class="page-header">
+                <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                <span class="page-header-section-title">小精灵战斗</span>
+            </div>
+
+            <div class="page-content">
+
+				<table class='moves'>
+                    <tr>
+                        <th>招式名称
+                        <th>招式属性
+                        <th>基础伤害
+						<th>
+                        <th>招式名称
+                        <th>招式属性
+                        <th>基础伤害
+                    </tr>
+
+<tr><td class='move-name'>Candle<td>火<td>2<td><td class='move-name'>Spectre<td>幽灵<td>5</tr>
+<tr><td class='move-name'>Cave In<td>岩石<td>3<td><td class='move-name'>Splash<td>水<td>0</tr>
+<tr><td class='move-name'>Double Zap<td>电<td>4<td><td class='move-name'>Tac<td>一般<td>5</tr>
+<tr><td class='move-name'>Earthquake<td>岩石<td>5<td><td class='move-name'>Tangle<td>草<td>2</tr>
+<tr><td class='move-name'>Flame Spear<td>火<td>6<td><td class='move-name'>Tic<td>一般<td>3</tr>
+<tr><td class='move-name'>Fountain<td>水<td>6<td><td class='move-name'>Toe<td>一般<td>1</tr>
+<tr><td class='move-name'>Grass Blade<td>草<td>4<td><td class='move-name'>Torchlight<td>火<td>4</tr>
+<tr><td class='move-name'>Heavy Rain<td>水<td>4<td><td class='move-name'>Toxic Waste<td>毒<td>5</tr>
+<tr><td class='move-name'>High Voltage<td>电<td>6<td><td class='move-name'>Venom Fang<td>毒<td>3</tr>
+<tr><td class='move-name'>Hollow Gaze<td>恶<td>4<td><td class='move-name'>Zap<td>电<td>2</tr>
+<tr><td class='move-name'>Ivy Spikes<td>草<td>6<td><td>-<td>-<td>-</tr>
+
+                </table>
+
+                <table class='multipliers'>
+                    <tr>
+                        <th>对抗属性 →
+                        <th rowspan='2'>一<br>般
+                        <th rowspan='2'>毒
+                        <th rowspan='2'>岩<br>石
+                        <th rowspan='2'>幽<br>灵
+                        <th rowspan='2'>火
+                        <th rowspan='2'>水
+                        <th rowspan='2'>草
+                        <th rowspan='2'>电
+                        <th rowspan='2'>恶
+                    </tr>
+                    <tr>
+                        <th>招式属性 ↓
+                    </tr>
+
+                    <tr>
+                        <th>一般
+                        <td>x1
+                        <td>x1
+                        <td class='special'>x1/2
+                        <td class='special'>x0
+                        <td>x1
+                        <td>x1
+                        <td>x1
+                        <td>x1
+                        <td>x1
+                    </tr>
+
+                    <tr>
+                        <th>毒
+                        <td>x1
+                        <td class='special'>x1/2
+                        <td class='special'>x1/2
+                        <td class='special'>x1/2
+                        <td>x1
+                        <td>x1
+                        <td class='special'>x2
+                        <td>x1
+                        <td>x1
+                    </tr>
+
+                    <tr>
+                        <th>岩石
+                        <td>x1
+                        <td>x1
+                        <td>x1
+                        <td>x1
+                        <td class='special'>x2
+                        <td>x1
+                        <td>x1
+                        <td>x1
+                        <td>x1
+                    </tr>
+
+                    <tr>
+                        <th>幽灵
+                        <td class='special'>x0
+                        <td>x1
+                        <td>x1
+                        <td class='special'>x2
+                        <td>x1
+                        <td>x1
+                        <td>x1
+                        <td>x1
+                        <td class='special'>x1/2
+                    </tr>
+
+                    <tr>
+                        <th>火
+                        <td>x1
+                        <td>x1
+                        <td class='special'>x1/2
+                        <td>x1
+                        <td class='special'>x1/2
+                        <td class='special'>x1/2
+                        <td class='special'>x2
+                        <td>x1
+                        <td>x1
+                    </tr>
+
+                    <tr>
+                        <th>水
+                        <td>x1
+                        <td>x1
+                        <td class='special'>x2
+                        <td>x1
+                        <td class='special'>x2
+                        <td class='special'>x1/2
+                        <td class='special'>x1/2
+                        <td>x1
+                        <td>x1
+                    </tr>
+
+                    <tr>
+                        <th>草
+                        <td>x1
+                        <td class='special'>x1/2
+                        <td class='special'>x2
+                        <td>x1
+                        <td class='special'>x1/2
+                        <td class='special'>x2
+                        <td class='special'>x1/2
+                        <td>x1
+                        <td>x1
+                    </tr>
+
+                    <tr>
+                        <th>电
+                        <td>x1
+                        <td>x1
+                        <td>x1
+                        <td>x1
+                        <td>x1
+                        <td class='special'>x2
+                        <td class='special'>x1/2
+                        <td class='special'>x1/2
+                        <td>x1
+                    </tr>
+
+                    <tr>
+                        <th>恶
+                        <td>x1
+                        <td>x1
+                        <td>x1
+                        <td class='special'>x2
+                        <td>x1
+                        <td>x1
+                        <td>x1
+                        <td>x1
+                        <td class='special'>x1/2
+                    </tr>
+                 </table>
+			</div>
+            <div class="page-footer relative-footer">第 5 页 / 共 5 页</div>
+		</div>
+    </div>
+</body>
+
+</html>

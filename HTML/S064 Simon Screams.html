@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>你喊我做——“保持通话，不会爆炸”一般模块</title>
+    <meta name="viewport" content="initial-scale=1">
+	<link rel='stylesheet' type='text/css' href='css/font.css'>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src='js/highlighter.js'></script>
+    <style>
+        table.simon-screams, table.simon-screams table {
+            border: none;
+        }
+        table.simon-screams td.corner, table.simon-screams th.corner {
+            border: none;
+        }
+        table.simon-screams td {
+            text-align: center;
+        }
+        table.simon-screams th {
+            text-align: right;
+        }
+        table.simon-screams th.little {
+            text-align: left;
+        }
+        table.simon-screams tr.top > th {
+            text-align: center;
+            vertical-align: bottom;
+        }
+        table.simon-screams tr.top > th > p {
+            margin: .25em;
+        }
+        table.simon-screams tr.rotated > th {
+            position: relative;
+            text-align: left;
+            height: 4em;
+        }
+        table.simon-screams tr.rotated > th > span.text {
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%) rotate(-50deg);
+            transform-origin: middle center;
+            text-align: center;
+            line-height: 1.25;
+        }
+        table.simon-screams-small td, table.simon-screams-small th {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+<div class="section">
+    <div class="page page-bg-01">
+        <div class="page-header">
+			<span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+			<span class="page-header-section-title">你喊我做</span>
+		</div>
+        <div class="page-content">
+    	    <img src="img/Component/Simon Screams.svg" class="diagram">
+            <h2>关于你喊我做(Simon Screams)</h2>
+            <p class="flavour-text">
+                他生气了！他狂怒了！他激愤了！他受够了！
+
+            <ul>
+                <li>
+                    该模块有六个有色灯，分别为红、橙、黄、绿、蓝和紫。这些会按某一序列闪烁，序列每阶段会变长。共有3阶段。
+                <li>
+                    在每一阶段，考虑闪烁的整个序列。在大表格中，找到适用的第一行和正确的一列。从那一项中，取对应当前阶段的字母（如在第二阶段，取第二个字母）并在小表格中查看其相应一列。
+                <li>
+                    从上到下查看那一列，按下每个条件符合的色彩。色彩记为红(R)、橙(O)、黄(Y)、绿(G)、蓝(B)、紫(P)，而“#”指“序列号”。
+                <li>
+                    每次序列重新闪烁时，你的输入将被重置。
+            </ul>
+
+            <table class='simon-screams'>
+                <tr class='top'>
+                    <td class='corner' rowspan='2'>
+
+                        <table class='simon-screams-small'>
+                            <tr>
+                                <td class='corner'>
+                                <th>A
+                                <th>C
+                                <th>D
+                                <th>E
+                                <th>F
+                                <th>H
+                            </tr>
+                            <tr><th class='little'>≥ 3 指示器     <td>Y<td>O<td>G<td>R<td>B<td>P</tr>
+                            <tr><th class='little'>≥ 3 接口       <td>P<td>Y<td>R<td>B<td>O<td>G</tr>
+                            <tr><th class='little'>≥ 3 数字在 # 中<td>O<td>G<td>B<td>P<td>R<td>Y</tr>
+                            <tr><th class='little'>≥ 3 字母在 # 中<td>G<td>B<td>O<td>Y<td>P<td>R</tr>
+                            <tr><th class='little'>≥ 3 电池       <td>R<td>P<td>Y<td>O<td>G<td>B</tr>
+                            <tr><th class='little'>≥ 3 电池盒     <td>B<td>R<td>P<td>G<td>Y<td>O</tr>
+                        </table>
+
+                    <th colspan='6' class='corner'>
+                        <p>阶段1：第一个闪烁的色彩
+                        <p>阶段2：第二个闪烁的色彩
+                        <p>阶段3：第三个闪烁的色彩
+                </tr>
+                <tr class='rotated'>
+                    <th><span class='text'>红</span>
+                    <th><span class='text'>橙</span>
+                    <th><span class='text'>黄</span>
+                    <th><span class='text'>绿</span>
+                    <th><span class='text'>蓝</span>
+                    <th><span class='text'>紫</span>
+                </tr>
+
+                <tr><th>如果三种连续的色彩按顺时针闪烁                          <td>FFC<td>CEH<td>HAF<td>ECD<td>DDE<td>AHA</tr>
+                <tr><th>否则，如果某一色彩闪烁，然后相邻的某一色彩，然后再第一个<td>AHF<td>DFC<td>ECH<td>CDE<td>FEA<td>HAD</tr>
+                <tr><th>否则，如果红、黄和蓝中最多一种色彩闪烁                  <td>DED<td>ECF<td>FHE<td>HAA<td>AFH<td>CDC</tr>
+                <tr><th>否则，如果有互相相对的两种色彩没有闪烁                  <td>HCE<td>ADA<td>CFD<td>DHH<td>EAC<td>FEF</tr>
+                <tr><th>否则，如果两种连续的色彩按顺时针闪烁                    <td>CAH<td>FHD<td>DDA<td>AEC<td>HCF<td>EFE</tr>
+                <tr><th>否则                                                    <td>EDA<td>HAE<td>AEC<td>FFF<td>CHD<td>DCH</tr>
+            </table>
+		</div>
+		<div class="page-footer relative-footer">第 1 页 / 共 1 页</div>
+	</div>
+</div>
+</body></html>

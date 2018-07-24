@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>旗语 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; } .crush { margin-right: -.5em; }
+			table.semaphore-table { width: 100%; }
+			table.semaphore-table td { width: 20%; text-align: center; font-weight: bold; }
+			img.semaphore-img { width: 5em; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-01">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">旗语<br>Semaphore</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Semaphore.svg" style="margin-bottom: 0">
+						<h2>关于<span class="force-zh">“</span>旗语<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">这个模块需要来自海洋的关注<span class="force-zh">——</span>不幸的是这炸弹滴水不进。</p>
+						<p class="appendix-reference">查看下一页以获得旗语参考。</p>
+						<p>
+						<ul>
+							<li>旗语模块会带着上一项按钮、下一项按钮、OK（确认）按钮和旗语指示器出现。</li>
+							<li>使用上一项与下一项按钮来浏览旗语序列，从最左侧的旗语字符开始，到最右侧的旗语字符结束。</li>
+							<li>旗语序列会包含一些来自于炸弹上序列号的字符，但也包括一个序列号中没有出现的其他字符。</li>
+							<li>请浏览至那个在序列号中缺少的唯一字符，然后按下 OK 按钮。</li>
+							<li>控制字符，例如<span class="force-zh">“</span>数字记号<span class="force-zh crush">”</span><span class="crush">、</span><span class="force-zh">“</span>字母记号<span class="force-zh crush">”</span><span class="crush">、</span><span class="force-zh">“</span>错误<span class="force-zh crush">”</span><span class="crush">、</span><span class="force-zh">“</span>待机<span class="force-zh">”</span>和<span class="force-zh">“</span>取消<span class="force-zh crush">”</span>，不被认作有效答案。</li>
+						</ul>
+						</p>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 2 页</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="page page-bg-02">
+							<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">旗语<br>Semaphore</span>
+					</div>
+					<div class="page-content">
+						<h3>旗语参考</h3>
+						<p>发送数字信号时，先发送<span class="force-zh">“</span>数字记号<span class="force-zh crush">”</span>，然后再发送数字。类似地，发送字母信号时，先发送<span class="force-zh">“</span>字母记号<span class="force-zh crush">”</span>，然后再发送字母。</p>
+						<p>可参考下图，了解如何解译旗语字符。</p>
+						<table class="semaphore-table">
+							<tr>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Ready.svg" alt="待机／空格" /><br>待机／空格</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Numeric.svg" alt="数字记号" /><br>数字记号</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Error.svg" alt="错误／注意" /><br>错误／注意</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Alpha.svg" alt="A 或 1" /><br>A 或 1</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Bravo.svg" alt="B 或 2" /><br>B 或 2</td>
+							</tr>
+							<tr>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Charlie.svg" alt="C 或 3" /><br>C 或 3</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Delta.svg" alt="D 或 4" /><br>D 或 4</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Echo.svg" alt="E 或 5" /><br>E 或 5</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Foxtrot.svg" alt="F 或 6" /><br>F 或 6</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Golf.svg" alt="G 或 7" /><br>G 或 7</td>
+							</tr>
+							<tr>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Hotel.svg" alt="H 或 8" /><br>H 或 8</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_India.svg" alt="I 或 9" /><br>I 或 9</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Juliet.svg" alt="J 或字母记号" /><br>J 或字母记号</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Kilo.svg" alt="K 或 0" /><br>K 或 0</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Lima.svg" alt="L" /><br>L</td>
+							</tr>
+							<tr>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Mike.svg" alt="M" /><br>M</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_November.svg" alt="N" /><br>N</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Oscar.svg" alt="O" /><br>O</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Papa.svg" alt="P" /><br>P</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Quebec.svg" alt="Q" /><br>Q</td>
+							</tr>
+							<tr>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Romeo.svg" alt="R" /><br>R</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Sierra.svg" alt="S" /><br>S</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Tango.svg" alt="T" /><br>T</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Uniform.svg" alt="U" /><br>U</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Victor.svg" alt="V" /><br>V</td>
+							</tr>
+							<tr>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Whiskey.svg" alt="W" /><br>W</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_X-ray.svg" alt="X" /><br>X</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Yankee.svg" alt="Y" /><br>Y</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Zulu.svg" alt="Z" /><br>Z</td>
+								<td><img class="semaphore-img" src="img/Semaphore/Semaphore_Cancel.svg" alt="取消／废除" /><br>取消／废除</td>
+							</tr>
+						</table>
+						<p>（所有图标来自 <a href="https://commons.wikimedia.org/wiki/User:Denelson83?uselang=zh-cn">Denelson83</a>，通过 <a href="https://commons.wikimedia.org/wiki/%E9%A6%96%E9%A1%B5?uselang=zh-cn">维基共享资源</a>，在 <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.zh">CC BY-SA 3.0</a> 协议下使用）</p>
+					</div>
+					<div class="page-footer relative-footer">第 2 页　共 2 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

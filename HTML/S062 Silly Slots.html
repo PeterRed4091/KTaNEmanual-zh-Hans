@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>糊涂老虎机——“保持通话，不会爆炸”一般模块</title>
+    <meta name="viewport" content="initial-scale=1">
+	<link rel='stylesheet' type='text/css' href='css/font.css'>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src='js/highlighter.js'></script>
+    <style>
+        .placeholder {
+            text-decoration: underline;
+        }
+        table.silly {
+            border: none;
+        }
+        td.corner {
+            border: none;
+        }
+
+        .warning {
+            float: right;
+            clear: right;
+            border: 1px solid black;
+            width: 8em;
+            padding: .1em .5em;
+            margin-left: .5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                <span class="page-header-section-title">糊涂老虎机</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Silly Slots.svg" class="diagram">
+
+                <h2>糊涂老虎机(Silly Slots)</h2>
+                <p class="flavour-text">
+                    漂亮的萨利说了对不起，因为沉闷的史蒂文喝了汤。
+
+                <p>
+                    只有在老虎机处于合法状态时按下保留(KEEP)按钮。只有在老虎机处于非法状态时拉下拉杆。在拉下拉杆4次后该模块会自动解除。
+
+                <p>
+                    如果下列任意陈述为真，老虎机处于非法状态：
+
+                <ul>
+                    <li>有单独一个<span class='placeholder'>糊涂的</span><span class='placeholder'>香肠</span>。
+                    <li>有单独一个<span class='placeholder'>漂亮的</span><span class='placeholder'>萨利</span>，除非该栏位在2阶段前同一位置是<span class='placeholder'>沉闷的</span>。
+                    <li>有2个或更多的<span class='placeholder'>沉闷的</span><span class='placeholder'>史蒂文</span>。
+                    <li>有3个<span class='placeholder'>西蒙</span>，除非其中任意一个是<span class='placeholder'>漂亮的</span>。
+                    <li>有一个<span class='placeholder'>香肠</span>与一个<span class='placeholder'>萨利</span>相邻，除非<span class='placeholder'>萨利</span>是<span class='placeholder'>沉闷的</span>。
+                    <li>有正好2个<span class='placeholder'>糊涂的</span>栏位，除非它们都是<span class='placeholder'>史蒂文</span>。
+                    <li>有单独一个<span class='placeholder'>沉闷的</span>栏位，除非前一阶段有任意数量的<span class='placeholder'>香肠</span>栏位。
+                    <li>所有3个栏位是相同的图案和色彩，除非在之前任意一个阶段有过一个<span class='placeholder'>沉闷的</span><span class='placeholder'>香肠</span>。
+                    <li>所有3个栏位是相同的色彩，除非其中任意一个是<span class='placeholder'>萨利</span>或者在上一阶段有一个<span class='placeholder'>糊涂的</span><span class='placeholder'>史蒂文</span>。
+                    <li>有任意数量的<span class='placeholder'>糊涂的</span><span class='placeholder'>西蒙</span>，除非在之前任意一个阶段有过一个<span class='placeholder'>漂亮的</span><span class='placeholder'>香肠</span>。
+                </ul>
+
+                <p>
+                    <span class='placeholder'>带下划线的</span>单词是占位词，使用下方的矩阵和在模块显示屏上找到的关键词，将它们用正确的单词替代。拉杆被拉下时这个关键词会改变。
+
+                <table class='silly'>
+                    <tr><td colspan='2' rowspan='2' class='corner'><th colspan='7'>占位词</tr>
+                    <tr><th>漂亮的<br>(Sassy)<th>糊涂的<br>(Silly)<th>沉闷的<br>(Soggy)<th>萨利<br>(Sally)<th>西蒙<br>(Simon)<th>香肠<br>(Sausage)<th>史蒂文<br>(Steven)</tr>
+                    <tr><th rowspan='7'>关<br>键<br>词
+                        <th>漂亮的<td>蓝色<td>红色<td>绿色<td>樱桃<td>葡萄<td>炸弹<td>硬币</tr>
+                    <tr><th>糊涂的<td>蓝色<td>绿色<td>红色<td>硬币<td>炸弹<td>葡萄<td>樱桃</tr>
+                    <tr><th>沉闷的<td>绿色<td>蓝色<td>红色<td>硬币<td>樱桃<td>炸弹<td>葡萄</tr>
+                    <tr><th>萨利<td>红色<td>蓝色<td>绿色<td>葡萄<td>樱桃<td>炸弹<td>硬币</tr>
+                    <tr><th>西蒙<td>红色<td>绿色<td>蓝色<td>炸弹<td>葡萄<td>樱桃<td>硬币</tr>
+                    <tr><th>香肠<td>红色<td>蓝色<td>绿色<td>葡萄<td>炸弹<td>硬币<td>樱桃</tr>
+                    <tr><th>史蒂文<td>绿色<td>红色<td>蓝色<td>樱桃<td>炸弹<td>硬币<td>葡萄</tr>
+                </table>
+
+            </div>
+			<div class="page-footer relative-footer">第 1 页 / 共 1 页</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 348 348" stroke-miterlimit="10" width="371.2" height="371.2" fill="none" stroke-linecap="square">
+    <clipPath id="a">
+        <path d="M0 0h348v348H0z"/>
+    </clipPath>
+    <g clip-path="url(#a)">
+        <path d="M0 0h348v348H0z" fill="#000" fill-opacity="0"/>
+        <path d="M-6 0h348v347.969H-6z" fill="#fff"/>
+        <path d="M5.079 5.776h336.913v337.67H5.08z" fill="#000" fill-opacity="0"/>
+        <path d="M5.079 5.776h336.913v337.67H5.08z" stroke="#000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"/>
+        <path d="M282.734 40.554c0-8.376 6.966-15.165 15.56-15.165 4.126 0 8.084 1.597 11.001 4.441 2.918 2.844 4.558 6.702 4.558 10.724 0 8.376-6.966 15.165-15.56 15.165-8.593 0-15.559-6.79-15.559-15.165z" fill="#fff"/>
+        <path d="M282.734 40.554c0-8.376 6.966-15.165 15.56-15.165 4.126 0 8.084 1.597 11.001 4.441 2.918 2.844 4.558 6.702 4.558 10.724 0 8.376-6.966 15.165-15.56 15.165-8.593 0-15.559-6.79-15.559-15.165z" stroke="#000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"/>
+    </g>
+    <path fill="#fff" fill-rule="evenodd" stroke="#000" stroke-linecap="butt" d="M27.278 105.392h48.77v47.943h-48.77zM115.423 105.392h48.77v47.943h-48.77zM203.567 105.392h48.77v47.943h-48.77zM272.962 105.392h48.77v47.943h-48.77zM272.962 202.816h48.77v47.943h-48.77z"/>
+    <path fill="#fff" fill-rule="evenodd" stroke="#000" stroke-width="1.145" stroke-linecap="butt" d="M128.196 283.598h103.593v29.612H128.196z"/>
+    <text style="line-height:0%" x="284.352" y="145.069" font-weight="400" font-family="sans-serif" letter-spacing="0" word-spacing="0" fill="#000" stroke-linecap="butt">
+        <tspan x="284.352" y="145.069" style="line-height:1.25" font-size="40">F</tspan>
+    </text>
+    <text style="line-height:0%" x="285.21" y="242.27" font-weight="400" font-family="sans-serif" letter-spacing="0" word-spacing="0" fill="#000" stroke-linecap="butt">
+        <tspan x="285.21" y="242.27" style="line-height:1.25" font-size="40">F</tspan>
+    </text>
+    <text style="line-height:0%" x="129.777" y="307.91" font-weight="400" font-family="sans-serif" letter-spacing="0" word-spacing="0" fill="#000" stroke-linecap="butt">
+        <tspan x="129.777" y="307.91" style="line-height:1.25" font-size="25">SUBMIT</tspan>
+    </text>
+    <text style="line-height:42.91113663px" x="79.178" y="140.567" transform="scale(.98546 1.01475)" font-weight="400" font-size="45.772" font-family="sans-serif" letter-spacing="0" word-spacing="0" fill="#000" stroke-width="1.716" stroke-linecap="butt">
+        <tspan x="79.178" y="140.567">∨</tspan>
+    </text>
+    <text style="line-height:42.91113663px" x="168.114" y="239.712" transform="scale(.98546 1.01475)" font-weight="400" font-size="45.772" font-family="sans-serif" letter-spacing="0" word-spacing="0" fill="#000" stroke-width="1.716" stroke-linecap="butt">
+        <tspan x="168.114" y="239.712">∨</tspan>
+    </text>
+    <text style="line-height:45.02620697px" x="70.483" y="257.908" transform="scale(1.06477 .93917)" font-weight="400" font-size="48.028" font-family="sans-serif" letter-spacing="0" word-spacing="0" fill="#000" stroke-width="1.801" stroke-linecap="butt">
+        <tspan x="70.483" y="257.908">∧</tspan>
+    </text>
+    <text style="line-height:45.02620697px" x="153.706" y="150.497" transform="scale(1.06477 .93917)" font-weight="400" font-size="48.028" font-family="sans-serif" letter-spacing="0" word-spacing="0" fill="#000" stroke-width="1.801" stroke-linecap="butt">
+        <tspan x="153.706" y="150.497">∧</tspan>
+    </text>
+    <path fill="#000" stroke="#000" stroke-width=".937" d="M32.548 90.332H70.52v9.299H32.548zM121.216 90.332h37.972v9.299h-37.972zM209.047 90.332h37.972v9.299h-37.972z"/>
+    <path fill="#fff" fill-rule="evenodd" stroke="#000" stroke-linecap="butt" d="M27.278 202.816h48.77v47.943h-48.77zM115.422 202.816h48.77v47.943h-48.77zM203.567 202.816h48.77v47.943h-48.77z"/>
+    <path fill="#000" stroke="#000" stroke-width=".937" d="M32.548 187.757H70.52v9.299H32.548zM121.216 187.757h37.972v9.299h-37.972zM209.047 187.757h37.972v9.299h-37.972z"/>
+</svg>

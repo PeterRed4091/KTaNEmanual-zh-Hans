@@ -1,0 +1,50 @@
+html { font-family: "Chinese Quotes", "Special Elite", "Courier New", "Chinese Font", monospace; }
+@font-face {
+	font-family: "Chinese Quotes";
+	src: url(../font/FZHTJW.ttf);
+	font-style: normal;
+	unicode-range: U+201C-201D, U+2014, U+2026;
+}
+@font-face {
+	font-family: "Chinese Quotes";
+	src: url(../font/FZKTJW.ttf);
+	font-style: italic;
+	unicode-range: U+201C-201D, U+2014, U+2026;
+}
+@font-face {
+	font-family: "Chinese Font";
+	src: url(../font/FZHTJW.ttf);
+	font-style: normal;
+}
+@font-face {
+	font-family: "Chinese Font";
+	src: url(../font/FZKTJW.ttf);
+	font-style: italic;
+}
+h2, h3, h4 { text-decoration: none; }
+em {
+	font-style: normal;
+	text-decoration: none;
+	border-bottom: 2px dotted;
+	padding-bottom: .05em;
+}
+@supports ((text-emphasis: filled circle) or (-webkit-text-emphasis: filled circle)) and ((text-emphasis-position: under) or (-webkit-text-emphasis-position: under)) {
+	em {
+		text-emphasis: filled circle;
+		-webkit-text-emphasis: filled circle;
+		text-emphasis-position: under right;
+		-webkit-text-emphasis-position: under right;
+		border-bottom: inherit;
+		padding-bottom: none;
+	}
+}
+.page-header-section-title { text-align: right; }
+.appendix-reference, .flavour-text, p { text-indent: 2em; }
+.section-title .page-content p { text-indent: 0; }
+@media print {
+	.relative-footer {
+		margin-top: .25in; /* = 0.25in */
+		height: .5in; /* = 0.5in */
+		display: block;
+	}
+}

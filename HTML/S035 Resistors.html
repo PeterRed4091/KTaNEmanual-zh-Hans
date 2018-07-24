@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>电阻——“保持通话，不会爆炸”一般模块</title>
+        <meta name="viewport" content="initial-scale=1"> 
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type='text/css' href="css/font.css">
+        <script src="js/highligher.js"></script>
+    </head>
+    <body>
+        <div class="section">
+            <div class="page page-bg-01">
+                <div class="page-header">
+                    <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                    <span class="page-header-section-title">电阻</span>
+                </div>
+                <div class="page-content">
+                    <img src="img/Component/Resistors.svg" class="diagram">
+                    <h2>关于电阻(Resistors)</h2>
+                    <p class="flavour-text">
+                        “要抵挡什么，开始时比较容易，到最后就难了。”<br>
+                        ——列奥纳多·达·芬奇在谈及拖延症时如是说
+                    </p>
+
+                    <p>
+                        该模块包含2个输入引脚（<b>A</b>和<b>B</b>），2个电阻，和2个输出引脚（<b>C</b>和<b>D</b>）。遵循规则来做出正确的线路连接。要连接线路，点击一个引脚后再点击另一个。按下<b>清除(CLEAR)</b>来移除所有的线路连接。
+                    </p>
+                    <ol>
+                        <li>
+                            <p>
+                                取炸弹的序列号的第一个数字（若没有数字则取0）。如果是偶数，<i>主要输入</i>为<b>A</b>；如果是奇数，则为<b>B</b>。
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                取炸弹的序列号的最后一个数字（若没有数字则取0）。如果是偶数，<i>主要输出</i>为<b>C</b>；如果是奇数，则为<b>D</b>。
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                以&ohm;为单位的<i>目标电阻</i>应按以下方式计算：
+                            </p>
+                            <ol>
+                                <li>
+                                    取炸弹的序列号的前两个数字。<br>
+                                    例如：<b>2E7X19</b> &rarr; <b>27</b>，<b>ZJ3MLN</b> &rarr; <b>3</b>，<b>ABCDEF</b> &rarr; <b>0</b><br>
+                                </li>
+                                <li>炸弹上每有一节电池（6节封顶），乘以10。</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p>
+                                将主要输入与主要输出以目标电阻连接。
+                            </p>
+                            <p><i>
+                                注：所有阻值在检查时应在5%误差范围内。
+                            </i></p>
+                        </li>
+                        <li>
+                            <p>
+                                如果有亮灯<b>FRK</b>指示器，同时将主要输入与另一个（次要）输出以目标电阻连接。
+                            </p>
+                            <p><i>
+                                注：这意味着C和D同样会以某个非无限大的电阻连接。这个阻值不会被作为你的解答的一部分去检查，因此可以是任意值。
+                            </i></p>
+                        </li>
+                        <li>
+                            <p>
+                                如果第5步不适用且至少有1节<i>D型电池</i>，将次要输入与次要输出以0&ohm;电阻连接。
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                完成时按下<b>检查(CHECK)</b>来检查解答。所有未提到的成对的输入/输出应断开。
+                            </p>
+                        </li>
+                    </ol>
+                    <p>
+                        查阅下一页来了解如何制造目标电阻。
+                    </p>
+                </div>
+				<div class="page-footer relative-footer">第 1 页 / 共 2 页</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="page page-bg-02">
+                <div class="page-header">
+                    <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                    <span class="page-header-section-title">电阻</span>
+                </div>
+                <div class="page-content">
+                    <h3>制造电阻</h3>
+                    <p>
+                        输入和输出能以五种方式之一连接。
+                    </p>
+                    <ol>
+                        <li>
+                            <b>无电阻</b>，电阻为0&ohm;。
+                        </li>
+                        <li>
+                            <b>上方电阻</b>。
+                        </li>
+                        <li>
+                            <b>下方电阻</b>。
+                        </li>
+                        <li>
+                            <b>串联两个电阻。</b><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;即：输入 &rarr; 上方电阻 &rarr; 下方电阻 &rarr; 输出<br>
+                            组合所得电阻为各自电阻之和。
+                        </li>
+                        <li>
+                            <b>并联两个电阻。</b><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;即：输入 &rarr; 上方电阻，输入 &rarr; 下方电阻，<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;上方电阻 &rarr; 输出，下方电阻 &rarr; 输出<br>
+                            组合所得电阻小于任意单一电阻。
+                        </li>
+                    </ol>
+                    <p class="flavour-text">
+                        如果你对此感到好奇……该阻值是：1 / (1 / (上方阻值) + 1 / (下方阻值))<br>
+                        别担心，这不会作为测验内容！
+                    </p>
+                    <h3>阅读电阻</h3>
+                    <p>
+                        每个电阻有一系列三条色带，表示一个两位数和一个倍乘数。另有第四条色带表示误差（不使用）。第四条色带与前三条会被间隔分开。电阻可能经过旋转；注意以正确的方向阅读色带。
+                    </p>
+                    <table class="repeaters-table resistor-table">
+                        <tbody>
+                            <tr>
+                                <th>色彩</th>
+                                <th>第一条色带</th>
+                                <th>第二条色带</th>
+                                <th>倍乘数</th>
+                            </tr>
+                            <tr>
+                                <td>黑</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1&ohm;</td>
+                            </tr>
+                            <tr>
+                                <td>棕</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>10&ohm;</td>
+                            </tr>
+                            <tr>
+                                <td>红</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>100&ohm;</td>
+                            </tr>
+                            <tr>
+                                <td>橙</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>1,000&ohm;</td>
+                            </tr>
+                            <tr>
+                                <td>黄</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>10,000&ohm;</td>
+                            </tr>
+                            <tr>
+                                <td>绿</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>100,000&ohm;</td>
+                            </tr>
+                            <tr>
+                                <td>蓝</td>
+                                <td>6</td>
+                                <td>6</td>
+                                <td>1,000,000&ohm;</td>
+                            </tr>
+                            <tr>
+                                <td>紫</td>
+                                <td>7</td>
+                                <td>7</td>
+                                <td>10,000,000&ohm;</td>
+                            </tr>
+                            <tr>
+                                <td>灰</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td>白</td>
+                                <td>9</td>
+                                <td>9</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td>金</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>0.1&ohm;</td>
+                            </tr>
+                            <tr>
+                                <td>银</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>0.01&ohm;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>例如，<b>绿紫黄</b>表示 57 &times; 10,000&ohm; = 570,000&ohm;。</p>
+                </div>
+				<div class="page-footer relative-footer">第 2 页 / 共 2 页</div>
+            </div>
+        </div>
+    </body>
+</html>

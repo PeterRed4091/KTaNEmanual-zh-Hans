@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>勿忘我 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; } .crush { margin-right: -.5em; }
+			.hardmodule-wrap { width: 0; height: 0; }
+			.hardmodule { width: 2em; height: 66em; opacity: 0.3; background-color: #FF0000; -webkit-print-color-adjust: exact; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-04">
+					<div class="hardmodule-wrap"><div class="hardmodule"></div></div>
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">勿忘我<br>Forget Me Not</span>
+					</div>
+					<div class="page-content">
+						<img src="img/Component/Forget Me Not.svg" class="diagram">
+						<h2>关于<span class="force-zh">“</span>勿忘我<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">这个东西喜欢受到关注，但不要过多关注。</p>
+						<ul>
+							<li>每有一个模块*解除时，主显示屏将更新。当前屏显阶段会在较小的显示屏上显示。</li>
+							<li>将显示的数字，加到从下方表格得到的相应数字上，并记录总和的最低位有效数字。这即是该阶段的计算得数。</li>
+							<li>当其他所有模块*被解除后，显示屏会变为空白。</li>
+							<li>按照取得计算得数的先后顺序，在键盘上按下它们。</li>
+							<li>如果输入了不正确的计算得数，会有 LED 指示该阶段显示了哪个数字。</li>
+						</ul>
+						<table>
+							<tbody>
+								<tr>
+									<td>第一个数字：
+										<ul>
+											<li>如果炸弹有常灭 CAR 指示灯，该数字为 2。</li>
+											<li>否则，如果炸弹的常灭指示灯多于常亮指示灯，该数字为 7。</li>
+											<li>否则，如果炸弹没有常灭指示灯，该数字为常亮指示灯的数量。</li>
+											<li>否则，该数字为序列号最后一位数字。</li>
+										</ul>
+									</td>
+								</tr><tr>
+									<td>第二个数字：
+										<ul>
+											<li>如果炸弹有串行接口并且序列号有 3 个或更多的数字，该数字为 3。</li>
+											<li>否则，如果前一个计算得数是偶数，该数字为前一个计算得数加上 1。</li>
+											<li>否则，该数字为前一个计算得数减去 1。</li>
+										</ul>
+									</td>
+								</tr><tr>
+									<td>其他所有数字：
+										<ul>
+											<li>如果前两个计算得数中的任意一个是 0，该数字为序列号中的最大数字。</li>
+											<li>否则，如果前两个计算得数都是偶数，该数字为序列号中最小的奇数数字，但如果不存在这样的数字则为 9。</li>
+											<li>否则，该数字为前两个计算得数之和的最高位有效数字。</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p><br>* 部分模块会被勿忘我模块忽略。
+						<br>［目前包括其他<span class="force-zh">“</span>勿忘我<span class="force-zh">”</span>模块<span class="crush">、</span><span class="force-zh">“</span>定时钥匙（Turn The Key<span class="crush">）</span><span class="force-zh crush">”</span><span class="crush">、</span><span class="force-zh">“</span>纪念品（Souvenir<span class="crush">）</span><span class="force-zh">”</span>以及<span class="force-zh">“</span>全忘掉（Forget Everything<span class="crush">）</span><span class="force-zh crush">”</span><span class="crush">。</span>］</p>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 1 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

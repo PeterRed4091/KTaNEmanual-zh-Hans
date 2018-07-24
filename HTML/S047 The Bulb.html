@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>灯泡——“保持通话，不会爆炸”一般模块</title>
+    <meta content="initial-scale=1" name="viewport">
+    <link rel='stylesheet' type='text/css' href='css/font.css'>
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src='js/highlighter.js'></script>
+    <style>
+        p { margin: .5em 0 .7em; }
+        ul { margin: .7em 0 0; }
+        th { margin: .7em 0 0; }
+        table.layout { border: none; }
+        table.layout td { border: none; vertical-align: top; padding: .5em 0 .5em .5em; }
+        table.layout th { border: none; vertical-align: top; padding: .5em .5em .5em 0; white-space: nowrap; }
+        ul { padding-left: .7em; margin: 0; }
+    </style>
+</head>
+<body>
+    <div id="ManualContent">
+        <div class="section">
+            <div class="page page-bg-05">
+                <div class="page-header">
+                    <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                    <span class="page-header-section-title">灯泡</span>
+                </div>
+                <div class="page-content">
+                    <img class="diagram" src="img/Component/The Bulb.svg">
+                    <h2>关于灯泡(The Bulb)</h2>
+
+                    <p class="flavour-text">拧紧一个电灯泡需要多少名拆弹专家？
+
+                    <p>该模块带有两个分别标有<strong>I</strong>和<strong>O</strong>的按钮与一个电灯泡。灯泡为（半）透明或不透明，且为六种色彩之一：蓝、绿、紫、红、白或黄。
+                    <p>如果你由于按下错误的按钮而引起失误，忽视该行为并继续。
+                    <p>如果你由于在不正确的时间拧松或拧紧灯泡而引起失误，你<u>必须</u>撤销该行为而后继续。
+
+                    <p>从<u>步骤1</u>开始。
+
+                    <table class='layout'>
+                        <tr>
+                            <th>步骤1
+                            <td><ul><li>如果灯是亮着的且灯泡为透明，按下<strong>I</strong>并前往<strong>步骤2</strong>。
+                                    <li>如果灯是亮着的且灯泡为不透明，按下<strong>O</strong>并前往<strong>步骤3</strong>。
+                                    <li>否则，拧松灯泡并前往<strong>步骤4</strong>。
+                                </ul>
+                        </tr>
+                        <tr>
+                            <th>步骤2
+                            <td><ul><li>如果灯泡为红色，按下<strong>I</strong>，然后拧松它并前往<strong>步骤5</strong>。
+                                    <li>如果灯泡为白色，按下<strong>O</strong>，然后拧松它并前往<strong>步骤6</strong>。
+                                    <li>否则，拧松灯泡并前往<strong>步骤7</strong>。
+                                </ul>
+                        </tr>
+                        <tr>
+                            <th>步骤3
+                            <td><ul><li>如果灯泡为绿色，按下<strong>I</strong>，然后拧松它并前往<strong>步骤6</strong>。
+                                    <li>如果灯泡为紫色，按下<strong>O</strong>，然后拧松它并前往<strong>步骤5</strong>。
+                                    <li>否则，拧松灯泡并前往<strong>步骤8</strong>。
+                                </ul>
+                        </tr>
+                        <tr>
+                            <th>步骤4
+                            <td><ul><li>如果炸弹有以下任意一个指示器：CAR、IND、MSA或SND，按下<strong>I</strong>并前往<strong>步骤9</strong>。
+                                    <li>否则，按下<strong>O</strong>并前往<strong>步骤10</strong>。
+                                </ul>
+                        </tr>
+                        <tr>
+                            <th>步骤5
+                            <td><ul><li>如果灯在步骤1中熄灭了，再次按下相同的按钮，然后拧紧灯泡。
+                                    <li>否则，按下你尚未按过的按钮，然后拧紧灯泡。
+                                </ul>
+                        </tr>
+                        <tr>
+                            <th>步骤6
+                            <td><ul><li>如果灯泡在你按下<strong>I</strong>时熄灭了，按下你在步骤1中按下的按钮，然后拧紧灯泡。
+                                    <li>否则，按下你在步骤2或3中按下的按钮，然后拧紧灯泡。
+                                </ul>
+                        </tr>
+                    </table>
+
+                </div>
+                <div class="page-footer relative-footer">第 1 页 / 共 2 页</div>
+            </div>
+            <div class="page page-bg-04">
+                <div class="page-header">
+                    <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                    <span class="page-header-section-title">灯泡</span>
+                </div>
+                <div class="page-content">
+                    <table class='layout'>
+                        <tr>
+                            <th>步骤7
+                            <td><ul><li>如果灯泡是绿色，按下<strong>I</strong>，记住<u>SIG</u>并前往<strong>步骤11</strong>。
+                                    <li>如果灯泡是紫色，按下<strong>I</strong>，然后拧紧它并前往<strong>步骤12</strong>。
+                                    <li>如果灯泡是蓝色，按下<strong>O</strong>，记住<u>CLR</u>并前往<strong>步骤11</strong>。
+                                    <li>否则，按下<strong>O</strong>，然后拧紧灯泡并前往<strong>步骤13</strong>。
+                                </ul>
+                        </tr>
+                        <tr>
+                            <th>步骤8
+                            <td><ul><li>如果灯泡是白色，按下<strong>I</strong>，记住<u>FRQ</u>并前往<strong>步骤11</strong>。
+                                    <li>如果灯泡是红色，按下<strong>I</strong>，然后拧紧它并前往<strong>步骤13</strong>。
+                                    <li>如果灯泡是黄色，按下<strong>O</strong>，记住<u>FRK</u>并前往<strong>步骤11</strong>。
+                                    <li>否则，按下<strong>O</strong>，然后拧紧灯泡并前往<strong>步骤12</strong>。
+                                </ul>
+                        </tr>
+                        <tr>
+                            <th>步骤9
+                            <td><ul><li>如果灯泡是蓝色，按下<strong>I</strong>并前往<strong>步骤14</strong>。
+                                    <li>如果灯泡是绿色，按下<strong>I</strong>，然后拧紧它并前往<strong>步骤12</strong>。
+                                    <li>如果灯泡是黄色，按下<strong>O</strong>并前往<strong>步骤15</strong>。
+                                    <li>如果灯泡是白色，按下<strong>O</strong>，然后拧紧它并前往<strong>步骤13</strong>。
+                                    <li>如果灯泡是紫色，拧紧它，然后按下<strong>I</strong>并前往<strong>步骤12</strong>。
+                                    <li>否则，拧紧灯泡，然后按下<strong>O</strong>并前往<strong>步骤13</strong>。
+                                </ul>
+                        </tr>
+                        <tr>
+                            <th>步骤10
+                            <td><ul><li>如果灯泡是紫色，按下<strong>I</strong>并前往<strong>步骤14</strong>。
+                                    <li>如果灯泡是红色，按下<strong>I</strong>，然后拧紧它并前往<strong>步骤13</strong>。
+                                    <li>如果灯泡是蓝色，按下<strong>O</strong>并前往<strong>步骤15</strong>。
+                                    <li>如果灯泡是黄色，按下<strong>O</strong>，然后拧紧它并前往<strong>步骤12</strong>。
+                                    <li>如果灯泡是绿色，拧紧它，然后按下<strong>I</strong>并前往<strong>步骤13</strong>。
+                                    <li>否则，拧紧灯泡，然后按下<strong>O</strong>并前往<strong>步骤12</strong>。
+                                </ul>
+                        </tr>
+                        <tr>
+                            <th>步骤11
+                            <td><ul><li>如果炸弹有被记住的指示器，按下<strong>I</strong>，然后拧紧灯泡。
+                                    <li>否则，按下<strong>O</strong>，然后拧紧灯泡。
+                                </ul>
+                        </tr>
+                        <tr>
+                            <th>步骤12
+                            <td><ul><li>如果灯现在是亮着的，按下<strong>I</strong>。
+                                    <li>否则，按下<strong>O</strong>。
+                                </ul>
+                        </tr>
+                        <tr>
+                            <th>步骤13
+                            <td><ul><li>如果灯现在是亮着的，按下<strong>O</strong>。
+                                    <li>否则，按下<strong>I</strong>。
+                                </ul>
+                        </tr>
+                        <tr>
+                            <th>步骤14
+                            <td><ul><li>如果灯泡是不透明的，按下<strong>I</strong>，然后拧紧灯泡。
+                                    <li>否则，按下<strong>O</strong>，然后拧紧灯泡。
+                                </ul>
+                        </tr>
+                        <tr>
+                            <th>步骤15
+                            <td><ul><li>如果灯泡是透明的，按下<strong>I</strong>，然后拧紧灯泡。
+                                    <li>否则，按下<strong>O</strong>，然后拧紧灯泡。
+                                </ul>
+                        </tr>
+                    </table>
+
+                </div>
+                <div class="page-footer relative-footer">第 2 页 / 共 2 页</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

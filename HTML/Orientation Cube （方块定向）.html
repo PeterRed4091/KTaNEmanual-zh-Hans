@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>方块定向 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; } .crush { margin-right: -.5em; }
+			.diagram-right { float: right; width: 70mm; display: block; margin-top: 2.5em; }
+			.diagram-left { float: left; width: 70mm; display: block; margin-top: 2.5em; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-02">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">方块定向<br>Orientation Cube</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Orientation Cube.svg">
+						<h2>关于<span class="force-zh">“</span>方块定向<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">即使这炸弹不会杀死我们，脑出血也可能致我们于死地。</p>
+						<p>为了解除炸弹的这一部分，你需要良好的三维定向技能。你需要利用底部的四个按键，将一个虚拟正方体旋转至指定的朝向。不幸的是该模块不会显示或表明该虚拟正方体当前的朝向，因此你不得不自己想象此正方体的状态。</p>
+						<p>左下角的两个按键会以俯瞰正方体的视角，分别顺时针或逆时针偏转该正方体。</p>
+						<p>右下角的两个按键会以虚拟观察者的视角，分别顺时针或逆时针翻滚该正方体。虚拟观察者的位置在模块上以眼睛表示。<em>注：虚拟观察者的位置有可能改变。</em></p>
+						<p>例如，如果眼睛在底部，那么它正面向<span class="force-zh">“</span>前方<span class="force-zh">”</span>表面。按下<span class="force-zh">“</span>顺时针翻滚<span class="force-zh">”</span>会将<span class="force-zh">“</span>左侧<span class="force-zh">”</span>表面放置到<span class="force-zh">“</span>顶部<span class="force-zh">”</span>表面所在的位置。</p>
+						<p>［英汉对照］
+						<br><span class="force-zh">“</span>TOP<span class="force-zh">”——“</span>顶部<span class="crush force-zh">”</span><span class="crush">；</span><span class="force-zh">“</span>BOTTOM<span class="force-zh">”——“</span>底部<span class="crush force-zh">”</span><span class="crush">；</span><span class="force-zh">“</span>FRONT<span class="force-zh">”——“</span>前方<span class="crush force-zh">”</span>；
+						<br><span class="force-zh">“</span>BACK<span class="force-zh">”——“</span>后方<span class="crush force-zh">”</span><span class="crush">；</span><span class="force-zh">“</span>LEFT<span class="force-zh">”——“</span>左侧<span class="crush force-zh">”</span><span class="crush">；</span><span class="force-zh">“</span>RIGHT<span class="force-zh">”——“</span>右侧<span class="force-zh">”</span></p>
+						<img src="img/Orientation Cube/top zh-Hans substitute PeterRed4091.svg" class="diagram-left">
+						<img src="img/Orientation Cube/front zh-Hans substitute PeterRed4091.svg" class="diagram-right">
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 2 页</div>
+				</div>
+				<div class="page page-bg-02">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">方块定向<br>Orientation Cube</span>
+					</div>
+					<div class="page-content">
+						<h3>如果炸弹上的序列号包含字母 R：</h3>
+						<p>旋转正方体，使得初始的左侧表面处于和初始的顶部表面相同的位置，然后按下 SET（设定）按钮。</p>
+						<h3>否则，如果炸弹有带 TRN 标签的常亮指示灯，或者有带 CAR 标签的常亮／常灭指示灯：</h3>
+						<p>旋转正方体，使得初始的底部表面处于和初始的右侧表面相同的位置，然后按下 SET 按钮。</p>
+						<h3>否则，如果炸弹有 PS/2 接口，或者已得一振或更多振：</h3>
+						<p>旋转正方体，使得初始的底部表面处于和初始的前方表面相同的位置，同时初始的左侧表面处于和初始的底部表面相同的位置，然后按下 SET 按钮。</p>
+						<h3>否则，如果炸弹上的序列号包含数字 7 或 8：</h3>
+						<p>旋转正方体，使得初始的右侧表面处于和初始的底部表面相同的位置，同时初始的后方表面处于和初始的前方表面相同的位置，然后按下 SET 按钮。</p>
+						<h3>否则，如果炸弹上有多于两节电池，或者虚拟观察者的初始位置正面向初始的左侧表面：</h3>
+						<p>旋转正方体，使得初始的顶部表面处于和初始的底部表面相同的位置，然后按下 SET 按钮。</p>
+						<h3>否则：</h3>
+						<p>旋转正方体，使得初始的顶部表面处于和初始的左侧表面相同的位置，然后按下 SET 按钮。</p>
+						<h3>得一振时：</h3>
+						<p>如果你得了一振，虚拟正方体会重置到初始位置。注意，如果观察者处于与之前不同的位置，你可能需要选一条新规则。</p>
+					</div>
+					<div class="page-footer relative-footer">第 2 页　共 2 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

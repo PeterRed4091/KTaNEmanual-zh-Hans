@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>西蒙述 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; } .crush { margin-right: -.5em; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-02">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">西蒙述<br>Simon States</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Simon States.svg">
+						<h2>关于<span class="force-zh">“</span>西蒙述<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">我甚至不确定它有资格被当做<span class="force-zh">“</span>西蒙说（Simon Says<span class="crush">）</span><span class="force-zh">”……</span></p>
+						<ul>
+							<li>每一阶段会闪烁一种或多种色彩。</li>
+							<li>每一阶段也会显示之前阶段中闪烁的色彩。</li>
+							<li>当前色彩序列在延迟一小段时间后会重复。</li>
+							<li>当色彩序列重复时，你的输入不会被重置。</li>
+							<li>如果你按下了不正确的按钮，你的输入会被重置。</li>
+							<li>利用下一页的表格，按下每一阶段正确的色彩来推进进度。</li>
+							<li>当某条规则要求色彩优先级时，利用下方的表格来确定正确的色彩。</li>
+						</ul>
+						<table>
+							<tbody>
+								<tr>
+									<td rowspan="2">优先级</td><td colspan="4">左上角按钮色彩</td>
+								</tr><tr>
+									<td>红色</td><td>黄色</td><td>绿色</td><td>蓝色</td>
+								</tr><tr>
+									<td>最高</td><td>红色</td><td>蓝色</td><td>绿色</td><td>黄色</td>
+								</tr><tr>
+									<td>较高</td><td>蓝色</td><td>黄色</td><td>红色</td><td>绿色</td>
+								</tr><tr>
+									<td>较低</td><td>绿色</td><td>红色</td><td>黄色</td><td>蓝色</td>
+								</tr><tr>
+									<td>最低</td><td>黄色</td><td>绿色</td><td>蓝色</td><td>红色</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 2 页</div>
+				</div>
+				<div class="page page-bg-03">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">西蒙述<br>Simon States</span>
+					</div>
+					<div class="page-content">
+						<table>
+							<tbody>
+								<tr>
+									<td>第 1 阶段
+										<ul>
+											<li>如果一种色彩闪烁，按下那种色彩。</li>
+											<li>否则，如果两种色彩闪烁而其一是蓝色，按下闪烁的最高优先级的色彩。</li>
+											<li>否则，如果两种色彩闪烁，按下蓝色。</li>
+											<li>否则，如果三种色彩闪烁且包含红色，按下闪烁的最低优先级的色彩。</li>
+											<li>否则，如果三种色彩闪烁，按下红色。</li>
+											<li>否则，按下第二高优先级的色彩。</li>
+										</ul>
+									</td>
+								</tr><tr>
+									<td>第 2 阶段
+										<ul>
+											<li>如果只有红色和蓝色闪烁，按下未闪烁的最高优先级的色彩。</li>
+											<li>否则，如果两种色彩闪烁，按下未闪烁的最低优先级的色彩。</li>
+											<li>否则，如果一种色彩闪烁且不是蓝色，按下蓝色。</li>
+											<li>否则，如果一种色彩闪烁，按下黄色。</li>
+											<li>否则，如果所有色彩闪烁，按下与第 1 阶段相同的色彩。</li>
+											<li>否则，按下未闪烁的色彩。</li>
+										</ul>
+									</td>
+								</tr><tr>
+									<td>第 3 阶段
+										<ul>
+											<li>如果三种色彩闪烁且至少其一在之前某阶段被按过，按下闪烁而未被按过的最高优先级的色彩。</li>
+											<li>否则，如果三种色彩闪烁，按下闪烁的最高优先级的色彩。</li>
+											<li>否则，如果两种色彩闪烁且都被按过，按下未闪烁的最低优先级的色彩。</li>
+											<li>否则，如果两种色彩闪烁，按下与第 1 阶段相同的色彩。</li>
+											<li>否则，如果一种色彩闪烁，按下那种色彩。</li>
+											<li>否则，按下第二低优先级的色彩。</li>
+										</ul>
+									</td>
+								</tr><tr>
+									<td>第 4 阶段
+										<ul>
+											<li>如果三种互不相同的色彩都被按过，按下第四种色彩。</li>
+											<li>否则，如果三种色彩闪烁且仅有其一未被按过，按下那种色彩。</li>
+											<li>否则，如果至少三种色彩闪烁，按下最低优先级的色彩。</li>
+											<li>否则，如果一种色彩闪烁，按下那种色彩。</li>
+											<li>否则，按下绿色。</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 2 页　共 2 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

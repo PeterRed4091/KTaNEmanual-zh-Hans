@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>导线序列 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-07 wire-sequence">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">导线序列<br><span>Wire Sequence</span></span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Wire Sequences.svg"/>
+						<h2>关于<span class="force-zh">“</span>导线序列<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">要说明这机械装置如何运行会很难。此工程技术挺令人印象深刻，不过，肯定有更简单的方法来管理九根导线。</p>
+						<ul>
+							<li>该模块内有数个上方带有导线的面板，但一次只能看见一个面板。利用向下按钮切换至下一个面板，利用向上按钮切换至上一个面板。</li>
+							<li>直到你确信已经剪断当前面板上所有必须被剪断的导线时，你才可以切换至下一个面板。</li>
+							<li>如同下列表格所指示的那样剪断导线。导线出现次数是在该模块中所有面板的范围内累积的。</li>
+						</ul>
+						<div style="clear: both"></div>
+						<table class="red-table">
+							<tr><th colspan="2" class="header">红色导线出现次数</th></tr>
+							<tr><th class="first-col">导线出现次序</th><th class="second-col">连至<span class="force-zh">……</span><br>则剪断</th></tr>
+							<tr><td class="first-col">红色出现第一次</td><td class="second-col">C</td></tr>
+							<tr><td class="first-col">红色出现第二次</td><td class="second-col">B</td></tr>
+							<tr><td class="first-col">红色出现第三次</td><td class="second-col">A</td></tr>
+							<tr><td class="first-col">红色出现第四次</td><td class="second-col">A 或 C</td></tr>
+							<tr><td class="first-col">红色出现第五次</td><td class="second-col">B</td></tr>
+							<tr><td class="first-col">红色出现第六次</td><td class="second-col">A 或 C</td></tr>
+							<tr><td class="first-col">红色出现第七次</td><td class="second-col">A、B 或 C</td></tr>
+							<tr><td class="first-col">红色出现第八次</td><td class="second-col">A 或 B</td></tr>
+							<tr><td class="first-col">红色出现第九次</td><td class="second-col">B</td></tr>
+						</table>
+						<table class="blue-table"><tbody>
+							<tr><th colspan="2" class="header">蓝色导线出现次数</th></tr>
+							<tr><th class="first-col">导线出现次序</th><th class="second-col">连至<span class="force-zh">……</span><br>则剪断</th></tr>
+							<tr><td class="first-col">蓝色出现第一次</td><td class="second-col">B</td></tr>
+							<tr><td class="first-col">蓝色出现第二次</td><td class="second-col">A 或 C</td></tr>
+							<tr><td class="first-col">蓝色出现第三次</td><td class="second-col">B</td></tr>
+							<tr><td class="first-col">蓝色出现第四次</td><td class="second-col">A</td></tr>
+							<tr><td class="first-col">蓝色出现第五次</td><td class="second-col">B</td></tr>
+							<tr><td class="first-col">蓝色出现第六次</td><td class="second-col">B 或 C</td></tr>
+							<tr><td class="first-col">蓝色出现第七次</td><td class="second-col">C</td></tr>
+							<tr><td class="first-col">蓝色出现第八次</td><td class="second-col">A 或 C</td></tr>
+							<tr><td class="first-col">蓝色出现第九次</td><td class="second-col">A</td></tr>
+						</tbody></table>
+						<table class="black-table">
+							<tr><th colspan="2" class="header">黑色导线出现次数</th></tr>
+							<tr><th class="first-col">导线出现次序</th><th class="second-col">连至<span class="force-zh">……</span><br>则剪断</th></tr>
+							<tr><td class="first-col">黑色出现第一次</td><td class="second-col">A、B 或 C</td></tr>
+							<tr><td class="first-col">黑色出现第二次</td><td class="second-col">A 或 C</td></tr>
+							<tr><td class="first-col">黑色出现第三次</td><td class="second-col">B</td></tr>
+							<tr><td class="first-col">黑色出现第四次</td><td class="second-col">A 或 C</td></tr>
+							<tr><td class="first-col">黑色出现第五次</td><td class="second-col">B</td></tr>
+							<tr><td class="first-col">黑色出现第六次</td><td class="second-col">B 或 C</td></tr>
+							<tr><td class="first-col">黑色出现第七次</td><td class="second-col">A 或 B</td></tr>
+							<tr><td class="first-col">黑色出现第八次</td><td class="second-col">C</td></tr>
+							<tr><td class="first-col">黑色出现第九次</td><td class="second-col">C</td></tr>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 1 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

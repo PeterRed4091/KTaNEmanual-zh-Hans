@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>谋杀案——“保持通话，不会爆炸”一般模块</title>
+	<meta name="viewport" content="initial-scale=1">
+	<link rel='stylesheet' type='text/css' href='css/font.css'>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src='js/highlighter.js'></script>
+</head>
+<body>
+<div class="section">
+	<div class="page page-bg-04">
+		<div class="page-header">
+			<span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+			<span class="page-header-section-title">谋杀案</span>
+		</div>
+		<div class="page-content">
+			<img src="img/Component/Murder.svg" class="diagram">
+			<h2>关于谋杀案(Murder)</h2>
+			<p class="flavour-text">
+				这个模块被谋杀案被害人躁动不安的灵魂所控制。唯一解除它的方法即是侦破这起案件，这样被害人才能安然通往来世。
+			</p>
+			<i>关于识别指示器的参考资料，参见附录 A。</i><br>
+			<i>关于识别电池的参考资料，参见附录 B。</i><br>
+			<i>关于识别接口的参考资料，参见附录 C。</i><br>
+			<ul>
+				<li>在显示面板上选择谋杀犯、作案凶器和地点并按下“指控(ACCUSE)”来解除该模块。<br>
+				<li>模块会以红色显示一个地点——这就是尸体被发现的房间。这不一定是案件发生的房间。<br>
+				<li>下方的表格显示了谋杀案发生时嫌疑人和潜在凶器所在地点。此时谋杀犯一定与作案凶器处于同一地点。<br>
+				<li>部分嫌疑人和潜在凶器已从调查中排除——这些不会在模块上被列出。
+			</ul>
+			<h4>嫌疑人：</h4>
+			<p>
+				如果有带TRN标签的亮灯指示器，使用第5行来定位嫌疑人。<br>
+				否则，如果尸体被发现于餐厅，使用第7行。<br>
+				否则，如果炸弹有2个或更多的双声道RCA接口，使用第8行。<br>
+				否则，如果炸弹上没有D型电池，使用第2行。<br>
+				否则，如果尸体被发现于书房，使用第4行。<br>
+				否则，如果有5节或更多的电池，使用第9行。<br>
+				否则，如果有带FRQ标签的灭灯指示器，使用第1行。<br>
+				否则，如果尸体被发现于暖房，使用第3行。<br>
+				否则，使用第6行能使嫌疑人被定位。<br>
+			</p>
+			<h4>凶器：</h4>
+			<p>
+				如果尸体被发现于起居室，使用第3行来定位凶器。<br>
+				否则，如果有5节或更多的电池，使用第1行。<br>
+				否则，如果炸弹有串行接口，使用第9行。<br>
+				否则，如果尸体被发现于台球室，使用第4行。<br>
+				否则，如果炸弹上没有电池，使用第6行。<br>
+				否则，如果炸弹上没有亮灯指示器，使用第5行。<br>
+				否则，如果尸体被发现于大厅，使用第7行。<br>
+				否则，如果炸弹有2个或更多的双声道RCA接口，使用第2行。<br>
+				否则，使用第8行能使凶器被定位。<br>
+			</p>
+		</div>
+		<div class="page-footer relative-footer">第 1 页 / 共 2 页</div>
+	</div>
+	<div class="page page-bg-05">
+		<div class="page-header">
+			<span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+			<span class="page-header-section-title">谋杀案</span>
+		</div>
+		<div class="page-content">
+			<h4>地点：</h4>
+			<br>
+			<table class="murder-table">
+				<tbody>
+					<tr>
+						<th class="murder-spacer" rowspan="2"> </th>
+						<th>斯卡利特小姐 (Miss Scarlett)</th>
+						<th>普朗姆教授 (Professor Plum)</th>
+						<th>皮考克太太 (Mrs Peacock)</th>
+						<th>格林牧师 (Reverend Green)</th>
+						<th>马斯塔德上校 (Colonel Mustard)</th>
+						<th>怀特夫人 (Mrs White)</th>
+					</tr>
+					<tr>
+						<th>烛台<br>(Candle- stick)</th>
+						<th>匕首<br>(Dagger)</th>
+						<th>铅管<br>(Lead Pipe)</th>
+						<th>手枪<br>(Revolver)</th>
+						<th>绳索<br>(Rope)</th>
+						<th>扳手<br>(Spanner)</th>
+					</tr>
+					<tr>
+						<th>1</th>
+						<td>餐厅<br>(Dining Room)</td>
+						<td>资料室</td>
+						<td>起居室</td>
+						<td>厨房</td>
+						<td>书房</td>
+						<td>暖房</td>
+					</tr>
+					<tr>
+						<th>2</th>
+						<td>书房<br>(Study)</td>
+						<td>大厅</td>
+						<td>台球室</td>
+						<td>起居室</td>
+						<td>厨房</td>
+						<td>资料室</td>
+					</tr>
+					<tr>
+						<th>3</th>
+						<td>厨房<br>(Kitchen)</td>
+						<td>台球室</td>
+						<td>舞厅</td>
+						<td>资料室</td>
+						<td>暖房</td>
+						<td>餐厅</td>
+					</tr>
+					<tr>
+						<th>4</th>
+						<td>起居室<br>(Lounge)</td>
+						<td>舞厅</td>
+						<td>餐厅</td>
+						<td>暖房</td>
+						<td>大厅</td>
+						<td>厨房</td>
+					</tr>
+					<tr>
+						<th>5</th>
+						<td>台球室<br>(Billiard Room)</td>
+						<td>厨房</td>
+						<td>书房</td>
+						<td>舞厅</td>
+						<td>餐厅</td>
+						<td>大厅</td>
+					</tr>
+					<tr>
+						<th>6</th>
+						<td>暖房<br>(Conserv- atory)</td>
+						<td>起居室</td>
+						<td>资料室</td>
+						<td>书房</td>
+						<td>台球室</td>
+						<td>舞厅</td>
+					</tr>
+					<tr>
+						<th>7</th>
+						<td>舞厅<br>(Ballroom)</td>
+						<td>暖房</td>
+						<td>厨房</td>
+						<td>大厅</td>
+						<td>资料室</td>
+						<td>书房</td>
+					</tr>
+					<tr>
+						<th>8</th>
+						<td>大厅<br>(Hall)</td>
+						<td>书房</td>
+						<td>暖房</td>
+						<td>餐厅</td>
+						<td>起居室</td>
+						<td>台球室</td>
+					</tr>
+					<tr>
+						<th>9</th>
+						<td>资料室<br>(Library)</td>
+						<td>餐厅</td>
+						<td>大厅</td>
+						<td>台球室</td>
+						<td>舞厅</td>
+						<td>起居室</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="page-footer relative-footer">第 2 页 / 共 2 页</div>
+	</div>
+</div>
+</body></html>

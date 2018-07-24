@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>游戏手柄——“保持通话，不会爆炸”一般模块</title>
+    <meta content="initial-scale=1" name="viewport">
+    <link rel='stylesheet' type='text/css' href='css/font.css'>
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src='js/highlighter.js'></script>
+    <style>
+        .arrow {font-family:"Yu Gothic";}
+        .invert {color:#fff;background:#000;}
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                <span class="page-header-section-title">游戏手柄</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/The Gamepad.svg" class="diagram">
+                <h2>关于游戏手柄(The Gamepad)</h2>
+                <p class="flavour-text">哦，这玩意上按钮的布局仿佛把我带回了童年！不过我其实没料到会在计时炸弹上看到它。我猜，玩乐时间结束了。</p>
+                <p><i>关于数学概念的更多信息，参见附录 数学概念。</i></p>
+                <ul style="margin:4px 0;padding-left:24px;">
+                    <li>顶部液晶显示屏上会显示两个2位数。底部有八个按键：输入按键（<span class="arrow">◀▲▼▶</span>AB）、回车和退格。</li>
+                    <li>根据这两个数的性质，确定应输入的由两组子命令组成的正确命令。使用第一个符合项。</li>
+                    <li>这两个数记为<i>x</i>和<i>y</i>。单独数字记为<i>abcd</i>。某数后带有<i>n</i>意为该数的某个倍数。
+                </ul>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th style="width:140px;height:16px;vertical-align:top;">全局优先项</th>
+                            <td rowspan="2">
+                                <ul style="margin:0;padding:0;padding-left: 16px;">
+                                    <li>如果x = 11n，交换第一个按键与第二个，还有第五个与第七个。</li>
+                                    <li>如果a = 1 + d，交换第三个与第四个按键，以及第六个与第八个。</li>
+                                    <li>如果x或y是一个高度合成数，交换子命令的顺序。</li>
+                                    <li>如果x和y是完全平方数，翻转整个序列。</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align:top;">在确定两组命令<em>之后</em>应用所有符合项。</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table style="margin-top:8px;width:49.5%;float:left;">
+                    <tbody>
+                        <tr>
+                            <th colspan="2">第一个子命令</th>
+                        </tr>
+                        <tr>
+                            <td>x是质数</td>
+                            <td><span class="arrow">▲▲▼▼</span></td>
+                        </tr>
+                        <tr>
+                            <td>x = 12n</td>
+                            <td><span class="arrow">▲</span>A<span class="arrow">◀◀</span></td>
+                        </tr>
+                        <tr>
+                            <td>a+b = 10且序列号的末位数字是奇数</td>
+                            <td>AB<span class="arrow">◀▶</span></td>
+                        </tr>
+                        <tr>
+                            <td>x = 6n + 3或x = 10n + 5</td>
+                            <td><span class="arrow">▼◀</span>A<span class="arrow">▶</span></td>
+                        </tr>
+                        <tr>
+                            <td>x = 7n且y ≠ 7n</td>
+                            <td><span class="arrow">◀◀▲</span>B</td>
+                        </tr>
+                        <tr>
+                            <td>x = c × d</td>
+                            <td>A<span class="arrow">▲◀◀</span></td>
+                        </tr>
+                        <tr>
+                            <td>x是完全平方数</td>
+                            <td><span class="arrow">▶▶</span>A<span class="arrow">▼</span></td>
+                        </tr>
+                        <tr>
+                            <td>x = 3n – 1或炸弹有标有SND的<strong>灭</strong>灯指示器</td>
+                            <td><span class="arrow">▶</span>AB<span class="arrow">▲</span></td>
+                        </tr>
+                        <tr>
+                            <td>60 ≤ x < 90且炸弹没有电池</td>
+                            <td>BB<span class="arrow">▶◀</span></td>
+                        </tr>
+                        <tr>
+                            <td>x = 6n</td>
+                            <td>ABA<span class="arrow">▶</span></td>
+                        </tr>
+                        <tr>
+                            <td>x = 4n</td>
+                            <td><span class="arrow">▼▼◀▲</span></td>
+                        </tr>
+                        <tr>
+                            <td>其他</td>
+                            <td>A<span class="arrow">◀</span>B<span class="arrow">▶</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table style="margin-top:8px;width:49.5%;float:right;">
+                    <tbody>
+                        <tr>
+                            <th colspan="2">第二个子命令</th>
+                        </tr>
+                        <tr>
+                            <td>y是质数</td>
+                            <td><span class="arrow">◀▶◀▶</span></td>
+                        </tr>
+                        <tr>
+                            <td>y = 8n</td>
+                            <td><span class="arrow">▼▶</span>B<span class="arrow">▲</span></td>
+                        </tr>
+                        <tr>
+                            <td>c - d = 4且炸弹有双声道RCA接口</td>
+                            <td><span class="arrow">▶</span>A<span class="arrow">▼▼</span></td>
+                        </tr>
+                        <tr>
+                            <td>y = 4n + 2或炸弹有标有FRQ的亮灯指示器</td>
+                            <td>B<span class="arrow">▲▶</span>A</td>
+                        </tr>
+                        <tr>
+                            <td>y = 7n且x ≠ 7n</td>
+                            <td><span class="arrow">◀◀▼</span>A</td>
+                        </tr>
+                        <tr>
+                            <td>y是完全平方数</td>
+                            <td><span class="arrow">▲▼</span>B<span class="arrow">▶</span></td>
+                        </tr>
+                        <tr>
+                            <td>y = a × b</td>
+                            <td>A<span class="arrow">▲◀▼</span></td>
+                        </tr>
+                        <tr>
+                            <td>y = 4n – 1或炸弹有PS/2接口</td>
+                            <td><span class="arrow">▲</span>BBB</td>
+                        </tr>
+                        <tr>
+                            <td>c > d且炸弹有2节或更多的电池</td>
+                            <td>AA<span class="arrow">▲▼</span></td>
+                        </tr>
+                        <tr>
+                            <td>y = 5n</td>
+                            <td>BAB<span class="arrow">◀</span></td>
+                        </tr>
+                        <tr>
+                            <td>y = 3n</td>
+                            <td><span class="arrow">▶▲▲◀</span></td>
+                        </tr>
+                        <tr>
+                            <td>其他</td>
+                            <td>B<span class="arrow">▲</span>A<span class="arrow">▼</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="page-footer relative-footer">第 1 页 / 共 2 页</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                <span class="page-header-section-title">附录 数学概念</span>
+            </div>
+            <div class="page-content">
+                <h2>附录 数学概念：数学有关概念</h2>
+                <p>本附录包含了在游戏手柄模块中使用的一些数学概念的简要概述。</p>
+                <h3>质数</h3>
+                <p>质数即是一个只能被1和本身整除的计数数（正整数）。换句话说，你没有办法让任意数量的多位好友均等地分享质数数量的甜甜圈。（除非你的好友和甜甜圈一样多！）</p>
+                <p>100以内的质数为：2、3、5、7、11、13、17、19、23、29、31、37、41、43、47、53、59、61、67、71、73、79、83、89、97。</p>
+                <h3>完全平方数</h3>
+                <p>完全平方数即是任意一个整数与本身相乘的乘积。</p>
+                <p>100以内的完全平方数为：1、4、9、16、25、36、49、64、81。</p>
+                <h3>高度合成数</h3>
+                <p>高度合成数比任意较小的正整数拥有更多的因数。例如，6可以被1、2、3和6整除，而这比上一个高度合成数4（其因数为1、2、4）要多。8可以被1、2、4和8整除，但有一个较小的数（6）拥有相同数量的因数，因此它不是高度合成数。</p>
+                <p>100以内的高度合成数为：1、2、4、6、12、24、36、48、60。</p>
+            </div>
+            <div class="page-footer relative-footer">第 2 页 / 共 2 页</div>
+        </div>
+    </div>
+</body>
+</html>

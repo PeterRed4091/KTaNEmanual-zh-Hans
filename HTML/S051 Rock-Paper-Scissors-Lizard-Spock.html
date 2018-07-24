@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>进阶石剪布——“保持通话，不会爆炸”一般模块</title>
+    <meta content="initial-scale=1" name="viewport">
+    <link rel='stylesheet' type='text/css' href='css/font.css'>
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src='js/highlighter.js'></script>
+    <style>
+        .squeeze {
+            position: absolute;
+            white-space: nowrap;
+            transform: scaleX(.937);
+            transform-origin: left;
+            text-decoration: inherit;
+        }
+        table.rock-paper-scissors-lizard-spock {
+            width: 100%;
+        }
+        table.rock-paper-scissors-lizard-spock td {
+            white-space: nowrap;
+            vertical-align: top;
+        }
+        .skip {
+            font-size: 10pt;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-04">
+            <div class="page-header">
+                <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                <span class="page-header-section-title">进阶石剪布</span>
+            </div>
+            <div class="page-content">
+                <img class='diagram' src='img/Component/Rock-Paper-Scissors-Lizard-Spock.svg'>
+                <h2>关于<span class='squeeze'><span class='squeeze'>进阶石剪布
+						<span class='squeeze'><span class='squeeze'>(Rock-Paper-Scissors-Lizard-Spock)</span></span></span></span></h2>
+
+                <p class="flavour-text">
+                    坊间证据表明在石头剪刀布的游戏中，由于结果数量有限，互相熟悉的玩家有75%到80%的概率会打平。石头剪刀布蜥蜴斯波克由互联网先驱萨姆·卡斯发明，是对该经典游戏的改进。萨姆·卡斯万岁。万岁。
+
+                <p>
+                    为解除该模块，确定五个图标中应按下哪几个。
+
+                <p>
+                    首先，确定诱饵。如果五个图标以正五边形排列，没有诱饵。否则，诱饵为排列中央那个，或排成一线的三个（横向、斜向或竖向）的中间那个。
+
+                <p>
+                    其次，查阅下表各行并确定每行得分最高的图标。在没有平局且得分最高的图标不是诱饵的第一行停下。然后按下模块上胜过该图标的图标。如果没有一行适用，按下除诱饵外的所有图标。
+
+                <p>
+                    哪个图标胜过哪个呢？这非常简单。剪刀剪碎布。布包住石头。石头砸死蜥蜴。蜥蜴毒死斯波克。斯波克击碎剪刀。剪刀斩首蜥蜴。蜥蜴吃掉纸。纸反驳斯波克。斯波克蒸发石头。最后一如既往，石头砸碎剪刀。
+
+                <table class='rock-paper-scissors-lizard-spock'>
+                    <tr><th>出现次数：              <th>石头        <th>布/纸       <th>剪刀        <th>蜥蜴        <th>斯波克      </tr>
+                    <tr><th><div>序列号字母</div>
+                            <div class='skip'>如果序列号包含X或Y，跳过此行。</div>
+                                                    <td>R、O        <td>P、A        <td>S、I        <td>L、Z        <td>C、K        </tr>
+                    <tr><th><div>接口</div>
+                            <div class='skip'>如果存在PS/2接口，跳过此行。</div>
+                                                    <td>RJ-45       <td>并行        <td>串行        <td>DVI-D       <td>双声道RCA   </tr>
+                    <tr><th><div>亮灯指示器</div>
+                            <div class='skip'>如果存在亮灯TRN指示器，跳过此行。</div>
+                                                    <td>FRK、FRQ    <td>BOB、IND    <td>CAR、SIG    <td>CLR、NSA    <td>SND、MSA    </tr>
+                    <tr><th><div>灭灯指示器</div>
+                            <div class='skip'>如果存在灭灯TRN指示器，跳过此行。</div>
+                                                    <td>FRK、FRQ    <td>BOB、IND    <td>CAR、SIG    <td>CLR、NSA    <td>SND、MSA    </tr>
+                    <tr><th>序列号数字              <td>0、5        <td>3、6        <td>1、9        <td>2、8        <td>4、7        </tr>
+                </table>
+            </div>
+			<div class="page-footer relative-footer">第 1 页 / 共 1 页</div>
+        </div>
+    </div>
+</body>
+</html>

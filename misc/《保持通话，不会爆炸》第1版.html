@@ -1,0 +1,2134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+		<title>《保持通话，不会爆炸》第 1 版</title>
+		<meta name="viewport" content="initial-scale=1"> 
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<link rel="stylesheet" type="text/css" href="css/custom zh-CN.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			table p { margin: 0 }
+			.memory-rules p {
+				margin: 0;
+				font-size: 1em;
+			}
+			.maze {
+				display: inline-block;
+				width: 12em;
+				height: 12em;
+				position: relative;
+			}
+			.maze.maze-0 { background-image: url(img/Maze/maze0.svg); }
+			.maze.maze-1 { background-image: url(img/Maze/maze1.svg); }
+			.maze.maze-2 { background-image: url(img/Maze/maze2.svg); }
+			.maze.maze-3 { background-image: url(img/Maze/maze3.svg); }
+			.maze.maze-4 { background-image: url(img/Maze/maze4.svg); }
+			.maze.maze-5 { background-image: url(img/Maze/maze5.svg); }
+			.maze.maze-6 { background-image: url(img/Maze/maze6.svg); }
+			.maze.maze-7 { background-image: url(img/Maze/maze7.svg); }
+			.maze.maze-8 { background-image: url(img/Maze/maze8.svg); }
+			.square {
+				width: 2em;
+				height: 2em;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-01 section-title">
+					<div class="page-content">
+						<h2 style="margin: 0 auto; text-decoration: none; line-height: 0em; font-size: 2.8em;">《保持通话，不会爆炸》</h2>
+						<img src="img/ktane-logo.png" alt="Keep Talking and Nobody Explodes" style="margin: 1em auto .2em; width: 42em;" />
+						<h1 style="font-size: 1em; font-weight: normal; margin: 5.55em auto 0;">
+							<span style="font-size: 7.7em; line-height: 1.05em;">炸弹<br />拆除<br />手册</span>
+						</h1>
+						<h2 style="margin: 1.78em auto 0; text-decoration: none; line-height: 1em; font-size: 2.8em;">第 1 版<br />
+							<span style="font-size: 0.57em; font-weight: normal;">验证码：241<br />PeterRed4091 译制</span>
+						</h2>
+					</div>
+					<div class="page-footer relative-footer">第 3 次修订</div>
+				</div>
+				<div class="page page-bg-02 section-title">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">前言</span>
+					</div>
+					<div class="page-content">
+						<div class="vertical-spacer"></div>
+						<p style="font-style:italic">欢迎来到危险而极具挑战的拆弹界。</p>
+						<p style="font-style:italic"><em style="font-style:italic">你将担任拆弹专家</em>（Expert），请仔细研读这份手册。<br />即使是要解除最为阴险的炸弹，在本手册中你也能找到你所需要知道的一切。<br />请记住——任何小疏忽都可能让一切完蛋！</p>
+					</div>
+					<div class="page-footer relative-footer">第 2 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-03">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">拆除炸弹</span>
+					</div>
+					<div class="page-content">
+						<h1>拆除炸弹</h1>
+						<p>当倒数计时器达到 0:00，或太多振数被记录时，炸弹将会爆炸。拆除炸弹的唯一方法，即是在其倒数计时器终止前，解除其所有的普通模块。</p>
+						<div class="bomb-diagram">
+							<span class="diagram-label">炸弹示例</span><br />
+							<table><tr><td><img class="bomb-diagram-front" src="img/Bomb zh-CN.svg" /><br />正面</td><td><img class="bomb-diagram-side" src="img/BombSide zh-CN.svg" /><br />侧面</td></tr></table>
+						</div>
+						<h3>模块</h3>
+						<p>每个炸弹会包含最多 11 个必须被解除的模块（Module）。每个模块各自独立，能以任意顺序被解除。<br />　　解除普通模块的指示能在第 1 节中找到。“反复”模块则提供了特例，在第 2 节内对此有所描述。</p>
+						<h3>振数</h3>
+						<div class="timer-diagram">振数指示器<br /><img src="img/TimerComponent.svg"/></div>
+						<p>当拆弹人员（Defuser）犯错时，炸弹会记录振（Strike）数，并在倒数计时器上方的指示器上显示。带有振数指示器的炸弹会在第三振爆炸。记录振数后，计时器会开始倒数得更快。<br />　　如果倒数计时器上方未出现振数指示器，炸弹会在第一振爆炸，不给错误留下任何余地。</p>
+						<h3>收集信息</h3>
+						<p>某些解除指示会需要关于炸弹的特定信息，例如序列号（Serial Number）。这类信息通常能在炸弹箱体的顶部、底部或两侧被找到。查看附录 A、附录 B 和附录 C 以获得对解除特定模块有用的识别指示。</p>
+					</div>
+					<div class="page-footer relative-footer">第 3 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-04 section-title">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">第 1 节：普通模块<br />Regular Module</span>
+					</div>
+					<div class="page-content">
+						<div class="vertical-spacer"></div>
+						<img class="diagram" src="img/Component.svg" />
+						<div class="new-block-formatting-context">
+							<h1>第 1 节：普通模块</h1>
+							<p>普通模块能通过右上角的 LED 来被识别。<br />此 LED 点亮为绿色时，该模块已被解除。</p>
+							<p>要拆除炸弹，所有普通模块必须被解除。</p>
+						</div>
+					</div>
+					<div class="page-footer relative-footer">第 4 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-05">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">导线<br />Wires</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Wires.svg" />
+						<h2>关于“导线”模块</h2>
+						<p class="flavour-text">导线是电器的血液！等等，不对，电力才是血液。导线更像动脉。静脉？那不重要……</p>
+						<ul>
+							<li>导线模块上会有 3-6 根导线。</li>
+							<li>要解除该模块，只有<em>一</em>根正确的导线需要被剪断。</li>
+							<li>导线的次序以顶部第一根为开始。</li>
+						</ul>
+						<div style="clear:both"></div>
+						<table>
+							<tr>
+								<td>
+									<strong><em>3 根导线</em>：</strong>
+									<p>如果没有红色导线，剪断第二根导线。</p>
+									<p>否则，如果最后一根导线为白色，剪断最后一根导线。</p>
+									<p>否则，如果蓝色导线多于一根，剪断最后一根蓝色导线。</p>
+									<p>否则，剪断最后一根导线。</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<strong><em>4 根导线</em>：</strong>
+									<p>如果红色导线多于一根，并且序列号最后一位数字为奇数，剪断最后一根红色导线。</p>
+									<p>否则，如果最后一根导线为黄色，并且没有红色导线，剪断第一根导线。</p>
+									<p>否则，如果蓝色导线仅有一根，剪断第一根导线。</p>
+									<p>否则，如果黄色导线多于一根，剪断最后一根导线。</p>
+									<p>否则，剪断第二根导线。</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<strong><em>5 根导线</em>：</strong>
+									<p>如果最后一根导线为黑色，并且序列号最后一位数字为奇数，剪断第四根导线。</p>
+									<p>否则，如果红色导线仅有一根，并且黄色导线多于一根，剪断第一根导线。</p>
+									<p>否则，如果没有黑色导线，剪断第二根导线。</p>
+									<p>否则，剪断第一根导线。</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<strong><em>6 根导线</em>：</strong>
+									<p>如果没有黄色导线，并且序列号最后一位数字为奇数，剪断第三根导线。</p>
+									<p>否则，如果黄色导线仅有一根，并且白色导线多于一根，剪断第四根导线。</p>
+									<p>否则，如果没有红色导线，剪断最后一根导线。</p>
+									<p>否则，剪断第四根导线。</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 5 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-06">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">按钮<br />Button</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/The Button zh-CN.svg" />
+						<h2>关于“按钮”模块</h2>
+						<p class="flavour-text">你可能会认为，一个告诉你要去按下它的按钮挺直截了当的。正是那种思维使得人们被炸。</p>
+						<p class="appendix-reference" style="margin-bottom: 0">查看附录 A 以获得指示器识别参考。</p>
+						<p class="appendix-reference" style="margin-top: 0">查看附录 B 以获得电池识别参考。</p>
+						<p>按照所列次序遵循这些规则。执行第一个适用的行动：</p>
+						<ol>
+							<li>如果按钮为蓝色，并且按钮标示着“Abort（中止）”，按住按钮，然后查阅“松开被按住的按钮”。</li>
+							<li>如果炸弹上电池多于 1 节，并且按钮标示着“Detonate（引爆）”，按下按钮，然后立即松开。</li>
+							<li>如果按钮为白色，并且有亮灯指示器带 CAR 标签，按住按钮，然后查阅“松开被按住的按钮”。</li>
+							<li>如果炸弹上电池多于 2 节，并且有亮灯指示器带 FRK 标签，按下按钮，然后立即松开。</li>
+							<li>如果按钮为黄色，按住按钮，然后查阅“松开被按住的按钮”。</li>
+							<li>如果按钮为红色，并且按钮标示着“Hold（按住）”，按下按钮，然后立即松开。</li>
+							<li>如果上述无一适用，按住按钮，然后查阅“松开被按住的按钮”。</li>
+						</ol>
+						<h3>松开被按住的按钮</h3>
+						<p>如果你开始向下按住按钮，模块右侧会亮起有色光带。根据其色彩，你必须在特定的时间点松开按钮：</p>
+						<ul>
+							<li><em>蓝色光带</em>：当倒数计时器在任意位置上有 4 时松开。</li>
+							<li><em>白色光带</em>：当倒数计时器在任意位置上有 1 时松开。</li>
+							<li><em>黄色光带</em>：当倒数计时器在任意位置上有 5 时松开。</li>
+							<li><em>其他任意色彩光带</em>：当倒数计时器在任意位置上有 1 时松开。</li>
+						</ul>
+					</div>
+					<div class="page-footer relative-footer">第 6 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-07">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">键盘<br />Keypad</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Keypad.svg" />
+						<h2>关于“键盘”模块</h2>
+						<p class="flavour-text">我不确定这些符号是什么，但我怀疑它们与神秘学有关。</p>
+						<ul>
+							<li>下面只有一列含有键盘上的所有四个符号。</li>
+							<li>按照键盘符号在那一列中从上到下出现的次序，按下这四个按钮。</li>
+						</ul>
+						<br />
+						<br />
+						<table class="keypad-table">
+							<tr>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/28-balloon.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/16-euro.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/1-copyright.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/11-six.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/24-pitchfork.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/11-six.png"></img></td>
+							</tr>
+							<tr>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/13-at.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/28-balloon.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/8-pumpkin.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/21-paragraph.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/4-smileyface.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/16-euro.png"></img></td>
+							</tr>
+							<tr>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/30-upsidedowny.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/23-leftc.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/26-cursive.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/31-bt.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/31-bt.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/27-tracks.png"></img></td>
+							</tr>
+							<tr>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/12-squigglyn.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/26-cursive.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/5-doublek.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/7-squidknife.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/22-rightc.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/14-ae.png"></img></td>
+							</tr>
+							<tr>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/7-squidknife.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/3-hollowstar.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/15-meltedthree.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/5-doublek.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/21-paragraph.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/24-pitchfork.png"></img></td>
+							</tr>
+							<tr>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/9-hookn.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/9-hookn.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/30-upsidedowny.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/20-questionmark.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/19-dragon.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/18-nwithhat.png"></img></td>
+							</tr>
+							<tr>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/23-leftc.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/20-questionmark.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/3-hollowstar.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/4-smileyface.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/2-filledstar.png"></img></td>
+								<td class="keypad-table-spacer"></td>
+								<td class="keypad-table-column"><img class="keypad-symbol-image" src="img/Keypad/6-omega.png"></img></td>
+							</tr>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 7 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-01">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">你说我做<br />Simon Says</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Simon Says.svg" />
+						<h2>关于“你说我做”模块</h2>
+						<p class="flavour-text">这像是你儿时玩过的那些玩具之一，你不得不匹配出现的图案。只是，这个大概是在一元店买的仿冒品。</p>
+						<ol>
+							<li>四个有色按钮之一会闪烁。</li>
+							<li>利用下方正确的表格，按下带有相应色彩的按钮。</li>
+							<li>原始的按钮会闪烁，其后会跟着又一个按钮。利用色彩映射，按照次序重复此序列。</li>
+							<li>每次你正确输入序列时，该序列会延长一项，直至模块被解除。</li>
+						</ol>
+						<img src="img/Simon Says/SimonComponent_ColourLegend zh-CN.svg" style="height: 9em; margin: 1em auto; display: block;" alt="顶部：蓝色；左侧：红色；右侧：黄色；底部：绿色" />
+						<p>如果序列号包含元音字母：</p>
+						<table class="repeaters-table">
+							<tr>
+								<th colspan="2" class="repeaters-spacer"></th>
+								<th>红色闪烁</th>
+								<th>蓝色闪烁</th>
+								<th>绿色闪烁</th>
+								<th>黄色闪烁</th>
+							</tr>
+							<tr>
+								<th rowspan="3">要按下的按钮：</th>
+								<th>零振</th>
+								<td>蓝色</td>
+								<td>红色</td>
+								<td>黄色</td>
+								<td>绿色</td>
+							</tr>
+							<tr>
+								<th>一振</th>
+								<td>黄色</td>
+								<td>绿色</td>
+								<td>蓝色</td>
+								<td>红色</td>
+							</tr>
+							<tr>
+								<th>至少两振</th>
+								<td>绿色</td>
+								<td>红色</td>
+								<td>黄色</td>
+								<td>蓝色</td>
+							</tr>
+						</table>
+						<p>如果序列号<em>不</em>包含元音字母：</p>
+						<table class="repeaters-table">
+							<tr>
+								<th colspan="2" class="repeaters-spacer"></th>
+								<th>红色闪烁</th>
+								<th>蓝色闪烁</th>
+								<th>绿色闪烁</th>
+								<th>黄色闪烁</th>
+							</tr>
+							<tr>
+								<th rowspan="3">要按下的按钮：</th>
+								<th>零振</th>
+								<td>蓝色</td>
+								<td>黄色</td>
+								<td>绿色</td>
+								<td>红色</td>
+							</tr>
+							<tr>
+								<th>一振</th>
+								<td>红色</td>
+								<td>蓝色</td>
+								<td>黄色</td>
+								<td>绿色</td>
+							</tr>
+							<tr>
+								<th>至少两振</th>
+								<td>黄色</td>
+								<td>绿色</td>
+								<td>蓝色</td>
+								<td>红色</td>
+							</tr>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 8 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-02">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">谁在一垒<br />Who’s on First</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Who’s on First zh-CN.svg" />
+						<h2>关于 “谁在一垒”模块</h2>
+						<p class="flavour-text">这奇特的装置像是从喜剧小品节目里来的东西，要是它没连接着炸弹的话，兴许有些滑稽。由于言语只会使事态复杂化，我将保持用语简短。</p>
+						<ol>
+							<li>阅读屏显内容，然后使用第 1 步来确定要<em>阅读</em>哪个按钮标签。</li>
+							<li>利用此按钮标签，使用第 2 步来确定要<em>按下</em>哪个按钮。</li>
+							<li>如此重复，直至模块被解除。</li>
+						</ol>
+						<h3>第 1 步：</h3>
+						<p>根据显示屏内容，<em>阅读</em>特定按钮的标签，然后前往第 2 步：</p>
+						<table class="whos-on-first-step1-table">
+							<tr>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">YES</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">FIRST</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+											<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">DISPLAY</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">OKAY</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">SAYS</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">NOTHING</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">  </th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">BLANK</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">NO</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">LED</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">LEAD</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">READ</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">RED</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">REED</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">LEED</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">HOLD ON</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">YOU</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">YOU ARE</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">YOUR</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">YOU'RE</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">UR</th>
+										</tr>
+										<tr>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">THERE</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">THEY'RE</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">THEIR</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">THEY ARE</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">SEE</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">C</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<th class="whos-on-first-look-at-display" colspan="2">CEE</th>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td><br /></td>
+										</tr>
+										<tr>
+											<td><br /></td>
+											<td class="whos-on-first-look-at"><img src="img/Who’s on First/eye-icon.png" alt="看这里" style="height: 1em;" /></td>
+										</tr>
+									</table>
+								</td>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 9 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-03">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">谁在一垒<br />Who’s on First</span>
+					</div>
+					<div class="page-content">
+						<h3>第 2 步：</h3>
+						<p>利用来自第 1 步的标签，<em>按下</em>其相应列表中出现的<em>第一个按钮</em>：</p>
+						<table class="whos-on-first-step2-table">
+							<tr>
+								<th>"READY":</th>
+								<td>YES, OKAY, WHAT, MIDDLE, LEFT, PRESS, RIGHT, BLANK, READY, NO, FIRST, UHHH, NOTHING, WAIT</td>
+							</tr>
+							<tr>
+								<th>"FIRST":</th>
+								<td>LEFT, OKAY, YES, MIDDLE, NO, RIGHT, NOTHING, UHHH, WAIT, READY, BLANK, WHAT, PRESS, FIRST</td>
+							</tr>
+							<tr>
+								<th>"NO":</th>
+								<td>BLANK, UHHH, WAIT, FIRST, WHAT, READY, RIGHT, YES, NOTHING, LEFT, PRESS, OKAY, NO, MIDDLE</td>
+							</tr>
+							<tr>
+								<th>"BLANK":</th>
+								<td>WAIT, RIGHT, OKAY, MIDDLE, BLANK, PRESS, READY, NOTHING, NO, WHAT, LEFT, UHHH, YES, FIRST</td>
+							</tr>
+							<tr>
+								<th>"NOTHING":</th>
+								<td>UHHH, RIGHT, OKAY, MIDDLE, YES, BLANK, NO, PRESS, LEFT, WHAT, WAIT, FIRST, NOTHING, READY</td>
+							</tr>
+							<tr>
+								<th>"YES":</th>
+								<td>OKAY, RIGHT, UHHH, MIDDLE, FIRST, WHAT, PRESS, READY, NOTHING, YES, LEFT, BLANK, NO, WAIT</td>
+							</tr>
+							<tr>
+								<th>"WHAT":</th>
+								<td>UHHH, WHAT, LEFT, NOTHING, READY, BLANK, MIDDLE, NO, OKAY, FIRST, WAIT, YES, PRESS, RIGHT</td>
+							</tr>
+							<tr>
+								<th>"UHHH":</th>
+								<td>READY, NOTHING, LEFT, WHAT, OKAY, YES, RIGHT, NO, PRESS, BLANK, UHHH, MIDDLE, WAIT, FIRST</td>
+							</tr>
+							<tr>
+								<th>"LEFT":</th>
+								<td>RIGHT, LEFT, FIRST, NO, MIDDLE, YES, BLANK, WHAT, UHHH, WAIT, PRESS, READY, OKAY, NOTHING</td>
+							</tr>
+							<tr>
+								<th>"RIGHT":</th>
+								<td>YES, NOTHING, READY, PRESS, NO, WAIT, WHAT, RIGHT, MIDDLE, LEFT, UHHH, BLANK, OKAY, FIRST</td>
+							</tr>
+							<tr>
+								<th>"MIDDLE":</th>
+								<td>BLANK, READY, OKAY, WHAT, NOTHING, PRESS, NO, WAIT, LEFT, MIDDLE, RIGHT, FIRST, UHHH, YES</td>
+							</tr>
+							<tr>
+								<th>"OKAY":</th>
+								<td>MIDDLE, NO, FIRST, YES, UHHH, NOTHING, WAIT, OKAY, LEFT, READY, BLANK, PRESS, WHAT, RIGHT</td>
+							</tr>
+							<tr>
+								<th>"WAIT":</th>
+								<td>UHHH, NO, BLANK, OKAY, YES, LEFT, FIRST, PRESS, WHAT, WAIT, NOTHING, READY, RIGHT, MIDDLE</td>
+							</tr>
+							<tr>
+								<th>"PRESS":</th>
+								<td>RIGHT, MIDDLE, YES, READY, PRESS, OKAY, NOTHING, UHHH, BLANK, LEFT, FIRST, WHAT, NO, WAIT</td>
+							</tr>
+							<tr>
+								<th>"YOU":</th>
+								<td>SURE, YOU ARE, YOUR, YOU'RE, NEXT, UH HUH, UR, HOLD, WHAT?, YOU, UH UH, LIKE, DONE, U</td>
+							</tr>
+							<tr>
+								<th>"YOU ARE":</th>
+								<td>YOUR, NEXT, LIKE, UH HUH, WHAT?, DONE, UH UH, HOLD, YOU, U, YOU'RE, SURE, UR, YOU ARE</td>
+							</tr>
+							<tr>
+								<th>"YOUR":</th>
+								<td>UH UH, YOU ARE, UH HUH, YOUR, NEXT, UR, SURE, U, YOU'RE, YOU, WHAT?, HOLD, LIKE, DONE</td>
+							</tr>
+							<tr>
+								<th>"YOU'RE":</th>
+								<td>YOU, YOU'RE, UR, NEXT, UH UH, YOU ARE, U, YOUR, WHAT?, UH HUH, SURE, DONE, LIKE, HOLD</td>
+							</tr>
+							<tr>
+								<th>"UR":</th>
+								<td>DONE, U, UR, UH HUH, WHAT?, SURE, YOUR, HOLD, YOU'RE, LIKE, NEXT, UH UH, YOU ARE, YOU</td>
+							</tr>
+							<tr>
+								<th>"U":</th>
+								<td>UH HUH, SURE, NEXT, WHAT?, YOU'RE, UR, UH UH, DONE, U, YOU, LIKE, HOLD, YOU ARE, YOUR</td>
+							</tr>
+							<tr>
+								<th>"UH HUH":</th>
+								<td>UH HUH, YOUR, YOU ARE, YOU, DONE, HOLD, UH UH, NEXT, SURE, LIKE, YOU'RE, UR, U, WHAT?</td>
+							</tr>
+							<tr>
+								<th>"UH UH":</th>
+								<td>UR, U, YOU ARE, YOU'RE, NEXT, UH UH, DONE, YOU, UH HUH, LIKE, YOUR, SURE, HOLD, WHAT?</td>
+							</tr>
+							<tr>
+								<th>"WHAT?":</th>
+								<td>YOU, HOLD, YOU'RE, YOUR, U, DONE, UH UH, LIKE, YOU ARE, UH HUH, UR, NEXT, WHAT?, SURE</td>
+							</tr>
+							<tr>
+								<th>"DONE":</th>
+								<td>SURE, UH HUH, NEXT, WHAT?, YOUR, UR, YOU'RE, HOLD, LIKE, YOU, U, YOU ARE, UH UH, DONE</td>
+							</tr>
+							<tr>
+								<th>"NEXT":</th>
+								<td>WHAT?, UH HUH, UH UH, YOUR, HOLD, SURE, NEXT, LIKE, DONE, YOU ARE, UR, YOU'RE, U, YOU</td>
+							</tr>
+							<tr>
+								<th>"HOLD":</th>
+								<td>YOU ARE, U, DONE, UH UH, YOU, UR, SURE, WHAT?, YOU'RE, NEXT, HOLD, UH HUH, YOUR, LIKE</td>
+							</tr>
+							<tr>
+								<th>"SURE":</th>
+								<td>YOU ARE, DONE, LIKE, YOU'RE, YOU, HOLD, UH HUH, UR, SURE, U, WHAT?, NEXT, YOUR, UH UH</td>
+							</tr>
+							<tr>
+								<th>"LIKE":</th>
+								<td>YOU'RE, NEXT, U, UR, HOLD, DONE, UH UH, WHAT?, UH HUH, YOU, LIKE, SURE, YOU ARE, YOUR</td>
+							</tr>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 10 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-04">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">记忆力<br />Memory</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Memory.svg" />
+						<h2>关于“记忆力”模块</h2>
+						<p class="flavour-text">记忆力是脆弱的东西；但当炸弹爆炸时，其他的一切也是如此。请集中注意力！</p>
+						<ul>
+							<li>按下正确的按钮以使该模块前往下一个阶段。完成所有阶段以解除模块。</li>
+							<li>按下不正确的按钮将使模块重置，回到第 1 阶段。</li>
+							<li>按钮位置是从左到右排序的。</li>
+						</ul>
+						<div class="memory-rules">
+							<h4>第1阶段：</h4>
+							<p style="margin-top: 0.3em">如果显示屏内容为 1，按下在第二个位置上的按钮。</p>
+							<p>如果显示屏内容为 2，按下在第二个位置上的按钮。</p>
+							<p>如果显示屏内容为 3，按下在第三个位置上的按钮。</p>
+							<p style="margin-bottom: 1em">如果显示屏内容为 4，按下在第四个位置上的按钮。</p>
+							<h4>第2阶段：</h4>
+							<p style="margin-top: 0.3em">如果显示屏内容为 1，按下被标为“4”的按钮。</p>
+							<p>如果显示屏内容为 2，按下和你第 1 阶段中所按的在同一个位置上的按钮。</p>
+							<p>如果显示屏内容为 3，按下在第一个位置上的按钮。</p>
+							<p style="margin-bottom: 1em">如果显示屏内容为 4，按下和你第 1 阶段中所按的在同一个位置上的按钮。</p>
+							<h4>第3阶段：</h4>
+							<p style="margin-top: 0.3em">如果显示屏内容为 1，按下和你第 2 阶段中所按的带有同一个标签的按钮。</p>
+							<p>如果显示屏内容为 2，按下和你第 1 阶段中所按的带有同一个标签的按钮。</p>
+							<p>如果显示屏内容为 3，按下在第三个位置上的按钮。</p>
+							<p style="margin-bottom: 1em">如果显示屏内容为 4，按下被标为“4”的按钮。</p>
+							<h4>第4阶段：</h4>
+							<p style="margin-top: 0.3em">如果显示屏内容为 1，按下和你第 1 阶段中所按的在同一个位置上的按钮。</p>
+							<p>如果显示屏内容为 2，按下在第一个位置上的按钮。</p>
+							<p>如果显示屏内容为 3，按下和你第 2 阶段中所按的在同一个位置上的按钮。</p>
+							<p style="margin-bottom: 1em">如果显示屏内容为 4，按下和你第 2 阶段中所按的在同一个位置上的按钮。</p>
+							<h4>第5阶段：</h4>
+							<p style="margin-top: 0.3em">如果显示屏内容为 1，按下和你第 1 阶段中所按的带有同一个标签的按钮。</p>
+							<p>如果显示屏内容为 2，按下和你第 2 阶段中所按的带有同一个标签的按钮。</p>
+							<p>如果显示屏内容为 3，按下和你第 4 阶段中所按的带有同一个标签的按钮。</p>
+							<p style="margin-bottom: 1em">如果显示屏内容为 4，按下和你第 3 阶段中所按的带有同一个标签的按钮。</p>
+						</div>
+					</div>
+					<div class="page-footer relative-footer">第 11 页　　共 23 页</div>
+				</div>
+								<div class="page page-bg-05 morse-code">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">摩尔斯电码<br />Morse Code</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Morse Code.svg" />
+						<h2>关于“摩尔斯电码”模块</h2>
+						<p class="flavour-text">陈旧的海军通信形式？接下来有什么？至少这是真正的摩尔斯电码。集中注意力，你兴许就学会点东西了呢。</p>
+						<ul>
+							<li>利用摩尔斯电码图，解译来自闪烁灯光的信号以拼写出表格中单词之一。</li>
+							<li>信号会循环，每次重复间会带有很长的间隔。</li>
+							<li>一旦认出单词，设置相应的频率，然后按下 TX（传输）按钮。</li>
+						</ul>
+						<img id="morseCodeChart" src="img/Morse Code/International_Morse_Code zh-CN.svg" />
+						<table>
+							<tr>
+								<th>如果该<br />单词为：</th>
+								<th>在此频率<br />回应：</th>
+							</tr>
+							<tr>
+								<td>shell</td>
+								<td>3.505 MHz</td>
+							</tr>
+							<tr>
+								<td>halls</td>
+								<td>3.515 MHz</td>
+							</tr>
+							<tr>
+								<td>slick</td>
+								<td>3.522 MHz</td>
+							</tr>
+							<tr>
+								<td>trick</td>
+								<td>3.532 MHz</td>
+							</tr>
+							<tr>
+								<td>boxes</td>
+								<td>3.535 MHz</td>
+							</tr>
+							<tr>
+								<td>leaks</td>
+								<td>3.542 MHz</td>
+							</tr>
+							<tr>
+								<td>strobe</td>
+								<td>3.545 MHz</td>
+							</tr>
+							<tr>
+								<td>bistro</td>
+								<td>3.552 MHz</td>
+							</tr>
+							<tr>
+								<td>flick</td>
+								<td>3.555 MHz</td>
+							</tr>
+							<tr>
+								<td>bombs</td>
+								<td>3.565 MHz</td>
+							</tr>
+							<tr>
+								<td>break</td>
+								<td>3.572 MHz</td>
+							</tr>
+							<tr>
+								<td>brick</td>
+								<td>3.575 MHz</td>
+							</tr>
+							<tr>
+								<td>steak</td>
+								<td>3.582 MHz</td>
+							</tr>
+							<tr>
+								<td>sting</td>
+								<td>3.592 MHz</td>
+							</tr>
+							<tr>
+								<td>vector</td>
+								<td>3.595 MHz</td>
+							</tr>
+							<tr>
+								<td>beats</td>
+								<td>3.600 MHz</td>
+							</tr>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 12 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-06 venn-wires">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">复杂导线<br />Complicated Wires</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Complicated Wires.svg" />
+						<h2>关于“复杂导线”模块</h2>
+						<p class="flavour-text">这些导线不像其他的；有些带有条纹！那使得它们完全不同。好消息是，我们找到了一套简洁的，关于对此该做什么的指示！也许太简洁了……</p>
+						<ul>
+							<li>看每根导线：导线上方有 LED，导线下方有一块为“★”符号预留的空白。</li>
+							<li>对于<b>每个</b>导线、LED 和符号的组合，使用下方的文氏图来决定是否要剪断此导线。</li>
+							<li>每根导线都可能带有呈条纹状的多种色彩。</li>
+						</ul>
+						<div>
+							<object id="venndiagram" width="100%" height="100%" data="img/Complicated Wires/venndiagram.svg" type="image/svg+xml"></object>
+						</div>
+						<div>
+							<object width="100%" height="100%" id="vennlegend" data="img/Complicated Wires/legend zh-CN.svg" type="image/svg+xml"></object>
+							<table id="venntable">
+								<tr>
+									<th>字母</th>
+									<th>指示</th>
+								</tr>
+								<tr>
+									<td>C</td>
+									<td>剪断该导线</td>
+								</tr>
+								<tr>
+									<td>D</td>
+									<td>不要剪断该导线</td>
+								</tr>
+								<tr>
+									<td>S</td>
+									<td>如果序列号的最后一位数字为偶数，剪断该导线</td>
+								</tr>
+								<tr>
+									<td>P</td>
+									<td>如果炸弹有并行接口，剪断该导线</td>
+								</tr>
+								<tr>
+									<td>B</td>
+									<td>如果炸弹有两节或更多电池，剪断该导线</td>
+								</tr>
+							</table>
+						</div>
+						<div style="clear:both"></div>
+						<p class="appendix-reference" style="margin-bottom: 0">查看附录 B 以获得电池识别参考。</p>
+						<p class="appendix-reference" style="margin-top: 0">查看附录 C 以获得接口识别参考。</p>
+					</div>
+					<div class="page-footer relative-footer">第 13 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-07 wire-sequence">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">导线序列<br />Wire Sequence</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Wire Sequence.svg" />
+						<h2>关于“导线序列”模块</h2>
+						<p class="flavour-text">要说明这机械装置如何运行会很难。此工程技术挺令人印象深刻，不过，肯定有更简单的方法来管理九根导线。</p>
+						<ul>
+							<li>该模块内有数个上方带有导线的面板，但一次只能看见一个面板。利用向下按钮切换至下一个面板，利用向上按钮切换至上一个面板。</li>
+							<li>直到你确信已经剪断当前面板上所有必须被剪断的导线时，你才可以切换至下一个面板。</li>
+							<li>如同下列表格所指示的那样剪断导线。导线出现次数是在该模块中所有面板的范围内累积的。</li>
+						</ul>
+						<div style="clear:both"></div>
+						<table class="red-table">
+							<tbody>
+								<tr>
+									<th colspan="2" class="header">红色导线出现次数</th>
+								</tr>
+								<tr>
+									<th class="first-col">导线出现次序</th>
+									<th class="second-col">连接至……<br />则剪断</th>
+								</tr>
+								<tr>
+									<td class="first-col">红色出现第一次</td>
+									<td class="second-col">C</td>
+								</tr>
+								<tr>
+									<td class="first-col">红色出现第二次</td>
+									<td class="second-col">B</td>
+								</tr>
+								<tr>
+									<td class="first-col">红色出现第三次</td>
+									<td class="second-col">A</td>
+								</tr>
+								<tr>
+									<td class="first-col">红色出现第四次</td>
+									<td class="second-col">A 或 C</td>
+								</tr>
+								<tr>
+									<td class="first-col">红色出现第五次</td>
+									<td class="second-col">B</td>
+								</tr>
+								<tr>
+									<td class="first-col">红色出现第六次</td>
+									<td class="second-col">A 或 C</td>
+								</tr>
+								<tr>
+									<td class="first-col">红色出现第七次</td>
+									<td class="second-col">A、B 或 C</td>
+								</tr>
+								<tr>
+									<td class="first-col">红色出现第八次</td>
+									<td class="second-col">A 或 B</td>
+								</tr>
+								<tr>
+									<td class="first-col">红色出现第九次</td>
+									<td class="second-col">B</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="blue-table">
+							<tbody>
+								<tr>
+									<th colspan="2" class="header">蓝色导线出现次数</th>
+								</tr>
+								<tr>
+									<th class="first-col">导线出现次序</th>
+									<th class="second-col">连接至……<br />则剪断</th>
+								</tr>
+								<tr>
+									<td class="first-col">蓝色出现第一次</td>
+									<td class="second-col">B</td>
+								</tr>
+								<tr>
+									<td class="first-col">蓝色出现第二次</td>
+									<td class="second-col">A 或 C</td>
+								</tr>
+								<tr>
+									<td class="first-col">蓝色出现第三次</td>
+									<td class="second-col">B</td>
+								</tr>
+								<tr>
+									<td class="first-col">蓝色出现第四次</td>
+									<td class="second-col">A</td>
+								</tr>
+								<tr>
+									<td class="first-col">蓝色出现第五次</td>
+									<td class="second-col">B</td>
+								</tr>
+								<tr>
+									<td class="first-col">蓝色出现第六次</td>
+									<td class="second-col">B 或 C</td>
+								</tr>
+								<tr>
+									<td class="first-col">蓝色出现第七次</td>
+									<td class="second-col">C</td>
+								</tr>
+								<tr>
+									<td class="first-col">蓝色出现第八次</td>
+									<td class="second-col">A 或 C</td>
+								</tr>
+								<tr>
+									<td class="first-col">蓝色出现第九次</td>
+									<td class="second-col">A</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="black-table">
+							<tbody>
+								<tr>
+									<th colspan="2" class="header">黑色导线出现次数</th>
+								</tr>
+								<tr>
+									<th class="first-col">导线出现次序</th>
+									<th class="second-col">连接至……<br />则剪断</th>
+								</tr>
+								<tr>
+									<td class="first-col">黑色出现第一次</td>
+									<td class="second-col">A、B 或 C</td>
+								</tr>
+								<tr>
+									<td class="first-col">黑色出现第二次</td>
+									<td class="second-col">A 或 C</td>
+								</tr>
+								<tr>
+									<td class="first-col">黑色出现第三次</td>
+									<td class="second-col">B</td>
+								</tr>
+								<tr>
+									<td class="first-col">黑色出现第四次</td>
+									<td class="second-col">A 或 C</td>
+								</tr>
+								<tr>
+									<td class="first-col">黑色出现第五次</td>
+									<td class="second-col">B</td>
+								</tr>
+								<tr>
+									<td class="first-col">黑色出现第六次</td>
+									<td class="second-col">B 或 C</td>
+								</tr>
+								<tr>
+									<td class="first-col">黑色出现第七次</td>
+									<td class="second-col">A 或 B</td>
+								</tr>
+								<tr>
+									<td class="first-col">黑色出现第八次</td>
+									<td class="second-col">C</td>
+								</tr>
+								<tr>
+									<td class="first-col">黑色出现第九次</td>
+									<td class="second-col">C</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 14 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-01">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">迷宫<br />Maze</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Maze.svg" />
+						<h2>关于“迷宫”模块</h2>
+						<p class="flavour-text">这看似是某种迷宫，图案大概是从餐厅的餐具垫上偷来的。</p>
+						<ul>
+							<li>找到带有相匹配的圆形标记的迷宫。</li>
+							<li>拆弹人员必须利用方向按键，将白色亮光导航至红色三角形处。</li>
+							<li><strong>警告</strong>：不要穿越迷宫中显示的线条。这些线条在炸弹上是隐形的。</li>
+						</ul>
+						<div style="clear:both"></div>
+						<div class="maze maze-0">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+						<div class="maze maze-1">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+						<div class="maze maze-2">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+						<div class="maze maze-3">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+						<div class="maze maze-4">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+						<div class="maze maze-5">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+						<div class="maze maze-6">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+						<div class="maze maze-7">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+                        <div class="maze maze-8">
+							<div class="highlightable square" style="left: 0em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 0em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 2em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 4em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 6em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 8em; top: 10em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 0em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 2em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 4em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 6em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 8em;"></div>
+							<div class="highlightable square" style="left: 10em; top: 10em;"></div>
+						</div>
+					</div>
+					<div class="page-footer relative-footer">第 15 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-02">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">密码<br />Password</span>
+					</div>
+					<div class="page-footer absolute-footer"></div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Password.svg" />
+						<h2>关于“密码”模块</h2>
+						<p class="flavour-text">幸运的是，这密码看上去没有满足标准政府安全需求：22 个字符，混合的大小写，顺序随机的数字，没有任何长度大于 3 的回文。</p>
+						<ul>
+							<li>每个字母上方和下方的按钮会循环翻阅那一位置的可能选项。</li>
+							<li>可用字母只有一种组合会与下方某个密码相匹配。</li>
+							<li>一旦设置好正确的单词，按下 Submit（提交）按钮。</li>
+						</ul>
+						<table class="password-table">
+							<tbody>
+								<tr>
+									<td>about</td>
+									<td>after</td>
+									<td>again</td>
+									<td>below</td>
+									<td>could</td>
+								</tr>
+								<tr>
+									<td>every</td>
+									<td>first</td>
+									<td>found</td>
+									<td>great</td>
+									<td>house</td>
+								</tr>
+								<tr>
+									<td>large</td>
+									<td>learn</td>
+									<td>never</td>
+									<td>other</td>
+									<td>place</td>
+								</tr>
+								<tr>
+									<td>plant</td>
+									<td>point</td>
+									<td>right</td>
+									<td>small</td>
+									<td>sound</td>
+								</tr>
+								<tr>
+									<td>spell</td>
+									<td>still</td>
+									<td>study</td>
+									<td>their</td>
+									<td>there</td>
+								</tr>
+								<tr>
+									<td>these</td>
+									<td>thing</td>
+									<td>think</td>
+									<td>three</td>
+									<td>water</td>
+								</tr>
+								<tr>
+									<td>where</td>
+									<td>which</td>
+									<td>world</td>
+									<td>would</td>
+									<td>write</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 16 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-03 section-title">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">第 2 节：反复模块<br />Needy Module</span>
+					</div>
+					<div class="page-content">
+						<div class="vertical-spacer"></div>
+						<img class="diagram" src="img/NeedyComponent.svg" />
+						<div class="new-block-formatting-context">
+							<h1>第 2 节：反复模块</h1>
+							<p>反复模块无需被解除，但是会引起重复出现的危险。</p>
+							<p>反复模块能被识别为顶部中央带有小型 2 位数计时器的模块。<br />与炸弹互动可能使得它们被启动。一旦这些反复模块启动，<br />为了避免振数，在其计时器终止前，它们必须被经常地照料。</p>
+							<p>坚持观察：反复模块可能在任何时间重新启动。</p>
+						</div>
+					</div>
+					<div class="page-footer relative-footer">第 17 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-04">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">排气<br />Venting Gas</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Venting Gas zh-CN.svg" />
+						<h2>关于“排气”模块</h2>
+						<p class="flavour-text">电脑黑客工作是很艰苦的！嘛，通常是这样。执行这项任务，只要让简单的饮水鸟装置反复地按下同样的按键，大概也是可行的。</p>
+						<ul>
+							<li>通过按下“Y”代表“是”，按下“N”代表“否”，回应电脑的提示。</li>
+						</ul>
+					</div>
+					<div class="page-footer relative-footer">第 18 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-05">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">电容放电<br />Capacitor Discharge</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Capacitor Discharge.svg" />
+						<h2>关于“电容放电”模块</h2>
+						<p class="flavour-text">我猜吧，它只是打算占用你的注意力，不然这真可谓是粗制滥造的电子产品。</p>
+						<ul>
+							<li>通过向下按住控制杆，在电容过载前使其放电。</li>
+						</ul>
+					</div>
+					<div class="page-footer relative-footer">第 19 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-06 needy-knob">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">旋钮<br />Knob</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Knob.svg" />
+						<h2>关于“旋钮”模块</h2>
+						<p class="flavour-text">不必要的复杂度，无止境的反复性。试想这种专长被用于制作恶魔谜题以外的东西会如何。</p>
+						<ul>
+							<li>此旋钮可被转动至四个不同的位置之一。</li>
+							<li>当该模块的计时器到达零，旋钮必须处于正确的位置。</li>
+							<li>可以通过十二个 LED 的亮灭配置来确定正确位置。</li>
+							<li>旋钮位置是相对于“UP（上方）”标签而言的。此标签可能会被旋转。</li>
+						</ul>
+						<h3>LED 配置</h3>
+						<h4>上方位置：</h4>
+						<table style="display: inline-table">
+							<tr>
+								<td> </td>
+								<td> </td>
+								<td>X</td>
+								<td> </td>
+								<td>X</td>
+								<td>X</td>
+							</tr>
+							<tr>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td> </td>
+								<td>X</td>
+							</tr>
+						</table>
+						<table style="display: inline-table">
+							<tr>
+								<td>X</td>
+								<td> </td>
+								<td>X</td>
+								<td> </td>
+								<td>X</td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td> </td>
+								<td>X</td>
+								<td>X</td>
+								<td> </td>
+								<td>X</td>
+								<td>X</td>
+							</tr>
+						</table>
+						<h4>下方位置：</h4>
+						<table style="display: inline-table">
+							<tr>
+								<td> </td>
+								<td>X</td>
+								<td>X</td>
+								<td> </td>
+								<td> </td>
+								<td>X</td>
+							</tr>
+							<tr>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td> </td>
+								<td>X</td>
+							</tr>
+						</table>
+						<table style="display: inline-table">
+							<tr>
+								<td>X</td>
+								<td> </td>
+								<td>X</td>
+								<td> </td>
+								<td>X</td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td> </td>
+								<td>X</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td>X</td>
+							</tr>
+						</table>
+						<h4>左侧位置：</h4>
+						<table style="display: inline-table">
+							<tr>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td>X</td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>X</td>
+								<td> </td>
+								<td> </td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+							</tr>
+						</table>
+						<table style="display: inline-table">
+							<tr>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td>X</td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td>X</td>
+								<td>X</td>
+								<td> </td>
+							</tr>
+						</table>
+						<h4>右侧位置：</h4>
+						<table style="display: inline-table">
+							<tr>
+								<td>X</td>
+								<td> </td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+							</tr>
+							<tr>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td> </td>
+								<td>X</td>
+								<td> </td>
+							</tr>
+						</table>
+						<table style="display: inline-table">
+							<tr>
+								<td>X</td>
+								<td> </td>
+								<td>X</td>
+								<td>X</td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>X</td>
+								<td>X</td>
+								<td>X</td>
+								<td> </td>
+								<td>X</td>
+								<td> </td>
+							</tr>
+						</table>
+						<br />
+						<br />
+						<p class="needy-diagram-label">X = 亮着的 LED</p>
+					</div>
+					<div class="page-footer relative-footer">第 20 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-07 appendix-indicators">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">附录 A</span>
+					</div>
+					<div class="page-content">
+						<h2>附录 A：指示器识别参考</h2>
+						<p>在炸弹箱体的侧面上能找到带有标签的指示器（Indicator）灯光。</p>
+						<img src="img/IndicatorWidget zh-CN.svg" style="height: 5em; display:block; margin: .6em 0 0;" />
+						<h3>常见指示器</h3>
+						<ul>
+							<li>SND</li>
+							<li>CLR</li>
+							<li>CAR</li>
+							<li>IND</li>
+							<li>FRQ</li>
+							<li>SIG</li>
+							<li>NSA</li>
+							<li>MSA</li>
+							<li>TRN</li>
+							<li>BOB</li>
+							<li>FRK</li>
+						</ul>
+					</div>
+					<div class="page-footer relative-footer">第 21 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-01 appendix-batteries">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">附录 B</span>
+					</div>
+					<div class="page-content">
+						<h2>附录 B：电池识别参考</h2>
+						<p>在炸弹箱体的侧面上能找到位于电池外壳内的常见电池（Battery）类型。</p>
+						<table style="margin-top: 1em;">
+							<tr><th>电池</th><th>类型</th></tr>
+							<tr><td><img src="img/appendix-batteries/Battery-AA.svg" style="width: 4.09375em; height: 6.18125em;"></td><td>AA</td></tr>
+							<tr><td><img src="img/appendix-batteries/Battery-D.svg" style="width: 4.09375em; height: 5.553125em;"></td><td>D</td></tr>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 22 页　　共 23 页</div>
+				</div>
+				<div class="page page-bg-02 appendix-ports">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">附录 C</span>
+					</div>
+					<div class="page-content">
+						<h2>附录 C：接口识别参考</h2>
+						<p>在炸弹箱体的侧面上能找到数字和模拟接口（Port）。</p>
+						<table>
+							<tr><th>接口</th><th>名称</th></tr>
+							<tr><td><img src="img/appendix-ports/DVI.svg" style="width: 10.15em;"></td><td>DVI-D</td></tr>
+							<tr><td><img src="img/appendix-ports/Parallel.svg" style="width: 16.1em;"></td><td>并行<br />（Parallel）</td></tr>
+							<tr><td><img src="img/appendix-ports/PS2.svg" style="width: 5.55em;"></td><td>PS/2</td></tr>
+							<tr><td><img src="img/appendix-ports/RJ45.svg" style="width: 5.2em;"></td><td>RJ-45</td></tr>
+							<tr><td><img src="img/appendix-ports/Serial.svg" style="width: 8.35em;"></td><td>串行<br />（Serial）</td></tr>
+							<tr><td><img src="img/appendix-ports/StereoRCA.svg" style="width: 5em;"></td><td>双声道 RCA<br />（Stereo RCA）</td></tr>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 23 页　　共 23 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

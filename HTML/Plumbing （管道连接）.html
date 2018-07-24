@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>管道连接 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; } .crush { margin-right: -.5em; }
+			.hardmodule-wrap { width: 0; height: 0; }
+			.hardmodule { width: 2em; height: 66em; opacity: 0.3; background-color: #FF0000; -webkit-print-color-adjust: exact; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-05">
+					<div class="hardmodule-wrap"><div class="hardmodule"></div></div>
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">管道连接<br>Plumbing</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Plumbing.svg">
+						<h2>关于<span class="force-zh">“</span>管道连接<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">事后你最好洗下手<span class="force-zh">……</span></p>
+						<ul>
+							<li>该模块有 4 根输入管道（左侧）和 4 根输出管道（右侧）。输入管道和输出管道各自有至少一根被激活。</li>
+							<li>利用 6 行 6 列的管道网格，拆弹员必须连通所有被激活的输入与输出管道，同时注意避免连接未被激活的输入与输出管道。点击 6 行 6 列网格中的某一节管道可以旋转它。</li>
+							<li>与被激活管道连通的所有管道也必须正确地与其他管道连接。如果连通管线中的任何一节管道存在未接入另一节管道（或接入了未被激活的的输入／输出管道）的开口，这将导致你在检查解答时得一振。</li>
+							<li>当你输入完解答后，按下<span class="force-zh">“</span>CHECK（检查<span class="crush">）</span><span class="force-zh">”</span>来验证解答。不正确的解答将导致你得一振。</li>
+							<li>利用下表来确定被激活的输入与输出管道。如果某管道的支持点数多于反对点数，则该管道被激活。</li>
+						</ul>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 2 页</div>
+				</div>
+				<div class="page page-bg-06">
+					<div class="hardmodule-wrap"><div class="hardmodule"></div></div>
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">管道连接<br>Plumbing</span>
+					</div>
+					<div class="page-content">
+						<table>
+							<tbody>
+								<tr>
+									<td width="50%">红色输入
+										<ul>
+											<li>支持：序列号包含<span class="force-zh">“</span>1<span class="force-zh">”</span></li>
+											<li>支持：仅有 1 个 RJ-45 接口</li>
+											<li>反对：任何重复的接口</li>
+											<li>反对：任何重复的序列号字符</li>
+										</ul>
+									</td>
+									<td width="50%">黄色输入
+										<ul>
+											<li>支持：序列号包含<span class="force-zh">“</span>2<span class="force-zh">”</span></li>
+											<li>支持：一个或更多的双声道 RCA 接口</li>
+											<li>反对：没有重复的接口</li>
+											<li>反对：序列号包含<span class="force-zh">“</span>1<span class="force-zh">”</span>或<span class="force-zh">“</span>L<span class="force-zh">”</span></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>绿色输入
+										<ul>
+											<li>支持：序列号包含 3 个或更多的数字</li>
+											<li>支持：一个或更多的 DVI-D 接口</li>
+											<li>反对：红色输入未被激活</li>
+											<li>反对：黄色输入未被激活</li>
+										</ul>
+									</td>
+									<td>蓝色输入
+										<ul>
+											<li>注：如果其他输入均未被激活，则此输入一定被激活</li>
+											<li>支持：至少 4 种接口</li>
+											<li>支持：至少 4 节电池</li>
+											<li>反对：没有接口</li>
+											<li>反对：没有电池</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>红色输出
+										<ul>
+											<li>支持：一个或更多的串行接口</li>
+											<li>支持：仅有一节电池</li>
+											<li>反对：序列号包含多于 2 个数字</li>
+											<li>反对：多于 2 个输入被激活</li>
+										</ul>
+									</td>
+									<td>黄色输出
+										<ul>
+											<li>支持：任何重复的接口</li>
+											<li>支持：序列号包含<span class="force-zh">“</span>4<span class="force-zh">”</span>或<span class="force-zh">“</span>8<span class="force-zh">”</span></li>
+											<li>反对：序列号不包含<span class="force-zh">“</span>2<span class="force-zh">”</span></li>
+											<li>反对：绿色输入被激活</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>绿色输出
+										<ul>
+											<li>支持：仅有 3 个输入被激活</li>
+											<li>支持：仅有 3 个接口</li>
+											<li>反对：有少于 3 个接口</li>
+											<li>反对：序列号包含多于 3 个数字</li>
+										</ul>
+									</td>
+									<td>蓝色输出
+										<ul>
+											<li>注：如果其他输出均未被激活，则此输出一定被激活</li>
+											<li>支持：所有输入都被激活</li>
+											<li>支持：任何其他的输出未被激活</li>
+											<li>反对：少于 2 节电池</li>
+											<li>反对：没有并行接口</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 2 页　共 2 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

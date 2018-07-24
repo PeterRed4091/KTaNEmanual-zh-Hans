@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>摩尔斯算术 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; } .crush { margin-right: -.5em; }
+			.hardmodule-wrap { width: 0; height: 0; }
+			.hardmodule { width: 2em; height: 66em; opacity: 0.3; background-color: #FF0000; -webkit-print-color-adjust: exact; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-02">
+					<div class="hardmodule-wrap"><div class="hardmodule"></div></div>
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">摩尔斯算术<br>Morsematics</span>
+					</div>
+					<div class="page-content">
+						<img src="img/Component/Morsematics.svg" class="diagram" />
+						<h2>关于<span class="force-zh">“</span>摩尔斯算术<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">懂了吗？因为它同时使用摩尔斯电码与算术！我自会走开<span class="force-zh">……</span></p>
+						<ul>
+							<li>字母表的每个字母被认为拥有了与其序位相等的数值（A=1、B=2 <span class="force-zh">……</span> Z=26<span class="crush">）</span>。</li>
+							<li>超出 1～26 范围的数值会回绕（Z+1=A、26+1=1<span class="crush">）</span>。</li>
+							<li>你将循环收到三个互不相同的字母，这些字母由模块中央三个闪烁的灯光来表示。</li>
+							<li>要解除模块，你必须利用右下角的发送按钮，以摩尔斯电码发送一个正确的应答字母。</li>
+							<li>顶部的小开关可以被用来切换接收字母用灯光的状态。</li>
+						</ul>
+						<p>发送的摩尔斯电码将根据按键的间隔来解译。
+						<br>长按时间超过平均间隔长度的两倍会被当作划，而任何短于此的都会被当作点。
+						<br>发送时，E 和 T 由于无法互相区分，将被同等看待。</p>
+						<p>取序列号的第 4 个与第 5 个字符，这即是你的字符对。</p>
+						<p>按顺序执行下面的每一步，逐渐更改你的字符对：</p>
+						<ul>
+							<li>对于每个在收到字母中有相匹配字母的指示器，如果常亮则把字符对中第一个字符加上 1，但如果常灭则把第二个字符加上 1。</li>
+							<li>如果字母对之和是平方数，把字符对中第一个字符加上 4，否则把第二个字符减去 4。</li>
+							<li>把字符对中第一个字符加上最大的收到字母。</li>
+							<li>如果有任何的收到字母是质数，把它们从字符对的第一个字符中减去。</li>
+							<li>如果有任何的收到字母是平方数，把它们从字符对的第二个字符中减去。</li>
+							<li>如果有电池，而任何的收到字母能被电池数量整除，把那些字母同时从字符对的两个字符中减去。</li>
+						</ul>
+						完成所有步骤之后，执行下方适用的规则：
+						<ul>
+							<li>两个字符相等：发送第一个字符</li>
+							<li>第一个字符较大：发送两个字符的差</li>
+							<li>第二个字符较大：发送两个字符的和</li>
+						</ul>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 2 页</div>
+				</div>
+				<div class="page page-bg-03">
+					<div class="hardmodule-wrap"><div class="hardmodule"></div></div>
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">摩尔斯算术<br>Morsematics</span>
+					</div>
+					<div class="page-content">
+						<img id="morseCodeChart" src="img/Morsematics/International_Morse_Code zh-Hans substitute PeterRed4091.svg" />
+						<table style="border: none">
+							<tbody>
+								<tr><td>A</td><td>1</td><td rowspan="13" style="border: none"><td>N</td><td>14</td></tr>
+								<tr><td>B</td><td>2</td> <td>O</td><td>15</td></tr>
+								<tr><td>C</td><td>3</td> <td>P</td><td>16</td></tr>
+								<tr><td>D</td><td>4</td> <td>Q</td><td>17</td></tr>
+								<tr><td>E</td><td>5</td> <td>R</td><td>18</td></tr>
+								<tr><td>F</td><td>6</td> <td>S</td><td>19</td></tr>
+								<tr><td>G</td><td>7</td> <td>T</td><td>20</td></tr>
+								<tr><td>H</td><td>8</td> <td>U</td><td>21</td></tr>
+								<tr><td>I</td><td>9</td> <td>V</td><td>22</td></tr>
+								<tr><td>J</td><td>10</td><td>W</td><td>23</td></tr>
+								<tr><td>K</td><td>11</td><td>X</td><td>24</td></tr>
+								<tr><td>L</td><td>12</td><td>Y</td><td>25</td></tr>
+								<tr><td>M</td><td>13</td><td>Z</td><td>26</td></tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 2 页　共 2 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

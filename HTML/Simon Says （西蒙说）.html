@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>西蒙说 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-01">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》第 1 版</span>
+						<span class="page-header-section-title">西蒙说<br>Simon Says</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Simon Says.svg">
+						<h2>关于<span class="force-zh">“</span>西蒙说<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">这像是你儿时玩过的那些玩具之一，你不得不匹配出现的图案。只是，这个大概是在一元店买的仿冒品。</p>
+						<ol>
+							<li>四个有色按钮之一会闪烁。</li>
+							<li>利用下方正确的表格，按下带有相应色彩的按钮。</li>
+							<li>原始的按钮会闪烁，其后会跟着又一个按钮。利用色彩映射，按照次序重复此序列。</li>
+							<li>每次你正确输入序列时，该序列会延长一项，直至模块被解除。</li>
+						</ol>
+						<img src="img/Simon Says/SimonComponent_ColourLegend zh-Hans substitute PeterRed4091.svg" style="height: 9em; margin: 1em auto; display: block;" alt="顶部：蓝色；左侧：红色；右侧：黄色；底部：绿色"/>
+						<div style="clear: both"><br></div>
+						<p style="margin-bottom: 0">如果序列号包含元音字母：</p>
+						<table class="repeaters-table">
+							<tr>
+								<th colspan="2" class="repeaters-spacer"></th>
+								<th>红色闪烁</th>
+								<th>蓝色闪烁</th>
+								<th>绿色闪烁</th>
+								<th>黄色闪烁</th>
+							</tr>
+							<tr>
+								<th rowspan="3">要按下的按钮：</th>
+								<th>零振</th>
+								<td>蓝色</td>
+								<td>红色</td>
+								<td>黄色</td>
+								<td>绿色</td>
+							</tr>
+							<tr>
+								<th>仅一振</th>
+								<td>黄色</td>
+								<td>绿色</td>
+								<td>蓝色</td>
+								<td>红色</td>
+							</tr>
+							<tr>
+								<th>至少两振</th>
+								<td>绿色</td>
+								<td>红色</td>
+								<td>黄色</td>
+								<td>蓝色</td>
+							</tr>
+						</table>
+						<div style="clear: both"><br></div>
+						<p style="margin-bottom: 0">如果序列号<em>不</em>包含元音字母：</p>
+						<table class="repeaters-table">
+							<tr>
+								<th colspan="2" class="repeaters-spacer"></th>
+								<th>红色闪烁</th>
+								<th>蓝色闪烁</th>
+								<th>绿色闪烁</th>
+								<th>黄色闪烁</th>
+							</tr>
+							<tr>
+								<th rowspan="3">要按下的按钮：</th>
+								<th>零振</th>
+								<td>蓝色</td>
+								<td>黄色</td>
+								<td>绿色</td>
+								<td>红色</td>
+							</tr>
+							<tr>
+								<th>仅一振</th>
+								<td>红色</td>
+								<td>蓝色</td>
+								<td>黄色</td>
+								<td>绿色</td>
+							</tr>
+							<tr>
+								<th>至少两振</th>
+								<td>黄色</td>
+								<td>绿色</td>
+								<td>蓝色</td>
+								<td>红色</td>
+							</tr>
+						</table>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 1 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

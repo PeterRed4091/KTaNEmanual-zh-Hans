@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>冗长通话 —《保持通话，不会爆炸》反复模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; } .crush { margin-right: -.5em; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-06">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">冗长通话<br>Filibuster</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Filibuster.svg" />
+						<h2>关于<span class="force-zh">“</span>冗长通话<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">这游戏叫什么名字来着？好吧，我们就得那样做。</p>
+						<ul>
+							<li>出现警告倒计时标志着该模块即将运转（armed<span class="crush">）</span>。</li>
+							<li>如果你听到烦人的哔哔声，请通话。</li>
+							<li>保持通话。</li>
+						</ul>
+						<h3>冗长通话设置</h3>
+						<p>本模组需要麦克风。它会寻找默认录音设备并监听以确定音量。</p>
+						<p>在模组设置文件夹（可从游戏中 Mods -> Mod Settings Folder 处打开）中，有一个名为 filibuster-settings.txt 的文件可用于自定义阈值。你可以在文字编辑器中打开这个文件来更改设定。若你修改了这些数值，需重启游戏才能生效。</p>
+						<p>下面是该文件的默认内容：
+						<br>{"MicThreshold": 25.0, "FailureThreshold": 3}</p>
+						<p><span style="font-style:italic">MicThreshold</span> <span class="force-zh">——</span>麦克风阈值：针对你的麦克风来调整该数值，其范围是 0.0～100.0。
+						<br><span style="font-style:italic">FailureThreshold</span> <span class="force-zh">——</span>失败阈值：得一振前麦克风检测失败的秒数，是一个整数数值。我建议将它保留在 1～10 的范围内。</p>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 1 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

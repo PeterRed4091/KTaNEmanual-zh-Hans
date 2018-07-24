@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>微型控制器——“保持通话，不会爆炸”一般模块</title>
+    <meta content="initial-scale=1" name="viewport">
+    <link rel='stylesheet' type='text/css' href='css/font.css'>
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src='js/highlighter.js'></script>
+</head>
+<body>
+    <div id="ManualContent">
+        <div class="section">
+            <div class="page">
+                <div class="page-header">
+                    <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                    <span class="page-header-section-title">微型控制器</span>
+                </div>
+                <div class="page-content">
+                    <img src="img/Component/Microcontroller.svg" class="diagram" />
+                    <h2>关于微型控制器(Microcontroller)</h2>
+                    <p class="flavour-text">虽然被称做“微型”控制器，这东西其实挺大的。大概是因为它能引起挺大的爆炸吧……</p>
+
+                    <ol>
+                        <li>以控制器所印刷的型号与其规格，用下方的图表来确定其引脚布局。</li>
+                        <li>控制器上的白色标记表明了1号引脚所在的位置。其他引脚在1号同侧按升序排列，而后在另一侧反向继续排序。</li>
+                        <li>使用下方的表格来确定每个连接的元件的正确色彩代码。</li>
+                        <li>对于每个引脚，使用上下按钮来选择正确的元件，然后使用OK按钮确认你的输入（下一个引脚会被自动选择）。</li>
+                    </ol>
+
+                    <h3>引脚布局</h3>
+                    <p>失误(STRK)控制器：</p>
+                    <div id="floatalign">
+                        <img style="height: 9em; margin: 0 2em 0 2em" src="img/Microcontroller/a1.svg" />
+                        <img style="height: 9em; margin: 0 2em 0 2em" src="img/Microcontroller/a2.svg" />
+                        <img style="height: 9em; margin: 0 2em 0 2em" src="img/Microcontroller/a3.svg" />
+                    </div>
+                    <p>二极管(LEDS)控制器：</p>
+                    <div id="floatalign">
+                        <img style="height: 9em; margin: 0 2em 0 2em" src="img/Microcontroller/b2.svg" />
+                        <img style="height: 9em; margin: 0 2em 0 2em" src="img/Microcontroller/b1.svg" />
+                        <img style="height: 9em; margin: 0 2em 0 2em" src="img/Microcontroller/b3.svg" />
+                    </div>
+                    <p>倒计时(CNTD)控制器：</p>
+                    <div id="floatalign">
+                        <img style="height: 9em; margin: 0 2em 0 2em" src="img/Microcontroller/c3.svg" />
+                        <img style="height: 9em; margin: 0 2em 0 2em" src="img/Microcontroller/c1.svg" />
+                        <img style="height: 9em; margin: 0 2em 0 2em" src="img/Microcontroller/c2.svg" />
+                    </div>
+                </div>
+                <div class="page-footer relative-footer">第 1 页 / 共 2 页</div>
+            </div>
+            <div class="page">
+                <div class="page-header">
+                    <span class="page-header-doc-title">“保持通话，不会爆炸”工坊模组</span>
+                    <span class="page-header-section-title">微型控制器</span>
+                </div>
+                <div class="page-content">
+                    <p>爆炸(EXPL)控制器：</p>
+                    <div id="floatalign">
+                        <img style="height: 9em; margin: 0 2em 0 2em" src="img/Microcontroller/d1.svg" />
+                        <img style="height: 9em; margin: 0 2em 0 2em" src="img/Microcontroller/d3.svg" />
+                        <img style="height: 9em; margin: 0 2em 0 2em" src="img/Microcontroller/d2.svg" />
+                    </div>
+                    <h3>组件色彩代码</h3>
+                    <table class="repeaters-table">
+                        <tr>
+                            <th colspan="1" class="repeaters-spacer"></th>
+                            <th>输入电压(VCC)</th>
+                            <th>模拟输入(AIN)</th>
+                            <th>数字输入(DIN)</th>
+                            <th>脉宽调制(PWM)</th>
+                            <th>重置(RST)</th>
+                        </tr>
+                        <tr>
+                            <th>如果控制器的序列号的末位数字是1或4</th>
+                            <td>黄色</td>
+                            <td>洋红</td>
+                            <td>绿色</td>
+                            <td>蓝色</td>
+                            <td>红色</td>
+                        </tr>
+                        <tr>
+                            <th>否则，如果有亮灯指示器“SIG”或RJ-45端口</th>
+                            <td>黄色</td>
+                            <td>红色</td>
+                            <td>洋红</td>
+                            <td>绿色</td>
+                            <td>蓝色</td>
+                        </tr>
+                        <tr>
+                            <th>否则，如果炸弹的序列号包含C、L、R、X、1或8</th>
+                            <td>红色</td>
+                            <td>洋红</td>
+                            <td>绿色</td>
+                            <td>蓝色</td>
+                            <td>黄色</td>
+                        </tr>
+                        <tr>
+                            <th>否则，如果控制器的序列号的第二个数字和炸弹上的电池数量相同</th>
+                            <td>红色</td>
+                            <td>蓝色</td>
+                            <td>黄色</td>
+                            <td>绿色</td>
+                            <td>洋红</td>
+                        </tr>
+                        <tr>
+                            <th>否则</th>
+                            <td>绿色</td>
+                            <td>红色</td>
+                            <td>黄色</td>
+                            <td>蓝色</td>
+                            <td>洋红</td>
+                        </tr>
+                    </table>
+                    <p>注：地线(GND)一直以白色为代码。</p>
+                </div>
+                <div class="page-footer relative-footer">第 2 页 / 共 2 页</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>密码锁 —《保持通话，不会爆炸》普通模块</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script src="js/highlighter.js"></script>
+		<style>
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 500; src: url(font/SourceHanSerifCN-Medium.ttf); }
+			@font-face { font-family: source-han-serif-cn; font-style: normal; font-weight: 700; src: url(font/SourceHanSerifCN-Bold.ttf); }
+			html { font-family: "Special Elite", "Courier New", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn, monospace; font-weight: 500; }
+			.page-header-section-title { text-align: right; } @media print { .relative-footer { margin-top: .25in; height: .5in; display: block; } }
+			.force-zh { font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif", "Noto Serif SC", "Noto Serif CJK SC", "Noto Serif CJK", source-han-serif-cn; line-height: 0.9; } .crush { margin-right: -.5em; }
+		</style>
+	</head>
+	<body>
+		<div id="ManualContent">
+			<div class="section">
+				<div class="page page-bg-01">
+					<div class="page-header">
+						<span class="page-header-doc-title">《保持通话，不会爆炸》工坊模组</span>
+						<span class="page-header-section-title">密码锁<br>Combination Lock</span>
+					</div>
+					<div class="page-content">
+						<img class="diagram" src="img/Component/Combination Lock.svg">
+						<h2>关于<span class="force-zh">“</span>密码锁<span class="force-zh">”</span>模块</h2>
+						<p class="flavour-text">这看上去像是个密码锁。我原以为是要解除这个炸弹，而不是解开它。</p>
+						<p class="appendix-reference">查看附录 B 以获得电池识别参考。
+						<br>查看附录<span class="force-zh">“</span>双重认证<span class="force-zh">”</span>以获得双重认证识别参考。</p>
+						<p>和常规的密码锁一样，此锁需要 3 个数字才能解开。向右旋转刻度盘到达第一个数字。然后向左旋转刻度盘到第二个数字。最后向右旋转刻度盘到最后一个数字。那样就能解开它了！
+						<br>如果密码中有前后数字相同的情况，请旋转一整圈后回到同一个数字。</p>
+						<h3>如何破解密码组合：</h3>
+						<p>每个数字的范围是 0～19。参考表格以确定每个数字。如果存在有双重认证代码，要注意它们会定期变更！</p>
+						<table>
+							<tr><td>
+								<h4>第一个数字：</h4>
+								<ol>
+									<li>将每个双重认证代码的最低位有效数字相加。如果没有双重认证代码，使用序列号末位数字与已解除模块数量相加的和。</li>
+									<li>加上电池的数量。</li>
+									<li>若结果超过 19，不断减去 20，直到结果位于 0～19 之间。</li>
+								</ol>
+							</td></tr>
+							<tr><td>
+								<h4>第二个数字：</h4>
+								<ol>
+									<li>将每个双重认证代码的最高位有效数字相加。如果没有双重认证代码，使用炸弹上模块的数量（包括反复模块<span class="crush">）</span>。</li>
+									<li>加上已解除模块的数量。</li>
+									<li>若结果超过 19，不断减去 20，直到结果位于 0～19 之间。</li>
+								</ol>
+							</td></tr>
+							<tr><td>
+								<h4>第三个数字：</h4>
+								<ol>
+									<li>将前两个数字相加。</li>
+									<li>若结果超过 19，不断减去 20，直到结果位于 0～19 之间。</li>
+								</ol>
+							</td></tr>
+						</table>
+						<p><br>［英汉对照］
+						<br><span class="force-zh">“</span>reset<span class="force-zh">”——“</span>重置<span class="force-zh">”</span></p>
+					</div>
+					<div class="page-footer relative-footer">第 1 页　共 1 页</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
